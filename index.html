@@ -8968,7 +8968,7 @@ function renderHall(){
   const pos=rows.findIndex(r=>r===me);
   let chal=pos===0?"¡Eres #1 de la Sala! Defiende tu récord.":"Te faltan "+(rows[pos-1][1]-save.xp+1)+" XP para superar a "+rows[pos-1][0]+".";
   const lv=levelOf(save.xp);
-  let h='<section><h3>★ TOP SCORES DE LA SALA DE MÉDICOS</h3><table class="lb"><tbody>'+rows.map((r,i)=>'<tr'+(r===me?' class="me"':"")+"><td>#"+(i+1)+"</td><td>"+esc(r[0])+'<small class="lvt">NV '+(levelOf(r[1])+1)+" · "+esc(LEVELS[levelOf(r[1])][1])+"</small></td><td>"+r[1].toLocaleString("es-CL")+" XP</td></tr>").join("")+'</tbody></table><p class="chal">'+chal+" Mejor racha: "+(save.bestRun||0)+" · Mejor ronda: "+(save.bestRound||0)+"/10</p></section>";
+  let h=(window.__rank?window.__rank.hallHTML():'')+'<section><h3>★ SALA DE PRÁCTICA (rivales simulados)</h3><table class="lb"><tbody>'+rows.map((r,i)=>'<tr'+(r===me?' class="me"':"")+"><td>#"+(i+1)+"</td><td>"+esc(r[0])+'<small class="lvt">NV '+(levelOf(r[1])+1)+" · "+esc(LEVELS[levelOf(r[1])][1])+"</small></td><td>"+r[1].toLocaleString("es-CL")+" XP</td></tr>").join("")+'</tbody></table><p class="chal">'+chal+" Mejor racha: "+(save.bestRun||0)+" · Mejor ronda: "+(save.bestRound||0)+"/10</p></section>";
   h+=srsPanel();h+=badgeHTML();
   h+='<section><h3>✦ PRECISIÓN POR ESPECIALIDAD</h3><div class="pb">'+["int","lab","hem","der","res","gas","tra"].map(s=>{const x=save.st[s]||{c:0,n:0};return '<div class="pbr"><span>'+SECNAME[s]+"</span>"+pctBar(x.c,x.n)+"<span>"+(x.n?Math.round(x.c/x.n*100)+"% ("+x.c+"/"+x.n+")":"sin datos")+"</span></div>";}).join("")+"</div></section>";
   el.innerHTML=h;
@@ -9961,6 +9961,109 @@ if(document.readyState==="loading")document.addEventListener("DOMContentLoaded",
 })();
 
 </script>
+<script id="rank-js">
+/* ===== Ranking real · perfil, podio y tabla compartida (db) ===== */
+(function(){
+"use strict";
+var db=null,usr=null,uid=null,st="init",rows=[],err="",lastPub="",lastPubT=0,loadT=0,loading=false,editing=false,busy=false,isOwner=false;
+function esc(s){return String(s==null?"":s).replace(/[&<>"']/g,function(c){return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]})}
+function RK(){if(!save.rk||typeof save.rk!=="object")save.rk={nick:"",show:true};return save.rk}
+function lvName(x){try{return LEVELS[levelOf(x)][1]}catch(e){return ""}}
+function repaint(){try{renderHall()}catch(e){}}
+function doc(){return db.collection("ranking").doc(uid)}
+async function init(){
+  try{
+    var cl=window.claude;if(!cl||!cl.use){st="none";return}
+    db=await cl.use("db");usr=await cl.use("user");
+    if(!db||!usr){db=null;st="none";repaint();return}
+    uid=await usr.id();try{isOwner=await usr.isOwner()}catch(e){}
+    if(!uid){db=null;st="none";repaint();return}
+    st="ready";await load();publish();
+    setInterval(function(){publish()},10000);
+    setInterval(function(){var h=document.getElementById("hall");if(h&&h.open&&Date.now()-loadT>60000)load()},15000);
+  }catch(e){st="err";err=(e&&e.message)||""}
+  repaint();
+}
+async function load(){
+  if(!db||loading)return;loading=true;
+  try{
+    var t=setTimeout(function(){err="No pude alcanzar el ranking todavía"},10000);
+    var s=await db.collection("ranking").orderBy("xp","desc").limit(50).get();
+    clearTimeout(t);
+    rows=s.docs.map(function(d){var v=d.data()||{};return {id:d.id,nick:String(v.nick||"").slice(0,24),xp:+v.xp||0,lvl:+v.lvl||0,tot:+v.tot||0,t:+v.t||0}}).filter(function(r){return r.nick});
+    st="ready";err="";loadT=Date.now();
+  }catch(e){err=(e&&e.message)||"error";if(e&&e.code==="not_granted")st="ro"}
+  loading=false;repaint();
+}
+async function publish(force){
+  var k=RK();if(!db||!uid)return;
+  if(!k.nick||k.show===false)return;
+  var sig=k.nick+"|"+(save.xp||0)+"|"+(save.tot||0);
+  if(!force&&(sig===lastPub||Date.now()-lastPubT<15000))return;
+  try{
+    await doc().set({nick:k.nick,xp:save.xp||0,lvl:levelOf(save.xp||0),tot:save.tot||0,t:Date.now()});
+    lastPub=sig;lastPubT=Date.now();err="";
+    if(st==="ro")st="ready";
+  }catch(e){
+    if(e&&(e.code==="not_granted"||/permission|forbid|write/i.test(e.message||"")))st="ro";else err=(e&&e.message)||"error";
+  }
+  repaint();
+}
+async function leave(){
+  if(!db||!uid)return;
+  try{await doc().delete();rows=rows.filter(function(r){return r.id!==uid});lastPub=""}catch(e){err=(e&&e.message)||"error"}
+  repaint();
+}
+function pod(r,pos,medal){
+  if(!r)return '<div class="rkp rkp'+pos+'"></div>';
+  return '<div class="rkp rkp'+pos+(r.id===uid?' me':'')+'"><div class="rkm">'+medal+'</div><b>'+esc(r.nick)+'</b><small>'+r.xp+' XP</small><div class="rkb"><span>'+pos+'</span></div></div>';
+}
+function hallHTML(){
+  var k=RK(),h='<section class="rk"><h3>🏆 RANKING REAL</h3>';
+  if(st==="none"||(!db&&st!=="init")){
+    return h+'<p class="rkn">Para entrar al ranking necesitas una sesión de Claude: abre este artefacto desde claude.ai con tu cuenta iniciada. Aquí tu avance sigue guardándose solo en este navegador.</p></section>';
+  }
+  if(st==="init")return h+'<p class="rkn">Conectando con tu cuenta…</p></section>';
+  if(!k.nick||editing){
+    return h+'<p class="rkn">Elige un apodo para aparecer en el ranking. No se publica tu correo ni tu nombre real: solo el apodo, tu nivel y tu XP, visibles para quienes abran este artefacto.</p>'+
+     '<div class="rkf"><input id="rknick" maxlength="24" placeholder="Apodo (2-24 caracteres)" value="'+esc(k.nick||"")+'" autocomplete="off"><button class="btn" data-rk="save">Guardar</button>'+(k.nick?'<button class="btn" data-rk="cancel">Cancelar</button>':'')+'</div>'+(err?'<p class="rkn rke">'+esc(err)+'</p>':'')+'</section>';
+  }
+  var mine=rows.findIndex(function(r){return r.id===uid});
+  h+='<p class="rkn">Sesión: <b>'+esc(k.nick)+'</b> · '+(save.xp||0)+' XP · '+esc(lvName(save.xp||0))+(k.show===false?' · <i>oculto del ranking</i>':'')+'</p>';
+  if(st==="ro")h+='<p class="rkn rke">Tu cuenta puede ver el ranking pero no publicar tu puntaje: pide acceso de colaborador al dueño del artefacto.</p>';
+  if(rows.length){
+    h+='<div class="rkpod">'+pod(rows[1],2,"🥈")+pod(rows[0],1,"🥇")+pod(rows[2],3,"🥉")+'</div>';
+    h+='<table class="lb"><tbody>'+rows.map(function(r,i){return '<tr'+(r.id===uid?' class="me"':'')+'><td>#'+(i+1)+'</td><td>'+esc(r.nick)+'<small class="lvt">NV '+(r.lvl+1)+' · '+esc(lvName(r.xp))+'</small></td><td>'+r.xp+' XP'+(isOwner&&r.id!==uid?' <button class="rkx" data-rk="del" data-id="'+esc(r.id)+'" title="Quitar del ranking">✕</button>':'')+'</td></tr>'}).join('')+'</tbody></table>';
+    if(mine<0&&k.show!==false)h+='<p class="rkn">Aún no apareces entre los 50 primeros o tu puntaje se está publicando.</p>';
+    else if(mine>0)h+='<p class="rkn">Vas en el puesto <b>#'+(mine+1)+'</b>. Te faltan '+(rows[mine-1].xp-(save.xp||0)+1)+' XP para superar a '+esc(rows[mine-1].nick)+'.</p>';
+    else if(mine===0)h+='<p class="rkn"><b>¡Eres #1!</b> Defiende tu récord.</p>';
+  }else h+='<p class="rkn">'+(loading?'Cargando…':'Todavía no hay nadie en el ranking. Gana XP y sé el primero.')+'</p>';
+  if(err)h+='<p class="rkn rke">'+esc(err)+'</p>';
+  h+='<div class="rkf"><button class="btn" data-rk="ref">Actualizar</button><button class="btn" data-rk="edit">Cambiar apodo</button><button class="btn" data-rk="vis">'+(k.show===false?'Volver al ranking':'Salir del ranking')+'</button></div>';
+  return h+'</section>';
+}
+document.addEventListener("click",async function(e){
+  var b=e.target.closest&&e.target.closest("[data-rk]");if(!b||busy)return;busy=true;
+  try{
+    var a=b.dataset.rk,k=RK();
+    if(a==="save"){var v=(document.getElementById("rknick").value||"").trim().replace(/\s+/g," ");
+      if(v.length<2){err="El apodo debe tener al menos 2 caracteres";repaint()}
+      else{k.nick=v.slice(0,24);k.show=true;editing=false;err="";persist();await publish(true);await load()}}
+    else if(a==="cancel"){editing=false;err="";repaint()}
+    else if(a==="edit"){editing=true;repaint()}
+    else if(a==="ref"){await load()}
+    else if(a==="vis"){if(k.show===false){k.show=true;persist();await publish(true);await load()}else{k.show=false;persist();await leave()}}
+    else if(a==="del"&&isOwner&&b.dataset.id){await db.collection("ranking").doc(b.dataset.id).delete();await load()}
+  }catch(er){err=(er&&er.message)||"error";repaint()}
+  busy=false;
+});
+window.__rank={hallHTML:hallHTML,load:load,publish:publish,state:function(){return {st:st,uid:uid,rows:rows.length}}};
+var css=document.createElement("style");css.textContent=".rk .rkn{font-size:13px;margin:6px 0;line-height:1.45}.rk .rke{color:#c0392b}.rk .rkf{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0}.rk .rkf input{flex:1 1 160px;min-width:0;padding:8px 10px;border:2px solid var(--line,#ccc);border-radius:8px;background:var(--surface);color:var(--ink);font:inherit}.rkpod{display:flex;align-items:flex-end;justify-content:center;gap:8px;margin:12px 0 8px;min-height:150px}.rkp{flex:1 1 0;max-width:120px;display:flex;flex-direction:column;align-items:center;text-align:center;gap:2px;font-size:12px}.rkp b{max-width:100%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.rkp small{opacity:.8}.rkm{font-size:26px}.rkb{width:100%;border-radius:8px 8px 0 0;display:flex;align-items:flex-start;justify-content:center;font:400 12px var(--f-pix);padding-top:6px;margin-top:4px}.rkp1 .rkb{height:78px;background:linear-gradient(#ffe27a,#f4c542)}.rkp2 .rkb{height:56px;background:linear-gradient(#e6e9ef,#bfc5d0)}.rkp3 .rkb{height:40px;background:linear-gradient(#f2c9a0,#d99a64)}.rkp.me b{text-decoration:underline}.rkx{border:0;background:none;color:#c0392b;cursor:pointer;font-weight:700}";
+document.head.appendChild(css);
+if(document.readyState==="loading")document.addEventListener("DOMContentLoaded",init);else init();
+})();
+</script>
+
 <script id="t10-js">
 (function(){
 "use strict";
