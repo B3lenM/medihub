@@ -403,7 +403,7 @@ const LTOPICS=[["l1","LAB 1 Ciclo e interpretación"],["l2","LAB 2 Seguridad y a
 const HTOPICS=[["h1","C1 Aplasia y SMD"],["h2","C2 Anemias"],["h3","C3 Leucemias agudas"],["h4","C4 LMC"],["h5","C5 Anatomía patológica"],["h6","C6 NMP Ph−"],["h7","C7 Linfomas"],["h8","C8 Trasplantes"],["h9","C9 Gammapatías y MM"]];
 const DTOPICS=[["d1","C1 Acné y rosácea"],["d2","C2 Derm. pediátrica"],["d3","C3 Papuloescamosas"],["d4","C4 Tumores benignos"],["d5","C5 Cáncer no melanoma"],["d6","C6 Melanoma"],["d7","C7 RAM y urticaria"],["d8","C8 Dermatitis"],["d9","C9 Autoinmunes"],["d10","C10 Infectología cutánea"]];
 const RTOPICS=[["r1","C1 Fisiología"],["r2","C2 Insuf. respiratoria"],["r3","C3 Farmacología"],["r4","C4 Asma"],["r5","C5 EPOC"],["r6","C6 Tos crónica"],["r7","C7 Bronquiectasias"],["r8","C8 Sueño"],["r9","C9 IRA e influenza"],["r10","C10 Neumonía"],["r11","C11 Tuberculosis"],["r12","C12 Tabaquismo"],["r13","C13 Pleura"],["r14","C14 Cáncer pulmón"],["r15","C15 EPID"],["r16","Radiografías"],["r17","Preguntas"]];
-const TTOPICS=[["t1", "T1 · Introducción a la traumatología y ortopedia"], ["t2", "T2 · Radiología del trauma: cómo leer una fractura"], ["t3", "T3 · Politraumatizado (ATLS, shock, triada de la muerte)"], ["t4", "T4 · Urgencias traumatológicas"], ["t5", "T5 · Hombro doloroso"], ["t6", "T6 · Muñeca y mano"], ["t7", "T7 · Dolor lumbar (lumbago)"], ["t8", "T8 · Dolor de cadera: enfrentamiento"], ["t9", "T9 · Fractura de cadera"], ["t10", "T10 · Rodilla traumática aguda"], ["t11", "T11 · Dolor de rodilla atraumático"], ["t12", "T12 · Artrosis (rodilla y cadera)"], ["t13", "T13 · Tobillo y pie doloroso"], ["t14", "T14 · Esguinces y fracturas de tobillo y pierna"], ["t15", "T15 · Lesiones musculares en el deporte"], ["t16", "T16 · Tumores musculoesqueléticos"], ["t17", "T17 · Ortopedia infantil: cadera, ejes y columna"], ["t18", "T18 · Urgencias traumatológicas en pediatría"]];
+const TTOPICS=[["t1", "C1 · Introducción a la traumatología y ortopedia"], ["t6", "C2 · Muñeca y mano"], ["t15", "C3 · Lesiones musculares en el deporte"], ["t3", "C4 · Politraumatizado (ATLS, shock, triada de la muerte)"], ["t16", "C5 · Tumores musculoesqueléticos"], ["t17", "C6 · Ortopedia infantil: cadera, ejes y columna"], ["t18", "C7 · Urgencias traumatológicas en pediatría"], ["t5", "C8 · Hombro doloroso"], ["t8", "C9 · Dolor de cadera: enfrentamiento"], ["t9", "C10 · Fractura de cadera"], ["t13", "C11 · Tobillo y pie doloroso"], ["t14", "C12 · Esguinces y fracturas de tobillo y pierna"], ["t12", "C13 · Artrosis (rodilla y cadera)"], ["t11", "C14 · Dolor de rodilla atraumático"], ["t10", "C15 · Rodilla traumática aguda"], ["t4", "C16 · Urgencias traumatológicas"], ["t7", "C17 · Dolor lumbar (lumbago)"], ["t2", "C18 · Radiología del trauma: cómo leer una fractura (complemento)"]];
 const GTOPICS=[["g1", "C1 ERGE"], ["g2", "C2 Disfagia"], ["g3", "C3 Dispepsia"], ["g4", "C4 H. pylori y gastritis autoinmune"], ["g5", "C5 Enfermedad úlceropéptica"], ["g6", "C6 HDA no variceal"], ["g7", "C7 Várices esofágicas y HDA variceal"], ["g8", "C8 Hemorragia del intestino delgado"], ["g9", "C9 Hemorragia digestiva baja"], ["g10", "C10 Síndrome de intestino irritable"], ["g11", "C11 Distensión abdominal"], ["g12", "C12 Diarrea aguda"], ["g13", "C13 Diarrea crónica"], ["g14", "C14 Estreñimiento crónico"], ["g15", "C15 Enfermedad inflamatoria intestinal (C15–16)"], ["g17", "C17 Síndrome malabsortivo"], ["g18", "C18 Enfermedad celíaca"], ["g19", "C19 Pruebas hepáticas alteradas"], ["g20", "C20 Síndrome ascítico y cirrótico"], ["g21", "C21 Cirrosis (C21–22)"], ["g23", "C23 Hepatitis virales"], ["g24", "C24 Patología hepática autoinmune"], ["g25", "C25 Esteatosis metabólica (MASLD)"], ["g26", "C26 Enfermedad hepática alcohólica"], ["g27", "C27 Lesiones focales hepáticas"], ["g28", "C28 Litiasis biliar y complicaciones"], ["g29", "C29 Pancreatitis aguda"], ["g30", "C30 Pancreatitis crónica"], ["g31", "C31 Síndrome emético"], ["g32", "C32 Patología diverticular"], ["g33", "C33 Microbiota"], ["g34", "C34 Diarrea asociada a antibióticos"], ["g35", "C35 Cánceres digestivos"], ["g36", "C36 Rayos de abdomen I"], ["g37", "C37 Rayos de abdomen II"]];
 const ALLT=TOPICS.concat(LTOPICS,HTOPICS,DTOPICS,RTOPICS,GTOPICS,TTOPICS);
 const TN=Object.fromEntries(ALLT);
@@ -6213,7 +6213,7 @@ const TIM=[[0,"t5","Rx AP de hombro: disminución del espacio subacromial (rotur
 const TLEG={"SH":"Acromion · Clavícula distal · Apófisis coracoides · Glenoides · Cabeza humeral · Tubérculo mayor · Cuello quirúrgico · Diáfisis humeral","CLAV":"Clavícula (tercios medial, medio, lateral) · Articulación acromioclavicular · Acromion · Apófisis coracoides · Cabeza humeral","ELB":"Húmero distal · Tróclea y capitelo · Epicóndilos · Olécranon · Apófisis coronoides · Cabeza del radio · Cúbito · Radio","WR":"Radio distal y estiloides radial · Cúbito distal · Escafoides · Semilunar · Piramidal · Trapecio y trapezoide · Hueso grande · Ganchoso · Metacarpianos","HAND":"Falanges distal, media y proximal · Articulaciones IFD, IFP y MCF · Metacarpianos · Carpo · Pulgar (1.er MC)","PELV":"Alas ilíacas · Sacro · Sínfisis púbica · Ramas isquio e iliopúbicas · Agujero obturador · Acetábulo · Cabeza y cuello femoral · Trocánteres","HIP":"Cabeza femoral · Acetábulo · Cuello femoral · Trocánter mayor y menor · Línea de Shenton · Fémur proximal","FEMUR":"Cabeza · Cuello · Trocánter mayor · Trocánter menor · Diáfisis femoral · Canal medular","KNEE":"Fémur distal (cóndilos medial y lateral) · Rótula · Meseta tibial · Espinas tibiales · Interlínea articular · Cabeza del peroné · Tuberosidad tibial","KNEEMR":"Fémur · Tibia · Rótula · Tendón cuadricipital y patelar · Cuerpo graso de Hoffa · Meniscos · Ligamentos cruzados · Cartílago articular","ANK":"Tibia distal · Peroné distal · Maléolo medial · Maléolo lateral · Mortaja tibioastragalina · Astrágalo · Calcáneo · Sindesmosis","FOOT":"Calcáneo · Astrágalo · Navicular · Cuboides · Cuñas · Metatarsianos (base, diáfisis, cabeza) · Falanges · Articulación de Lisfranc","TIB":"Tibia (diáfisis y metáfisis) · Peroné · Cortical · Canal medular · Rasgo de fractura · Callo","ARM":"Radio · Cúbito · Cortical · Metáfisis y diáfisis · Rasgo de fractura","SPINE":"Cuerpo vertebral · Pedículos · Apófisis espinosa y transversas · Espacio intervertebral · Facetas articulares · Canal medular · Sacro","TUM":"Zona de transición · Márgenes · Reacción perióstica · Matriz · Cortical · Partes blandas","RM":"Hueso · Músculo · Tendón / ligamento · Grasa · Líquido (hiperintenso en T2) · Lesión","PEDHIP":"Núcleo epifisario femoral · Acetábulo · Cartílago trirradiado · Metáfisis proximal · Rama iliopúbica · Línea de Hilgenreiner","LL":"Fémur · Tibia · Eje mecánico · Rodilla · Tobillo · Fisis","FOTO":"Rodillas · Tobillos · Eje del miembro inferior · Distancia intercondílea / intermaleolar","ESQ":""};
 
 /* ===== TRAUMATOLOGÍA · lecciones 1 ===== */
-L("t1","T1 · Introducción a la traumatología y ortopedia",[
+L("t1","C1 · Introducción a la traumatología y ortopedia",[
 ["key","Definiciones y por qué importa",ul([
  "{{Traumatología}}: diagnóstico, tratamiento y prevención de lesiones {{traumáticas}} del sistema musculoesquelético (fracturas, luxaciones, lesiones de ligamentos, tendones y músculos).",
  "{{Ortopedia}}: enfermedades, deformidades y alteraciones {{congénitas o adquiridas}} del sistema musculoesquelético.",
@@ -6246,7 +6246,7 @@ L("t1","T1 · Introducción a la traumatología y ortopedia",[
  "Evaluar siempre: anamnesis y examen por segmento, imágenes iniciales (Rx en ≥2 planos), signos de alarma."
 ])]
 ]);
-L("t2","T2 · Radiología del trauma: cómo leer una fractura",[
+L("t2","C18 · Radiología del trauma: cómo leer una fractura (complemento)",[
 ["key","Qué debe describir una Rx de trauma",ul([
  "Siempre {{2 proyecciones}} (AP y lateral) que incluyan las articulaciones proximal y distal.",
  "Describa: hueso y segmento, {{rasgo}} (transverso, oblicuo, espiroideo, complejo), {{desplazamiento y angulación}}, impactación, conminución, compromiso articular.",
@@ -6281,7 +6281,7 @@ L("t2","T2 · Radiología del trauma: cómo leer una fractura",[
  "Fractura patológica: trauma mínimo, lesiones líticas en pelvis/fémur → pensar metástasis o mieloma."
 ])]
 ]);
-L("t3","T3 · Politraumatizado (ATLS, shock, triada de la muerte)",[
+L("t3","C4 · Politraumatizado (ATLS, shock, triada de la muerte)",[
 ["key","Concepto y mortalidad",ul([
  "{{Politrauma}}: trauma contuso o lacerante que compromete uno o más sistemas. Principal causa de muerte en población joven.",
  "Distribución de mortalidad: en la {{escena}}; en las {{primeras 24 h}} (la modificable: hemorragia); tardía (sepsis).",
@@ -6314,7 +6314,7 @@ L("t3","T3 · Politraumatizado (ATLS, shock, triada de la muerte)",[
  "Alternativa: rotación interna y vendaje de las extremidades inferiores."
 ])]
 ]);
-L("t4","T4 · Urgencias traumatológicas",[
+L("t4","C16 · Urgencias traumatológicas",[
 ["key","Fractura expuesta",ul([
  "Comunicación entre el foco de fractura y el exterior. 2-3 % de las fracturas; jóvenes de alta energía, extremidad inferior.",
  "Riesgos: necrosis tisular, {{infección}}, no consolidación. Buscar lesión vascular (pulso, palidez, frialdad) y nerviosa.",
@@ -6346,7 +6346,7 @@ L("t4","T4 · Urgencias traumatológicas",[
  "Es {{emergencia quirúrgica}}: desbridamiento amplio antes de 6 h + antibióticos amplio espectro (pip-tazo + clindamicina) + soporte hemodinámico."
 ])]
 ]);
-L("t5","T5 · Hombro doloroso",[
+L("t5","C8 · Hombro doloroso",[
 ["key","Enfrentamiento: ¿trauma o no?",ul([
  "{{Atraumático}}: manguito rotador, bíceps, tendinitis cálcica, capsulitis adhesiva, artrosis GH/AC, artritis séptica, tumores, dolor referido.",
  "{{Traumático}}: fractura de clavícula, disyunción AC, fractura de húmero proximal, hombro flotante, fractura de escápula, inestabilidad GH, rotura traumática del manguito.",
@@ -6379,7 +6379,7 @@ L("t5","T5 · Hombro doloroso",[
  "Reducción: analgesia (AINE, opioide, lidocaína intraarticular, sedación con midazolam), {{rotación externa es clave}}; técnicas Stimson, tracción-contratracción, escapular, SPASO. Inmovilizar ~3 semanas."
 ])]
 ]);
-L("t6","T6 · Muñeca y mano",[
+L("t6","C2 · Muñeca y mano",[
 ["key|dx","Fractura de radio distal",ul([
  "La fractura más frecuente; trimodal: niños (tercio distal de antebrazo), adultos jóvenes (alta energía), mujeres mayores osteoporóticas.",
  "Mecanismo: caída con mano en extensión. Deformidad {{en dorso de tenedor}}. {{Colles}}: desplazamiento dorsal (el más frecuente); {{Smith}}: palmar.",
@@ -6416,7 +6416,7 @@ L("t6","T6 · Muñeca y mano",[
 ]);
 
 /* ===== TRAUMATOLOGÍA · lecciones 2 ===== */
-L("t7","T7 · Dolor lumbar (lumbago)",[
+L("t7","C17 · Dolor lumbar (lumbago)",[
 ["key","Epidemiología y causas",ul([
  "80 % de las personas tendrá lumbalgia; principal motivo de consulta traumatológica y de ausentismo laboral; 60 % recurre en el año; mayoría {{autolimitada}}.",
  "Causas: {{97 % mecánicas}} (70 % muscular, 10 % degenerativas, 4 % HNP, 4 % fractura osteoporótica, 3 % estenosis, 2 % espondilolistesis), 2 % viscerales (renal, vascular, pélvico), 1 % no mecánicas (infección, tumor, inflamatorio).",
@@ -6446,7 +6446,7 @@ L("t7","T7 · Dolor lumbar (lumbago)",[
  "Cirugía: déficit neurológico progresivo, cauda equina, dolor radicular refractario con correlación en imágenes."
 ])]
 ]);
-L("t8","T8 · Dolor de cadera: enfrentamiento",[
+L("t8","C9 · Dolor de cadera: enfrentamiento",[
 ["key","Dónde duele orienta el origen",tbl(["Dolor","Pensar en","Irradiación típica"],[
  ["{{Anterior / inguinal}}","{{Intraarticular hasta demostrar lo contrario}}: artrosis, pinzamiento femoroacetabular, lesión labral, psoas, hernia, pubalgia","Cara anterior del muslo hasta la rodilla; {{signo de la C}}"],
  ["{{Lateral / peritrocantérico}}","Lo más frecuente: {{tendinopatía glútea}} (medio/menor) y bursitis trocantérea; cintilla iliotibial; meralgia parestésica (anterolateral)","Cara lateral del muslo sin pasar la rodilla; duele al acostarse sobre ese lado"],
@@ -6473,7 +6473,7 @@ L("t8","T8 · Dolor de cadera: enfrentamiento",[
  "Antecedentes: displasia, Perthes, epifisiolisis previas; factores de necrosis avascular (OH, corticoides, coagulopatías, VIH, buzos)."
 ])]
 ]);
-L("t9","T9 · Fractura de cadera",[
+L("t9","C10 · Fractura de cadera",[
 ["key","Epidemiología e impacto",ul([
  "Cada vez más frecuente (1,6 M/año en el mundo; casi el doble para 2050). Adultos mayores por fragilidad (mujeres ×3); en jóvenes <50 años es de alta energía.",
  "Mortalidad {{15-30 % al año}} (1-10 % intrahospitalaria); la mitad no vuelve a caminar independiente; 20 % se institucionaliza.",
@@ -6503,7 +6503,7 @@ L("t9","T9 · Fractura de cadera",[
  "Antes del alta: {{prevención secundaria}} (osteoporosis y caídas)."
 ])]
 ]);
-L("t10","T10 · Rodilla traumática aguda",[
+L("t10","C15 · Rodilla traumática aguda",[
 ["key|ex","Definición y examen",ul([
  "{{Rodilla traumática aguda}}: trauma reciente + dolor de rodilla. Un {{derrame}} (edema, hemartrosis) tras torsión indica daño intraarticular.",
  "Anamnesis: mecanismo, sitio del dolor, tiempo de evolución, signos de alarma (bloqueo, falla), eje (valgo/varo/neutro).",
@@ -6533,7 +6533,7 @@ L("t10","T10 · Rodilla traumática aguda",[
  "{{Menisco}}: dolor en línea articular, bloqueo, McMurray +; lesión degenerativa del menisco medial en >40 años se maneja inicialmente conservador."
 ])]
 ]);
-L("t11","T11 · Dolor de rodilla atraumático",[
+L("t11","C14 · Dolor de rodilla atraumático",[
 ["key|dd","Enfrentamiento por localización y edad",tbl(["Cuadro","Claves"],[
  ["{{Monoartritis aguda}} (adulto)","Derrame + dolor + fiebre: artritis séptica vs cristales; hacer {{artrocentesis}} siempre"],
  ["{{Osgood-Schlatter}}","Niño 10-14 a, deportista de salto/patada; dolor y aumento de volumen en la {{tuberosidad tibial}}; sin derrame"],
@@ -6561,7 +6561,7 @@ L("t11","T11 · Dolor de rodilla atraumático",[
  "Osteocondritis disecante y epifisiolisis: derrame con dolor mecánico = alerta; pedir Rx AP y lateral (y de cadera si sospecha SCFE)."
 ])]
 ]);
-L("t12","T12 · Artrosis (rodilla y cadera)",[
+L("t12","C13 · Artrosis (rodilla y cadera)",[
 ["key","Definición, epidemiología y fisiopatología",ul([
  "Enfermedad degenerativa de {{toda la articulación}} con inflamación de bajo grado y pérdida progresiva del cartílago. Chile ≥55 años: rodilla {{14,4 %}}, cadera {{9 %}} (ENS 2016-17).",
  "Cartílago hialino: 80 % agua, colágeno II (tensión) y {{proteoglicanos (agrecano)}}; único tipo celular: condrocito; sin vasos ni nervios (se nutre por difusión desde el líquido sinovial). Capas: superficial, media, profunda, calcificada (tidemark).",
@@ -6582,7 +6582,7 @@ L("t12","T12 · Artrosis (rodilla y cadera)",[
 ]);
 
 /* ===== TRAUMATOLOGÍA · lecciones 3 ===== */
-L("t13","T13 · Tobillo y pie doloroso",[
+L("t13","C11 · Tobillo y pie doloroso",[
 ["key","Anatomía clave",ul([
  "Pierna: {{4 compartimentos}} (anterior, lateral, posterior superficial, posterior profundo). Pie: {{28 huesos}} en retropié (talo y calcáneo), mediopié (navicular, cuboides, 3 cuñas) y antepié (metatarsianos y falanges).",
  "Inervación: {{peroneo profundo}} = compartimento anterior (dorsiflexión); {{peroneo superficial}} = lateral (eversión); {{tibial}} = posteriores (flexión plantar, inversión).",
@@ -6605,7 +6605,7 @@ L("t13","T13 · Tobillo y pie doloroso",[
  ["Uña y dedos","Uña encarnada, dedo en martillo/garra"]
 ])]
 ]);
-L("t14","T14 · Esguinces y fracturas de tobillo y pierna",[
+L("t14","C12 · Esguinces y fracturas de tobillo y pierna",[
 ["key|dx","Esguince y reglas de Ottawa",ul([
  "Esguince lateral por {{inversión}}: 2,15 por 1.000 personas/año; más frecuente a 15-19 años; ~49 % en deporte. Rompe primero el {{LPAA}}.",
  "{{Examen diferido a los 4-5 días}} (más fiable que el inicial). Dolor óseo = fractura hasta demostrar lo contrario.",
@@ -6638,7 +6638,7 @@ L("t14","T14 · Esguinces y fracturas de tobillo y pierna",[
  "Indicaciones quirúrgicas en tobillo: luxofractura, falla de reducción cerrada, inestable o desplazada, bimaleolar/trimaleolar."
 ])]
 ]);
-L("t15","T15 · Lesiones musculares en el deporte",[
+L("t15","C3 · Lesiones musculares en el deporte",[
 ["key","Relevancia y epidemiología",ul([
  "20-40 % de las lesiones con pérdida de tiempo en fútbol profesional (18-25 % en amateur); >90 % en extremidades inferiores. Los 4 grupos: {{isquiosurales, cuádriceps, aductores, tríceps sural}}.",
  "Los desgarros de isquiosurales aumentan y son ~24 % de todas las lesiones del fútbol profesional (UEFA).",
@@ -6661,7 +6661,7 @@ L("t15","T15 · Lesiones musculares en el deporte",[
  "Rehabilitación progresiva con carga controlada y retorno por criterios funcionales."
 ])]
 ]);
-L("t16","T16 · Tumores musculoesqueléticos",[
+L("t16","C5 · Tumores musculoesqueléticos",[
 ["key","Relevancia y clasificación",ul([
  "Tumores infrecuentes: sarcomas ~1 % del cáncer adulto y 20 % de los tumores sólidos pediátricos. Benignos hasta 100 veces más frecuentes que los sarcomas.",
  "Óseos: benignos (formadores de cartílago: {{osteocondroma}}; de hueso: osteoma, osteoma osteoide), malignos primarios ({{osteosarcoma}}, {{sarcoma de Ewing}}, {{condrosarcoma}}) y secundarios ({{metástasis}}, mieloma).",
@@ -6687,7 +6687,7 @@ L("t16","T16 · Tumores musculoesqueléticos",[
  "Osteocondroma: tratar solo si molesta o hay riesgo de malignización (dolor, crecimiento, capa cartilaginosa >2 cm en adulto)."
 ])]
 ]);
-L("t17","T17 · Ortopedia infantil: cadera, ejes y columna",[
+L("t17","C6 · Ortopedia infantil: cadera, ejes y columna",[
 ["key|dx","Displasia del desarrollo de cadera (DDC)",ul([
  "1-4 % de la población (Chile 4,1 %, luxación 1 en 500); mujeres 7:1; cadera izquierda 60 %; bilateral 30 %. 20 % de las artroplastías de cadera por esta causa.",
  "Factores de riesgo: {{presentación podálica}}, sexo femenino, historia familiar, primer hijo, oligohidramnios, bajo peso, partos múltiples, deformidades de pie.",
@@ -6712,7 +6712,7 @@ L("t17","T17 · Ortopedia infantil: cadera, ejes y columna",[
  "Pie plano: flexible (frecuente, se forma el arco en puntas, test de Jack) vs {{rígido}} (no se forma el arco; barras tarsianas) → estudio. Escoliosis: Rx de columna total AP/lateral y medición de {{ángulo de Cobb}}."
 ])]
 ]);
-L("t18","T18 · Urgencias traumatológicas en pediatría",[
+L("t18","C7 · Urgencias traumatológicas en pediatría",[
 ["key|dd","El niño que cojea",ul([
  "Claudicación: dolorosa (80 %) o no; 3,6 por 1.000 niños. Dolor referido puede engañar (cadera → rodilla).",
  "Diferencial por edad: 0-3 años infecciones osteoarticulares, trauma, maltrato; 3-10 años trauma, {{Perthes}}, sinovitis transitoria; >10 años {{epifisiolisis}}, osteocondritis.",
