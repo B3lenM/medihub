@@ -25,6 +25,13 @@
   window.claude={use:function(n){return Promise.resolve(n==='sample'?(getKey(false)||true?sample:null):n==='downloads'?downloads:null)}};
 })();
 </script></head><body><title>MEDI-HUB · Belén Murillo</title>
+<style id="gas-css">.alg{margin:6px 0}.algleg{display:flex;flex-wrap:wrap;gap:6px 12px;margin-bottom:8px;font:600 11.5px var(--f-body);color:var(--muted)}.algleg span{display:inline-flex;align-items:center;gap:5px}.algleg i{width:14px;height:14px;border-radius:4px;border:2px solid}
+.algsc{overflow-x:auto;border:1px solid var(--line);border-radius:12px;background:#fffaf5;padding:6px;-webkit-overflow-scrolling:touch}
+.algsvg{display:block;margin:0 auto;max-width:none}.algsvg .an{font:700 11.5px 'Manrope',sans-serif;fill:#3b2f5c}.algsvg .ae{fill:none;stroke:#9a8fb8;stroke-width:1.8}.algsvg .aa{fill:none;stroke:#9a8fb8;stroke-width:1.8}
+.algsvg .alb{fill:#fff;stroke:#cdbfe8}.algsvg .alt{font:700 9.5px 'Manrope',sans-serif;fill:#6b5a96}
+.algft{font-size:11.5px;color:var(--muted);margin:6px 2px 0}
+.kind.alg{background:#ffd9e8;color:#8a2f5c;border:1px solid #e58fb4}
+</style>
 <meta name="claude:viewport-fit-sides" content="cover">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -276,7 +283,7 @@ svg.px{display:block;image-rendering:pixelated;shape-rendering:crispEdges;width:
 @media (max-width:430px){.pbr{grid-template-columns:90px 1fr auto}}
 
 /* selector de especialidad con iconos pixel */
-.secsw{grid-template-columns:repeat(6,1fr)}
+.secsw{grid-template-columns:repeat(7,1fr)}
 .figs{display:flex;flex-wrap:wrap;gap:8px;margin:10px 0;justify-content:center}.fg{margin:0;flex:1 1 140px;max-width:300px}.fg img{width:100%;height:auto;display:block;border:3px ridge var(--bevel);border-radius:6px;background:var(--surface2)}.fgc{flex-basis:100%;text-align:center;font-size:12px;color:var(--muted);font-style:italic}.card .figs{margin:12px 0 4px}.card .fg{max-width:260px}
 .secsw button{display:flex;flex-direction:column;align-items:center;gap:4px;padding:8px 2px;font:400 8px/1.4 var(--f-pix)!important;border-color:var(--bevel);background:var(--surface);color:var(--muted)}
 .secsw button svg{width:34px}
@@ -349,7 +356,7 @@ h1{font-size:19px}
 .bgg{margin-bottom:6px}.bgh{width:100%;display:flex;justify-content:space-between;border:3px outset var(--bevel);border-radius:6px;background:linear-gradient(var(--pop-t),var(--tint));padding:8px 10px;font:400 9px var(--f-pix);color:var(--ink);cursor:pointer}.bgh[aria-expanded="true"]{border-style:inset}.bgg .bgs{margin:8px 0}
 #recbtn{position:fixed;right:10px;bottom:14px;z-index:45;border:3px outset var(--bevel);border-radius:6px;background:var(--surface);color:var(--ink);font:400 8px/1.4 var(--f-pix);padding:8px 10px;cursor:pointer;box-shadow:3px 3px 0 var(--pop-t);opacity:.93}#recbtn[hidden]{display:none}#recbtn[aria-pressed="true"]{border-style:inset;background:linear-gradient(var(--pop-t),var(--tint));color:var(--accent)}
 
-.secsw{grid-template-columns:repeat(6,1fr)}.secsw button{font-size:7px!important;padding:6px 1px}.secsw button svg{width:26px}
+.secsw{grid-template-columns:repeat(7,1fr)}.secsw button{font-size:7px!important;padding:6px 1px}.secsw button svg{width:26px}
 .occ{position:relative;display:inline-block;max-width:100%;border:3px ridge var(--bevel);border-radius:6px;overflow:hidden;background:#fff;line-height:0}
 .occ img{display:block;width:100%;height:auto}
 .occ .mk{position:absolute;background:var(--accent);border-radius:3px;cursor:pointer;opacity:.97;transition:opacity .25s;box-shadow:0 0 0 1px #fff inset}
@@ -397,7 +404,8 @@ const HTOPICS=[["h1","C1 Aplasia y SMD"],["h2","C2 Anemias"],["h3","C3 Leucemias
 const DTOPICS=[["d1","C1 Acné y rosácea"],["d2","C2 Derm. pediátrica"],["d3","C3 Papuloescamosas"],["d4","C4 Tumores benignos"],["d5","C5 Cáncer no melanoma"],["d6","C6 Melanoma"],["d7","C7 RAM y urticaria"],["d8","C8 Dermatitis"],["d9","C9 Autoinmunes"],["d10","C10 Infectología cutánea"]];
 const RTOPICS=[["r1","C1 Fisiología"],["r2","C2 Insuf. respiratoria"],["r3","C3 Farmacología"],["r4","C4 Asma"],["r5","C5 EPOC"],["r6","C6 Tos crónica"],["r7","C7 Bronquiectasias"],["r8","C8 Sueño"],["r9","C9 IRA e influenza"],["r10","C10 Neumonía"],["r11","C11 Tuberculosis"],["r12","C12 Tabaquismo"],["r13","C13 Pleura"],["r14","C14 Cáncer pulmón"],["r15","C15 EPID"],["r16","Radiografías"],["r17","Preguntas"]];
 const TTOPICS=[["t1", "T1 · Introducción a la traumatología y ortopedia"], ["t2", "T2 · Radiología del trauma: cómo leer una fractura"], ["t3", "T3 · Politraumatizado (ATLS, shock, triada de la muerte)"], ["t4", "T4 · Urgencias traumatológicas"], ["t5", "T5 · Hombro doloroso"], ["t6", "T6 · Muñeca y mano"], ["t7", "T7 · Dolor lumbar (lumbago)"], ["t8", "T8 · Dolor de cadera: enfrentamiento"], ["t9", "T9 · Fractura de cadera"], ["t10", "T10 · Rodilla traumática aguda"], ["t11", "T11 · Dolor de rodilla atraumático"], ["t12", "T12 · Artrosis (rodilla y cadera)"], ["t13", "T13 · Tobillo y pie doloroso"], ["t14", "T14 · Esguinces y fracturas de tobillo y pierna"], ["t15", "T15 · Lesiones musculares en el deporte"], ["t16", "T16 · Tumores musculoesqueléticos"], ["t17", "T17 · Ortopedia infantil: cadera, ejes y columna"], ["t18", "T18 · Urgencias traumatológicas en pediatría"]];
-const ALLT=TOPICS.concat(LTOPICS,HTOPICS,DTOPICS,RTOPICS,TTOPICS);
+const GTOPICS=[["g1", "C1 ERGE"], ["g2", "C2 Disfagia"], ["g3", "C3 Dispepsia"], ["g4", "C4 H. pylori y gastritis autoinmune"], ["g5", "C5 Enfermedad úlceropéptica"], ["g6", "C6 HDA no variceal"], ["g7", "C7 Várices esofágicas y HDA variceal"], ["g8", "C8 Hemorragia del intestino delgado"], ["g9", "C9 Hemorragia digestiva baja"], ["g10", "C10 Síndrome de intestino irritable"], ["g11", "C11 Distensión abdominal"], ["g12", "C12 Diarrea aguda"], ["g13", "C13 Diarrea crónica"], ["g14", "C14 Estreñimiento crónico"], ["g15", "C15 Enfermedad inflamatoria intestinal (C15–16)"], ["g17", "C17 Síndrome malabsortivo"], ["g18", "C18 Enfermedad celíaca"], ["g19", "C19 Pruebas hepáticas alteradas"], ["g20", "C20 Síndrome ascítico y cirrótico"], ["g21", "C21 Cirrosis (C21–22)"], ["g23", "C23 Hepatitis virales"], ["g24", "C24 Patología hepática autoinmune"], ["g25", "C25 Esteatosis metabólica (MASLD)"], ["g26", "C26 Enfermedad hepática alcohólica"], ["g27", "C27 Lesiones focales hepáticas"], ["g28", "C28 Litiasis biliar y complicaciones"], ["g29", "C29 Pancreatitis aguda"], ["g30", "C30 Pancreatitis crónica"], ["g31", "C31 Síndrome emético"], ["g32", "C32 Patología diverticular"], ["g33", "C33 Microbiota"], ["g34", "C34 Diarrea asociada a antibióticos"], ["g35", "C35 Cánceres digestivos"], ["g36", "C36 Rayos de abdomen I"], ["g37", "C37 Rayos de abdomen II"]];
+const ALLT=TOPICS.concat(LTOPICS,HTOPICS,DTOPICS,RTOPICS,GTOPICS,TTOPICS);
 const TN=Object.fromEntries(ALLT);
 const DOT=Object.fromEntries(ALLT.map((t,i)=>[t[0],"hsl("+((i*37+195)%360)+" 55% 52%)"]));
 const LESSONS=[];
@@ -7072,6 +7080,1638 @@ function viewTAtlas(v){
   const m=$("#tatm");if(m)m.onclick=()=>{tAt.m+=48;re();};
 }
 
+const GP={dx:[],tx:[]};
+/* ===== Algoritmos clínicos: modelo de datos tipo medAL-creator (inicio → preguntas → diagnóstico → tratamiento) y dibujo SVG propio, tonos pastel ===== */
+const ALGC={s:["#fff1b8","#e0c25a","Inicio"],q:["#e6dcff","#a893ea","Pregunta"],c:["#d9ecff","#7fb2e6","Criterio / examen"],d:["#ffd9e8","#e58fb4","Diagnóstico"],t:["#d3f4e0","#74c99b","Tratamiento"],a:["#ffe3cc","#eaa56e","Alarma / derivar"]};
+function algWrap(tx,max){const w=String(tx).split(/\s+/),L=[];let c="";w.forEach(x=>{if((c+" "+x).trim().length>max&&c){L.push(c);c=x}else c=(c+" "+x).trim()});if(c)L.push(c);return L}
+function algSVG(spec){
+ const N={},order=[];spec.n.forEach(r=>{N[r[0]]={id:r[0],ty:r[1],tx:r[2],ou:(r[3]||[]).map(e=>({lb:e[0],to:e[1]})),lv:0,pa:[]};order.push(N[r[0]])});
+ order.forEach(n=>n.ou.forEach(e=>{if(N[e.to])N[e.to].pa.push(n.id)}));
+ const root=order[0];
+ let ch=true,it=0;while(ch&&it++<30){ch=false;order.forEach(n=>n.ou.forEach(e=>{const m=N[e.to];if(m&&m.lv<n.lv+1&&m!==root){m.lv=n.lv+1;ch=true}}))}
+ const CW=17,NW=150,GAP=22,PADX=10;
+ order.forEach(n=>{n.L=algWrap(n.tx,CW);n.w=NW;n.h=Math.max(34,n.L.length*15+16)});
+ const rows=[];order.forEach(n=>{(rows[n.lv]=rows[n.lv]||[]).push(n)});
+ rows.forEach(r=>{if(!r)return});
+ const maxN=Math.max.apply(null,rows.filter(Boolean).map(r=>r.length));
+ const W=Math.max(300,maxN*(NW+GAP)+GAP);
+ let y=22;
+ rows.forEach(r=>{if(!r)return;const hh=Math.max.apply(null,r.map(n=>n.h));r.forEach(n=>{n.y=y;n.rh=hh});y+=hh+54});
+ const H=y-30;
+ rows.forEach(r=>{if(!r)return;r.forEach((n,i)=>{n.x=W/2+(i-(r.length-1)/2)*(NW+GAP)})});
+ for(let p=0;p<6;p++){
+  rows.forEach((r,li)=>{if(!r||li===0)return;
+   r.forEach(n=>{const ps=n.pa.map(i=>N[i].x);n.tg=ps.length?ps.reduce((a,b)=>a+b,0)/ps.length:n.x});
+   r.sort((a,b)=>a.tg-b.tg);
+   let last=-1e9;r.forEach(n=>{n.x=Math.max(n.tg,last+NW+GAP);last=n.x});
+   const over=r[r.length-1].x-(W-NW/2-GAP/2);if(over>0){let sh=over;r.forEach(n=>n.x-=sh)}
+   const left=NW/2+GAP/2-r[0].x;if(left>0)r.forEach(n=>n.x+=left)});
+  for(let li=rows.length-2;li>=0;li--){const r=rows[li];if(!r)continue;r.forEach(n=>{const cs=n.ou.map(e=>N[e.to]).filter(m=>m&&m.lv===li+1);if(cs.length)n.tg=cs.reduce((a,m)=>a+m.x,0)/cs.length;else n.tg=n.x});
+   r.sort((a,b)=>a.tg-b.tg);let last=-1e9;r.forEach(n=>{n.x=Math.max(n.tg,last+NW+GAP);last=n.x});
+   const over=r[r.length-1].x-(W-NW/2-GAP/2);if(over>0)r.forEach(n=>n.x-=over);const left=NW/2+GAP/2-r[0].x;if(left>0)r.forEach(n=>n.x+=left)}
+ }
+ let e="",nd="";
+ order.forEach(n=>n.ou.forEach((o,k)=>{const m=N[o.to];if(!m)return;
+  const x1=n.x+(n.ou.length>1?(k-(n.ou.length-1)/2)*Math.min(40,NW/n.ou.length):0),y1=n.y+n.h,x2=m.x,y2=m.y,dy=Math.max(18,(y2-y1)/2);
+  e+='<path d="M'+x1+" "+y1+"C"+x1+" "+(y1+dy)+" "+x2+" "+(y2-dy)+" "+x2+" "+(y2-3)+'" class="ae"/>';
+  e+='<path d="M'+(x2-4)+" "+(y2-8)+"L"+x2+" "+(y2-2)+"L"+(x2+4)+" "+(y2-8)+'" class="aa"/>';
+  if(o.lb){const lx=(x1+x2)/2,ly=y1+(y2-y1)*0.38,lw=Math.min(120,o.lb.length*5.6+12);e+='<rect x="'+(lx-lw/2)+'" y="'+(ly-9)+'" width="'+lw+'" height="16" rx="8" class="alb"/><text x="'+lx+'" y="'+(ly+3)+'" class="alt" text-anchor="middle">'+esc(o.lb.length>22?o.lb.slice(0,21)+"…":o.lb)+"</text>"}}));
+ order.forEach(n=>{const c=ALGC[n.ty]||ALGC.q;
+  nd+='<g><rect x="'+(n.x-n.w/2+3)+'" y="'+(n.y+3)+'" width="'+n.w+'" height="'+n.h+'" rx="'+(n.ty==="q"||n.ty==="c"?14:7)+'" fill="'+c[1]+'" opacity=".55"/><rect x="'+(n.x-n.w/2)+'" y="'+n.y+'" width="'+n.w+'" height="'+n.h+'" rx="'+(n.ty==="q"||n.ty==="c"?14:7)+'" fill="'+c[0]+'" stroke="'+c[1]+'" stroke-width="2"/>'+
+   n.L.map((l,i)=>'<text x="'+n.x+'" y="'+(n.y+n.h/2-(n.L.length-1)*7.5+i*15+4)+'" text-anchor="middle" class="an">'+esc(l)+"</text>").join("")+"</g>"});
+ return '<svg class="algsvg" viewBox="0 0 '+W+" "+H+'" width="'+W+'" height="'+H+'" role="img" aria-label="'+esc(spec.t)+'">'+e+nd+"</svg>";
+}
+function alg(spec){
+ const used={};spec.n.forEach(r=>used[r[1]]=1);
+ return '<div class="alg"><div class="algleg">'+Object.keys(ALGC).filter(k=>used[k]).map(k=>'<span><i style="background:'+ALGC[k][0]+";border-color:"+ALGC[k][1]+'"></i>'+ALGC[k][2]+"</span>").join("")+'</div><div class="algsc">'+algSVG(spec)+'</div><p class="algft">Esquema armado con el modelo de árbol de decisión de medAL-creator (inicio → preguntas → diagnóstico → conducta). Desliza para ver todo.</p></div>';
+}
+
+/* ============ GASTRO · C32, C33, C34 ============ */
+L("g32","C32 · Patología diverticular",[
+["key","Epidemiología y clasificación",tbl(["Tema","Dato clave"],[
+ ["Divertículo","Verdadero (todas las capas) vs {{pseudo-divertículo}} (herniación de mucosa/submucosa por puntos débiles de la pared; es el colónico). Sigmoides el más frecuente en occidente"],
+ ["Prevalencia","< 5% en < 30 años; aumenta con la edad"],
+ ["Factores de riesgo","Genética (~50%), obesidad (IMC ≥ 30 triplica diverticulosis, ×2,4 diverticulitis), AINEs, tabaco, sedentarismo, dieta baja en fibra, DM2/HTA"],
+ ["Diverticulosis asintomática","Forma más frecuente (75–85%)"],
+ ["SUDD","Enfermedad diverticular sintomática no complicada"],
+ ["Complicada","Absceso, perforación, fístula, estenosis, obstrucción"],
+ ["Hemorragia diverticular","Rotura de vasa recta; indolora, abundante; cede espontáneamente en la mayoría; recurrencia 13–48%; suspender AINEs"]])],
+["dx","Diverticulitis aguda: diagnóstico y gravedad",tbl(["Tema","Dato clave"],[
+ ["Clínica","Dolor en fosa ilíaca izquierda, fiebre, leucocitosis y PCR elevada"],
+ ["TAC","{{Gold standard}} con contraste EV: S 98–99%, E 99%"],
+ ["Alternativas","RM (S 86–94%) y ecografía (S 77–98%; operador dependiente, útil en embarazo)"],
+ ["Hinchey I","Absceso pericólico"],
+ ["Hinchey II","Absceso pélvico o retroperitoneal"],
+ ["Hinchey III","Peritonitis purulenta"],
+ ["Hinchey IV","Peritonitis fecal"]])],
+["tx","Tratamiento y prevención",tbl(["Situación","Conducta"],[
+ ["No complicada","Manejo ambulatorio, dieta líquida, analgesia; antibióticos {{selectivos}} (sepsis, T° > 38,5, leucocitosis marcada, comorbilidad o sin control en 48–72 h)"],
+ ["Esquemas orales","Amoxicilina-ácido clavulánico 875/125 mg c/12 h, o ciprofloxacino + metronidazol; 4–7 días"],
+ ["Absceso","Antibióticos EV; drenaje percutáneo si > 3–4 cm"],
+ ["Perforación / peritonitis","Cirugía de urgencia (Hartmann o resección con anastomosis)"],
+ ["Recurrencia","Tras el primer episodio 13–23%; frutos secos no son factor de riesgo (mito)"],
+ ["Prevención","Fibra, bajar de peso, ejercicio, evitar AINEs y tabaco"],
+ ["Colonoscopía","A las 6–8 semanas de una diverticulitis complicada o con síntomas de alarma, para descartar cáncer"]])],
+["alg","Algoritmo clínico: diverticulitis aguda",alg({t:"Divertic.",n:[
+ ["a","s","Dolor en fosa ilíaca izquierda + fiebre",[["","b"]]],
+ ["b","c","TAC de abdomen y pelvis con contraste",[["Sin complicación","c"],["Absceso","d"],["Peritonitis","e"]]],
+ ["c","t","Ambulatorio; antibiótico solo si hay factores de riesgo",[]],
+ ["d","t","Antibióticos EV + drenaje si es > 3–4 cm",[]],
+ ["e","a","Cirugía urgente (Hinchey III–IV)",[]]]})]
+]);
+L("g33","C33 · Microbiota intestinal",[
+["key","Conceptos y funciones",tbl(["Tema","Dato clave"],[
+ ["Microbiota","Comunidad de microorganismos vivos que habita el intestino"],
+ ["Microbioma","Concepto holístico: microorganismos + sus genes, metabolitos y entorno"],
+ ["Funciones","Protectora (barrera, exclusión competitiva), estructural/inmunológica (desarrollo de la mucosa), metabólica ({{AGCC}} como butirato, vitamina K y B, absorción de Mg, Ca, Fe)"],
+ ["Cultivo","Solo ~20% de las especies intestinales es cultivable"],
+ ["Ómicas","Metagenómica, metatranscriptómica, metaproteómica, metabolómica"],
+ ["ARNr 16S","Amplifica el gen (~1.500 pb, 9 regiones hipervariables); barato, solo taxonomía"],
+ ["Shotgun","ADN total sin amplificar de un gen; da genes y función, resolución a especie/cepa; más costoso"]])],
+["dx","Métricas, desafíos y disbiosis",tbl(["Tema","Dato clave"],[
+ ["Alfa diversidad","Riqueza y equitabilidad dentro de una muestra (Shannon, Chao1)"],
+ ["Beta diversidad","Diferencia entre muestras (Bray-Curtis, UniFrac); ordenamiento PCoA"],
+ ["Diseño","Estudios transversales: asociación, no causalidad (causalidad reversa)"],
+ ["Preanalítica","Congelar a {{−80 °C}}; la extracción sesga las Gram positivas"],
+ ["Disbiosis en EII","Menor alfa diversidad, menos Firmicutes productores de butirato (Faecalibacterium), más Proteobacterias"],
+ ["Causalidad","Trasplante de microbiota de pacientes con EII a ratones libres de gérmenes induce inflamación con Th17"]])],
+["alg","Algoritmo: elegir método de análisis",alg({t:"Microbiota",n:[
+ ["a","s","Pregunta de investigación sobre microbiota",[["","b"]]],
+ ["b","q","¿Solo composición taxonómica?",[["Sí","c"],["No, también función","d"]]],
+ ["c","t","Secuenciación del gen ARNr 16S",[]],
+ ["d","t","Metagenómica shotgun ± metabolómica",[]]]})]
+]);
+L("g34","C34 · Diarrea asociada a antibióticos",[
+["key","Patogenia y diagnóstico",tbl(["Tema","Dato clave"],[
+ ["Entidades","DAA simple (no toxigénica) y diarrea por {{Clostridioides difficile}} (DACD)"],
+ ["C. difficile","Bacilo Gram+ anaerobio esporulado; transmisión fecal-oral por esporas; toxinas A y B (PaLoc), toxina binaria en cepas hipervirulentas (NAP1/027)"],
+ ["Factores de riesgo","Antibióticos (clindamicina, cefalosporinas, fluoroquinolonas), hospitalización, edad > 65, IBP, inmunosupresión"],
+ ["Portación asintomática","4–15% comunidad, 21% hospitalizados, 15–30% en residencias"],
+ ["Atribución","20–30% de DAA, 50–60% de colitis asociada, 90–100% de colitis pseudomembranosa"],
+ ["Clínica","Diarrea acuosa, dolor, fiebre, leucocitosis; megacolon tóxico en fulminante"],
+ ["Diagnóstico","EIA toxina A/B: especificidad 99%, sensibilidad 47,8%; PCR (tcdB): sensibilidad 91,7%; usar algoritmos en dos pasos (GDH + toxina, o PCR + toxina)"],
+ ["Endoscopía","Pseudomembranas (no necesaria de rutina)"]])],
+["tx","Gravedad y tratamiento",tbl(["Situación","Tratamiento"],[
+ ["Grave","Leucocitosis ≥ 15.000 o creatinina ≥ 1,5 mg/dL"],
+ ["Leve-moderada","{{Vancomicina}} oral 125 mg c/6 h por 10 días (metronidazol oral solo si no hay vancomicina)"],
+ ["Grave","Vancomicina 125 mg c/6 h o fidaxomicina 200 mg c/12 h, 10 días"],
+ ["Fulminante","Vancomicina 500 mg c/6 h + metronidazol EV; cirugía (colectomía) si hay megacolon o perforación"],
+ ["Recurrencia","Dentro de 8 semanas; vancomicina en pulsos/descenso o fidaxomicina; luego trasplante de microbiota fecal"],
+ ["Nuevas terapias","TMF y bacterioterapia oral (SER-109/VOWST, FDA 2023)"],
+ ["Prevención","Aislamiento de contacto, lavado con agua y jabón (el alcohol no mata esporas), uso racional de antibióticos"],
+ ["DAA simple","Suspender o cambiar el antibiótico; probióticos de apoyo; hidratación"]])],
+["alg","Algoritmo clínico: diarrea tras antibióticos",alg({t:"DACD",n:[
+ ["a","s","Diarrea ≥ 3 deposiciones/día tras antibióticos",[["","b"]]],
+ ["b","c","Test de C. difficile (GDH + toxina o PCR)",[["Positivo","c"],["Negativo","d"]]],
+ ["c","q","¿Leucocitos ≥ 15.000 o creatinina ≥ 1,5?",[["Sí","e"],["No","f"]]],
+ ["d","t","DAA simple: suspender antibiótico e hidratar",[]],
+ ["e","t","Vancomicina oral o fidaxomicina; fulminante: + metronidazol EV",[]],
+ ["f","t","Vancomicina oral 125 mg c/6 h por 10 días",[]]]})]
+]);
+C.push(
+["g32","Gold standard de diverticulitis aguda","TAC de abdomen y pelvis con contraste EV."],
+["g32","Hinchey III y IV","Peritonitis purulenta y fecal."],
+["g32","Mito de los frutos secos","No aumentan el riesgo de diverticulitis."],
+["g33","Porcentaje cultivable de la microbiota","~20%."],
+["g33","Método para solo taxonomía bacteriana","Secuenciación del gen ARNr 16S."],
+["g34","Tratamiento de DACD leve-moderada","Vancomicina oral 125 mg c/6 h por 10 días."],
+["g34","Mejor test de sensibilidad","PCR para tcdB (91,7%)."],
+["g34","Tratamiento de recurrencias múltiples","Trasplante de microbiota fecal."]
+);
+VF.push(
+["g32","Los antibióticos son siempre obligatorios en diverticulitis no complicada.",false,"Se usan selectivamente."],
+["g32","El divertículo colónico típico es un pseudo-divertículo.",true,"Solo mucosa y submucosa."],
+["g33","La metagenómica shotgun requiere amplificar el gen 16S.",false,"Secuencia el ADN total."],
+["g33","Un estudio transversal demuestra causalidad.",false,"Solo asociación."],
+["g34","El alcohol gel elimina las esporas de C. difficile.",false,"Se requiere agua y jabón."],
+["g34","El EIA de toxinas tiene alta sensibilidad.",false,"Solo 47,8%."],
+["g34","La vancomicina oral se absorbe de forma importante.",false,"Absorción < 3%."]
+);
+MC.push(
+["g32","Sensibilidad de la TAC en diverticulitis","98–99%",["50%","70%","20%"]],
+["g32","Duración de ATB oral en diverticulitis","4–7 días",["1 día","30 días","6 meses"]],
+["g33","Temperatura de conservación estándar de muestras","−80 °C",["25 °C","4 °C","37 °C"]],
+["g34","Umbral de leucocitos de DACD grave","≥ 15.000/mm³",["≥ 4.000","≥ 8.000","≥ 100.000"]],
+["g34","Plazo de recurrencia","8 semanas",["1 día","1 año","10 años"]]
+);
+GP.dx.push(["Hinchey","Gravedad de diverticulitis"],["Pseudomembranas","Colitis por C. difficile"],["ARNr 16S","Composición taxonómica"],["Beta diversidad","Diferencias entre muestras"]);
+GP.tx.push(["Diverticulitis con absceso > 3–4 cm","Drenaje + antibióticos"],["DACD leve","Vancomicina oral 10 días"],["DACD recurrente","Trasplante de microbiota fecal"],["Peritonitis diverticular","Cirugía urgente"]);
+
+/* ============ GASTRO · C15–C18 ============ */
+L("g15","C15 y 16 · Enfermedad inflamatoria intestinal",[
+["key","Epidemiología, patogenia y diferencias Crohn vs CU",tbl(["Tema","Dato clave"],[
+ ["Fenotipos","Colitis ulcerosa (CU) y enfermedad de Crohn (EC); ~10% queda como colitis indeterminada"],
+ ["Patogenia","Genética (> 300 polimorfismos; {{NOD2}} en Crohn), ambiente, microbiota y respuesta inmune"],
+ ["Tabaco","Factor de riesgo en {{Crohn}} (más recaídas); en CU parece protector (paradoja)"],
+ ["Inmunidad","Crohn: Th1/Th17 (IFN-γ, TNF, IL-12/23, IL-17). CU: Th2 atípica (IL-13), inflamación {{confinada a la mucosa}}"],
+ ["Localización","Crohn: cualquier segmento, {{íleon terminal}}, discontinuo (lesiones salteadas), transmural, granulomas, fístulas. CU: recto y continuo hacia proximal, mucosa, abscesos crípticos"],
+ ["Extensión CU","E1 proctitis, E2 izquierda, E3 extensa (pancolitis)"],
+ ["Montreal (Crohn)","Edad (A1–A3), localización (L1 íleon, L2 colon, L3 ileocolónica) y comportamiento (B1 inflamatorio, B2 estenosante, B3 penetrante)"],
+ ["Extraintestinales","Artritis, espondilitis, eritema nodoso, pioderma, uveítis/epiescleritis, colangitis esclerosante primaria (CU)"]])],
+["dx","Diagnóstico y complicaciones",tbl(["Tema","Dato clave"],[
+ ["Sospecha","Diarrea > 4 semanas (sospechar desde 2), sangre, dolor, baja de peso, fístulas perianales"],
+ ["Calprotectina fecal","< 100 µg/g funcional; 100–200 zona gris; {{> 200}} probable inflamación → ileocolonoscopía con biopsias"],
+ ["Imágenes","EnteroTAC o enteroRM para delgado; RM pelvis para enfermedad perianal"],
+ ["Descartar","Infecciones (C. difficile, CMV), isquemia, TBC intestinal, colitis por AINEs"],
+ ["Megacolon tóxico","Colon > {{6 cm}} + toxicidad (fiebre > 38 °C, FC > 100, leucocitosis, anemia): riesgo de perforación"],
+ ["Otras complicaciones","Estenosis, fístulas y abscesos (Crohn); hemorragia; cáncer colorrectal (riesgo ↑ con duración y extensión: vigilancia)"]])],
+["tx","Tratamiento",tbl(["Opción","Puntos clave"],[
+ ["5-ASA (mesalazina)","CU leve–moderada: inducción 3–4,5 g/día, mantención ≥ 2 g. Proctitis: supositorios; colitis izquierda: oral + enema"],
+ ["Corticoides","Solo para inducción de remisión; no sirven de mantención"],
+ ["Inmunomoduladores","Tiopurinas (azatioprina), metotrexato en Crohn"],
+ ["Terapias avanzadas","Anti-TNF (infliximab, adalimumab), vedolizumab, ustekinumab y anti-IL-23, inhibidores JAK / S1P en CU"],
+ ["Colitis aguda grave","Hospitalizar: metilprednisolona 60 mg/día o hidrocortisona 300 mg/día + sigmoidoscopía (CMV, C. difficile). {{Día 3}}: sin respuesta (Oxford > 8 deposiciones o 3–8 con PCR > 45) → infliximab o ciclosporina o colectomía"],
+ ["Cirugía","CU refractaria o displasia: proctocolectomía; Crohn: resección de estenosis/fístulas complicadas"],
+ ["Treat to target","PCR normal, calprotectina < 100–150 µg/g y cicatrización mucosa"],
+ ["Soporte","Nutrición, corrección de hierro/B12/vitamina D, vacunas y trabajo multidisciplinario"]])],
+["alg","Algoritmo clínico: EII",alg({t:"EII",n:[
+ ["a","s","Diarrea crónica con sangre o dolor",[["","b"]]],
+ ["b","c","Calprotectina fecal y descartar infección (coprocultivo, C. difficile)",[["< 100 µg/g","c"],["> 200 µg/g","d"]]],
+ ["c","d","Probable trastorno funcional",[]],
+ ["d","c","Ileocolonoscopía con biopsias",[["Continuo desde recto","e"],["Lesiones salteadas / íleon","f"]]],
+ ["e","d","Colitis ulcerosa",[["","g"]]],
+ ["f","d","Enfermedad de Crohn (enteroTAC o enteroRM)",[["","h"]]],
+ ["g","q","¿Severidad?",[["Leve–moderada","i"],["Aguda grave","j"]]],
+ ["i","t","Mesalazina oral + tópica",[]],
+ ["j","a","Hospitalizar: corticoide IV; día 3 rescate o colectomía",[]],
+ ["h","t","Corticoide de inducción + tiopurina o biológico",[]]]})]
+]);
+L("g17","C17 · Síndrome malabsortivo",[
+["key","Fisiopatología y clínica",tbl(["Tema","Dato clave"],[
+ ["Superficie absortiva","200–300 m² (pliegues ×3, vellosidades ×10, microvellosidades ×20); reserva funcional ~{{50%}}"],
+ ["Causas","Luminales (pancreáticas, biliares), mucosas (celiaquía, Crohn), linfáticas (linfangiectasia), vasculares, congénitas (abetalipoproteinemia, Hartnup, cistinuria)"],
+ ["Formas clínicas","Asintomática, oligosintomática y clásica (diarrea crónica, esteatorrea, baja de peso)"],
+ ["Lípidos","Absorción > 95%; esteatorrea si grasa fecal > 5–6 g/día; déficit de vitaminas A, D, E, K"],
+ ["Carbohidratos y proteínas","Diarrea osmótica, flatulencia; edema e hipoalbuminemia"],
+ ["Micronutrientes","B12: anemia macrocítica y neuropatía; hierro: anemia microcítica; calcio/D: osteopenia"]])],
+["dx","Diagnóstico y tratamiento",tbl(["Examen","Puntos clave"],[
+ ["Van de Kamer","{{Gold standard}}: grasa fecal en 72 h con dieta de 100 g de grasa; > 6 g/día confirma"],
+ ["Elastasa fecal-1","Normal 200–500 µg/g; {{< 200}} sugiere insuficiencia pancreática exocrina"],
+ ["Citrulina plasmática","Marcador de masa enterocitaria (baja en intestino corto)"],
+ ["D-xilosa","Evalúa absorción de la mucosa del delgado"],
+ ["Endoscopia con biopsia duodenal","Celiaquía, Whipple, giardiasis, linfangiectasia"],
+ ["Imágenes","EnteroTAC/RM para Crohn, tumores"],
+ ["Tratamiento etiológico","Celiaquía: dieta sin gluten; insuficiencia pancreática: enzimas pancreáticas (TREP); SIBO: rifaximina"],
+ ["Intestino corto","< 50% del delgado o < 150–200 cm: nutrición parenteral/enteral, MCT y agonista GLP-2 (0,05 mg/kg/día; costo muy alto)"],
+ ["Reposición","Hierro (VO o EV), B12 1.000 µg IM, calcio y vitamina D, vitaminas liposolubles"]])],
+["alg","Algoritmo clínico: malabsorción",alg({t:"Malabsorción",n:[
+ ["a","s","Diarrea crónica con baja de peso o esteatorrea",[["","b"]]],
+ ["b","c","Hemograma, albúmina, hierro, B12, vitamina D",[["","c"]]],
+ ["c","c","Grasa fecal (Van de Kamer) y elastasa fecal",[["Elastasa < 200","d"],["Grasa ↑ con elastasa normal","e"]]],
+ ["d","t","Insuficiencia pancreática: enzimas",[]],
+ ["e","c","Serología celíaca y EDA con biopsia duodenal",[["Atrofia","f"],["Normal","g"]]],
+ ["f","t","Dieta sin gluten",[]],
+ ["g","c","SIBO, enteroTAC/RM, estudio de Crohn",[]]]})]
+]);
+L("g18","C18 · Enfermedad celíaca",[
+["key","Patogenia, epidemiología y clínica",tbl(["Tema","Dato clave"],[
+ ["Definición","Enteropatía autoinmune desencadenada por {{gluten}} en personas con HLA-DQ2/DQ8"],
+ ["Genética","Heredabilidad 60–87%; HLA-DQ2/DQ8 en ≥ 98% de celíacos pero también en 30% de la población: {{alto VPN}}, no confirma. Familiar de 1er grado: 10–15%"],
+ ["Prevalencia Chile","~{{0,5%}} (1:200); 75% mujeres; picos en la infancia y la adultez"],
+ ["Espectro de Oslo","Clásica (malabsorción), no clásica, subclínica, potencial, refractaria"],
+ ["Manifestaciones","Diarrea, distensión, baja de peso, anemia ferropénica, osteoporosis, infertilidad, transaminasas ↑, neuropatía, dermatitis herpetiforme"],
+ ["Grupos de riesgo","Dermatitis herpetiforme (100%), DM1 (3–8% niños), tiroiditis (1,5–14%), Down (5–12%), Turner (2–10%), familiares"]])],
+["dx","Diagnóstico",tbl(["Examen","Puntos clave"],[
+ ["IgA anti-tTG2","Primera línea (ELISA): S y E ~{{98%}}. Pedir con IgA total; si hay déficit de IgA usar IgG anti-tTG/DGP"],
+ ["Anti-endomisio (EMA)","Especificidad ~100%, operador dependiente, menos disponible"],
+ ["Condición","Estudiar {{con dieta con gluten}}; HLA solo para descartar"],
+ ["Biopsia duodenal","≥ 4 de la 2ª porción + 1–2 del bulbo. {{Marsh}}: 0 normal; 1 > 25 LIE/100 enterocitos; 2 hiperplasia de criptas; 3a/b/c atrofia parcial/subtotal/total"],
+ ["Sin biopsia","Solo en casos seleccionados: anti-tTG2 > 10 veces el límite superior con EMA positivo"],
+ ["Diferencial de atrofia","Giardiasis, SIBO, enteropatía por olmesartán, Crohn, inmunodeficiencia variable común, VIH"]])],
+["tx","Tratamiento y seguimiento",tbl(["Tema","Puntos clave"],[
+ ["Dieta sin gluten","De por vida: sin trigo, cebada, centeno (avena contaminada). Sin gluten: ≤ {{20 ppm}} (Codex)"],
+ ["Seguimiento","Clínico y serológico (anti-tTG a los 6–12 meses); densitometría y vacunas; nutricionista"],
+ ["No respondedora","Primero descartar ingestión inadvertida de gluten, SIBO, pancreática, colitis microscópica"],
+ ["Refractaria","Persistencia de atrofia con dieta estricta > 12 meses: tipo I (LIE normales) y II (aberrantes, riesgo de linfoma)"],
+ ["Complicaciones","Yeyunitis ulcerativa, linfoma T asociado a enteropatía (EATL), adenocarcinoma de intestino delgado"],
+ ["Derivar","Refractariedad, complicaciones, diagnóstico dudoso"]])],
+["alg","Algoritmo clínico: celiaquía",alg({t:"Celiaquía",n:[
+ ["a","s","Sospecha de enfermedad celíaca (con dieta con gluten)",[["","b"]]],
+ ["b","c","IgA anti-tTG2 + IgA total",[["Positivo","c"],["Negativo","d"],["Déficit de IgA","e"]]],
+ ["c","c","EDA con biopsias duodenales",[["Marsh 2–3","f"],["Normal","g"]]],
+ ["d","d","Poco probable; HLA-DQ2/DQ8 si persiste la duda",[]],
+ ["e","c","IgG anti-tTG o DGP y biopsia",[["","c"]]],
+ ["f","t","Dieta sin gluten de por vida + seguimiento",[["Persisten síntomas","h"]]],
+ ["g","d","Celiaquía potencial: seguir",[]],
+ ["h","a","Descartar gluten oculto y enfermedad refractaria",[]]]})]
+]);
+C.push(
+["g15","Crohn vs colitis ulcerosa: extensión","Crohn: transmural y discontinuo, cualquier segmento. CU: mucosa, continua desde el recto."],
+["g15","Calprotectina fecal > 200 µg/g","Inflamación orgánica probable: ileocolonoscopía con biopsias."],
+["g15","Megacolon tóxico","Colon > 6 cm con toxicidad sistémica."],
+["g15","Colitis aguda grave: día 3","Sin respuesta a corticoide IV: rescate con infliximab o ciclosporina, o colectomía."],
+["g17","Gold standard de esteatorrea","Van de Kamer: grasa fecal > 6 g/día en 72 h."],
+["g17","Elastasa fecal < 200 µg/g","Insuficiencia pancreática exocrina."],
+["g17","Síndrome de intestino corto","< 50% del delgado o < 150–200 cm: nutrición, MCT y análogo GLP-2."],
+["g18","Examen de primera línea en celiaquía","IgA anti-tTG2 (S y E ~98%) con IgA total."],
+["g18","Clasificación Marsh-Oberhuber","0 normal, 1 LIE > 25, 2 hiperplasia de criptas, 3 atrofia (a, b, c)."],
+["g18","Límite de gluten sin gluten","20 ppm."]
+);
+VF.push(
+["g15","El tabaquismo empeora la enfermedad de Crohn.",true,"Más recaídas y resistencia al tratamiento."],
+["g15","Los corticoides sirven como tratamiento de mantención en EII.",false,"Solo inducen remisión."],
+["g15","La mesalazina es pilar en la colitis ulcerosa leve a moderada.",true,""],
+["g17","El test de Van de Kamer es el gold standard de la grasa fecal.",true,"> 6 g/día confirma."],
+["g17","La elastasa fecal < 200 µg/g sugiere insuficiencia pancreática.",true,""],
+["g18","El HLA-DQ2/DQ8 confirma el diagnóstico de celiaquía.",false,"Solo tiene valor predictivo negativo."],
+["g18","El estudio serológico debe hacerse con dieta libre de gluten.",false,"Debe hacerse con gluten en la dieta."],
+["g18","El límite para considerar un alimento sin gluten es 20 ppm.",true,"Codex Alimentarius."]
+);
+MC.push(
+["g15","Diámetro del megacolon tóxico","> 6 cm",["> 3 cm","> 10 cm","> 15 cm"]],
+["g15","Dosis de mantención de mesalazina en CU","≥ 2 g/día",["0,5 g/día","10 g/día","100 mg/día"]],
+["g17","Grasa fecal que confirma esteatorrea (Van de Kamer)","> 6 g/día",["> 1 g/día","> 20 g/día","> 50 g/día"]],
+["g17","Reserva funcional del delgado","~50%",["5%","20%","90%"]],
+["g18","Prevalencia de celiaquía en Chile","~0,5%",["5%","10%","0,01%"]],
+["g18","Sensibilidad y especificidad de IgA anti-tTG2","98%",["50%","70%","100% de ambas"]]
+);
+GP.dx.push(["Crohn","Lesiones salteadas, transmural, íleon terminal"],["Colitis ulcerosa","Continua desde el recto, mucosa"],["Marsh 3","Atrofia vellositaria"],["Van de Kamer","Grasa fecal > 6 g/día"],["Elastasa fecal < 200","Insuficiencia pancreática exocrina"]);
+GP.tx.push(["CU leve a moderada","Mesalazina oral y tópica"],["Colitis aguda grave","Corticoide IV; rescate al día 3"],["Celiaquía","Dieta sin gluten de por vida"],["Intestino corto","Nutrición, MCT, agonista GLP-2"]);
+
+/* ============ GASTRO · C9–C11 ============ */
+L("g9","C9 · Hemorragia digestiva baja",[
+["key","Epidemiología, etiología y estratificación",tbl(["Tema","Dato clave"],[
+ ["Definición","Sangrado distal a la válvula ileocecal (colon, recto, ano); 20–27/100.000, sobre todo adultos mayores"],
+ ["Evolución","Cesa espontáneamente en 75–80%; en general mejor pronóstico que la HDA"],
+ ["Causas","Divertículos, colitis (13,6%: isquémica, infecciosa, inflamatoria), cáncer colorrectal 6,1%, pólipos 2,5%, post-polipectomía 1,9–3%, angiodisplasias 1–1,2%, hemorroides y fisuras"],
+ ["Divertículos","Diverticulosis en > 50% de los mayores de 60 años; sangra {{3–15%}}. Rectorragia abundante e {{indolora}}; recurrencia 25–40% a 4 años"],
+ ["Colitis isquémica","Factores CV; dolor + diarrea sanguinolenta; eritema, edema y úlceras en «territorios frontera»"],
+ ["Angiodisplasias","Ciego y colon ascendente, > 70 años; antitrombóticos las desenmascaran; tratamiento térmico (bipolar o argón)"],
+ ["Anorrectal","Hemorroides (hasta 75% incidental) y fisuras: sangre roja al final de la defecación"],
+ ["Colitis infecciosa","Campylobacter: azitromicina; Shigella: ciprofloxacino; E. coli Shiga: {{sin antibióticos}} (riesgo de SHU); amebiasis: metronidazol + paromomicina"],
+ ["Oakland","Edad, sexo, ingreso previo, tacto rectal, FC, PAS y Hb. {{≤ 8 puntos}} = bajo riesgo de alta segura"]])],
+["tx","Manejo y estudio",tbl(["Tema","Dato clave"],[
+ ["Reanimación","Misma sistemática de HDA: vías gruesas, cristaloides, transfusión restrictiva"],
+ ["Anticoagulantes","Evaluar suspensión/reversión según riesgo trombótico; individualizar"],
+ ["Colonoscopía","Estudio principal tras preparación; en 24 h en hospitalizados estables. Evitar en colitis infecciosa aguda"],
+ ["Estigmas diverticulares","Arterial activo (25%): adrenalina + hemoclip/térmica. Vaso visible: clips a ambos lados"],
+ ["AngioTAC","Sangrado masivo o inestable: localiza y guía embolización"],
+ ["Falla","Angioembolización; cirugía solo como rescate"]])],
+["alg","Algoritmo clínico: HDB",alg({t:"HDB",n:[
+ ["a","s","Rectorragia o hematoquezia",[["","b"]]],
+ ["b","q","¿Inestable hemodinámicamente?",[["Sí","c"],["No","d"]]],
+ ["c","t","Reanimar; considerar HDA masiva (EDA) y AngioTAC",[["","e"]]],
+ ["d","c","Oakland score + tacto rectal",[["≤ 8","f"],["> 8","g"]]],
+ ["f","t","Alta con colonoscopía ambulatoria",[]],
+ ["g","t","Hospitalizar y preparar colon",[["","h"]]],
+ ["h","c","Colonoscopía en 24 h",[["Divertículo o angiodisplasia","i"],["Sin causa","j"]]],
+ ["i","t","Hemostasia endoscópica (clip, adrenalina, argón)",[]],
+ ["j","c","AngioTAC; arteriografía y embolización",[["Falla","k"]]],
+ ["e","c","AngioTAC",[["","j"]]],
+ ["k","a","Cirugía de rescate",[]]]})]
+]);
+L("g10","C10 · Síndrome de intestino irritable (SII)",[
+["key","Definición, patogenia y diagnóstico",tbl(["Tema","Dato clave"],[
+ ["Prevalencia","3% con Roma IV; {{9%}} con Roma V (más sensible)"],
+ ["Patogenia","Trastorno del eje intestino-cerebro: hipersensibilidad visceral, alteración de motilidad, disbiosis, inflamación de bajo grado"],
+ ["Postinfeccioso","Una enteritis aguda ↑ el riesgo {{4,2 veces}}"],
+ ["Diagnóstico","{{Criterios positivos}} (Roma V), no por exclusión de todo"],
+ ["Subtipos","SII-E, SII-D, SII-M (mixto) y SII-U (no clasificable)"],
+ ["Estudio acotado","Hemograma, PCR, celiaquía serológica en SII-D; {{calprotectina fecal}} < 45 años con diarrea"],
+ ["Colonoscopía","Si inicio > 45–50 años, banderas rojas o calprotectina alta. En SII-D tomar {{biopsias escalonadas}} (colitis microscópica)"],
+ ["Banderas rojas","Fiebre, diarrea nocturna profusa, sangrado, baja de peso, anemia, antecedente familiar de CCR o EII, masa"]])],
+["tx","Tratamiento",tbl(["Tema","Puntos clave"],[
+ ["Alianza terapéutica","Educar, validar los síntomas y evitar sobreestudiar"],
+ ["Dieta","Guía NICE; dieta baja en {{FODMAPs}} (restricción 4–6 sem, reintroducción y personalización). CARIBS 2024: respuesta 76% a 4 semanas"],
+ ["Antiespasmódicos","Otilonio, pinaverio, mebeverina; aceite de menta"],
+ ["SII-E","PEG (mejora tránsito, no dolor); {{linaclotida}} 290 µg (recomendación fuerte); plecanatida 3 mg"],
+ ["SII-D","{{Rifaximina}} 550 mg c/8 h 14 d; loperamida; secuestrantes de ácidos biliares"],
+ ["Neuromoduladores","{{Amitriptilina}} 10 mg/noche (elección en SII-D, enlentece el tránsito); ISRS en SII-E; se usan por modular el dolor, no por depresión"],
+ ["Psicoterapia","TCC e hipnoterapia dirigida al intestino"]])],
+["alg","Algoritmo clínico: SII",alg({t:"SII",n:[
+ ["a","s","Dolor abdominal con cambio del hábito intestinal",[["","b"]]],
+ ["b","q","¿Banderas rojas, > 45–50 años o calprotectina elevada?",[["Sí","c"],["No","d"]]],
+ ["c","c","Colonoscopía con biopsias escalonadas",[]],
+ ["d","d","SII por criterios de Roma V",[["","e"]]],
+ ["e","q","¿Subtipo?",[["SII-E","f"],["SII-D","g"],["SII-M","h"]]],
+ ["f","t","Fibra/PEG; linaclotida si falla",[]],
+ ["g","t","Dieta baja en FODMAPs; rifaximina; amitriptilina",[]],
+ ["h","t","Antiespasmódicos y neuromoduladores",[]]]})]
+]);
+L("g11","C11 · Distensión abdominal",[
+["key","Fisiopatología y diagnóstico",tbl(["Tema","Dato clave"],[
+ ["Epidemiología","10–20% de la población; 60–90% se asocia a trastornos del eje intestino-cerebro; severa en 25%"],
+ ["Gas intestinal","99% N2 y O2 (aire deglutido); < 1% CO2, H2 y CH4 de fermentación bacteriana"],
+ ["Malabsorción de lactosa","Hipolactasia; lactasa no persistente hacia los 20 años (30–60% de la población)"],
+ ["Estreñimiento","Retención y fermentación colónica"],
+ ["SIBO","{{Rara}}; requiere factores predisponentes (estasis, cirugía, hipoclorhidria); sobrediagnosticada"],
+ ["Hipersensibilidad y acomodación","Disinergia abdomino-frénica: el diafragma desciende y la pared abdominal protruye"],
+ ["Roma V","Síntomas ≥ 1 día/semana por 3 meses (inicio 6 meses antes) sin cumplir SII ni dispepsia funcional"],
+ ["Pruebas","Test de aire espirado SIBO (H2 ≥ 20 ppm o CH4 ≥ 10 ppm; interpretar con cautela). Lactosa: H2 ≥ 20 ppm sobre basal o estudio genético C>T-13910 MCM6"],
+ ["Banderas rojas","Baja de peso, anemia, sangrado, masa, ascitis, vómitos, inicio tardío"]])],
+["tx","Tratamiento",tbl(["Opción","Puntos clave"],[
+ ["Dieta baja en FODMAPs","Restricción 4–8 sem; reintroducción 6–10 sem; no mantenerla de forma indefinida (riesgo de trastorno alimentario y disbiosis)"],
+ ["Lactasa","Comprimido (p. ej. 9000 FCC) con el primer bocado"],
+ ["Antiespasmódicos","Otilonio, pinaverio, mebeverina, trimebutino (efecto modesto)"],
+ ["Rifaximina","400 mg c/8 h o 550 mg c/12 h por 14 días: beneficio discreto"],
+ ["Neuromoduladores","Respuesta 61% con 36% de mejoría > 50%"],
+ ["Biofeedback","Reeducación tóraco-abdominal en disinergia abdomino-frénica"]])],
+["alg","Algoritmo clínico: distensión abdominal",alg({t:"Distensión",n:[
+ ["a","s","Distensión abdominal crónica",[["","b"]]],
+ ["b","q","¿Banderas rojas?",[["Sí","c"],["No","d"]]],
+ ["c","c","Estudio dirigido (imágenes, EDA/colonoscopía)",[]],
+ ["d","c","Anamnesis dietética y de hábito intestinal",[["","e"]]],
+ ["e","q","¿Causa identificable?",[["Lactosa","f"],["Estreñimiento","g"],["Disinergia","h"],["No","i"]]],
+ ["f","t","Evitar lácteos o lactasa",[]],
+ ["g","t","Tratar estreñimiento",[]],
+ ["h","t","Biofeedback tóraco-abdominal",[]],
+ ["i","t","Dieta FODMAP, antiespasmódicos, neuromoduladores",[]]]})]
+]);
+C.push(
+["g9","Característica de la hemorragia diverticular","Rectorragia abundante e indolora; cesa sola en 75–80%."],
+["g9","Colitis por E. coli productora de Shiga","Soporte e hidratación; evitar antibióticos por riesgo de síndrome hemolítico urémico."],
+["g9","Oakland score","Estratifica riesgo en HDB; ≤ 8 puntos permite alta segura."],
+["g10","Diagnóstico del SII","Criterios positivos de Roma V, no por exclusión."],
+["g10","Biopsias en SII-D con colonoscopía","Escalonadas, aun con mucosa normal, para descartar colitis microscópica."],
+["g10","Fármaco de elección para SII-D con dolor","Amitriptilina 10 mg nocturna; rifaximina como alternativa."],
+["g10","Linaclotida","Agonista de guanilato ciclasa-C 290 µg/día: SII-E con recomendación fuerte."],
+["g11","Composición del gas intestinal","99% N2 y O2 por aire deglutido; el resto proviene de fermentación bacteriana."],
+["g11","SIBO","Rara y sobrediagnosticada; requiere factores predisponentes."],
+["g11","Tratamiento de la disinergia abdomino-frénica","Biofeedback tóraco-abdominal."]
+);
+VF.push(
+["g9","La mayoría de las hemorragias diverticulares requiere cirugía.",false,"Cesan espontáneamente en 75–80%."],
+["g9","En colitis por E. coli productora de Shiga se recomiendan antibióticos.",false,"Aumentan el riesgo de SHU."],
+["g9","Las angiodisplasias predominan en ciego y colon ascendente.",true,"Más en mayores de 70 años."],
+["g10","El SII se diagnostica por exclusión de todas las demás causas.",false,"Se diagnostica con criterios positivos."],
+["g10","La calprotectina fecal ayuda a distinguir EII de trastornos funcionales.",true,"En menores de 45 años con diarrea."],
+["g10","La amitriptilina se usa en SII porque estos pacientes están deprimidos.",false,"Se usa para modular el dolor, en dosis bajas."],
+["g11","El SIBO es una causa muy frecuente de distensión en personas sin factores predisponentes.",false,"Es rara y sobrediagnosticada."],
+["g11","La dieta baja en FODMAPs debe mantenerse estricta de forma indefinida.",false,"Tiene fases; la restricción prolongada es riesgosa."]
+);
+MC.push(
+["g9","Frecuencia de cese espontáneo de la hemorragia diverticular","75–80%",["10%","30%","99%"]],
+["g10","Prevalencia de SII con criterios Roma V","9%",["1%","3%","25%"]],
+["g10","Dosis de linaclotida","290 µg/día",["29 µg/día","1 mg/día","3 mg/día"]],
+["g11","Prevalencia de distensión abdominal en la población","10–20%",["1–2%","40–50%","80%"]]
+);
+GP.dx.push(["SII","Criterios positivos de Roma V"],["Hemorragia diverticular","Rectorragia indolora abundante"],["SII-D","Biopsias escalonadas en colonoscopía"],["Disinergia abdomino-frénica","Distensión por protrusión de la pared abdominal"]);
+GP.tx.push(["SII-E","Linaclotida o PEG"],["SII-D","Rifaximina o amitriptilina"],["Intolerancia a lactosa","Evitar lácteos o lactasa"],["Angiodisplasia sangrante","Argón plasma o térmica"]);
+
+/* ============ GASTRO · C1–C5 ============ */
+L("g1","C1 · Enfermedad por reflujo gastroesofágico (ERGE)",[
+["key","Definición, fisiopatología y fenotipos",tbl(["Tema","Dato clave"],[
+ ["Definición","Ascenso de contenido gástrico al esófago con {{síntomas molestos y/o complicaciones}} (Montreal 2006)"],
+ ["Epidemiología","Prevalencia global {{13,3%}} (Norteamérica 20%, Europa 14%, Latam 13%). Chile (ENS 2003): 30% con síntomas en el mes; ~10% con ERGE patológico"],
+ ["Tendencia","↑ por obesidad centrípeta (↑ presión intraabdominal) y ↓ de {{H. pylori}} (masa parietal íntegra). ↑ Barrett y adenocarcinoma distal"],
+ ["RGE fisiológico vs patológico","Fisiológico: posprandial, breve, sin lesión. Patológico: exposición ácida excede el aclaramiento químico (saliva, bicarbonato) y mecánico (peristalsis)"],
+ ["Barrera antirreflujo","EEI + diafragma crural. Solo funcional → reflujo en bipedestación ({{ERNE}}). Defecto estructural (hernia hiatal) → reflujo también en {{decúbito}} y ERGE erosiva severa"],
+ ["ERGE erosiva","Rupturas mucosas en EDA con exposición ácida anormal"],
+ ["ERNE","EDA normal con AET patológico ({{> 6%}})"],
+ ["Hipersensibilidad al reflujo","AET {{< 4%}} pero asociación sintomática positiva (SAP > 95% o índice sintomático > 50%)"],
+ ["Pirosis funcional","EDA normal, AET < 4% y asociación sintomática negativa: trastorno del eje cerebro-intestino"]])],
+["dx","Cuadro clínico y diagnóstico",tbl(["Tema","Dato clave"],[
+ ["Síntomas típicos","{{Pirosis}}, regurgitación ácida, dolor torácico de origen esofágico (descartar antes causa coronaria)"],
+ ["Síntomas atípicos","Tos crónica, asma, disfonía, globus, otalgia: relación causal baja si están aislados. Eructos excesivos y {{rumiación}} no responden a IBP (terapia conductual)"],
+ ["Anamnesis","Sensibilidad y especificidad ≈ {{60%}} (AUC ~0,60): no basta para diagnosticar ni operar"],
+ ["Prueba con IBP","Dosis doble (omeprazol 20 mg c/12 h) 4–8 sem en síntomas típicos sin alarma. S {{78%}}, E {{54%}} (efecto placebo 10–25%)"],
+ ["EDA (tras 2–4 sem sin IBP)","Normal en 70–90%. Definitivo: esofagitis LA {{B, C o D}}, Barrett confirmado por biopsia (> 3 cm), estenosis péptica. {{LA A}} es inconcluyente (5–20% de sanos)"],
+ ["Monitoreo de reflujo","{{Estándar de oro}}: cápsula BRAVO (hasta 96 h) o impedancio-pH 24 h. Indicado si EDA normal/LA A, refractariedad (< 50% de alivio), síntomas extraesofágicos y estudio preoperatorio"],
+ ["Lyon 2.0 (2024)","ERGE no probada: estudiar {{OFF IBP}}. ERGE probada con síntomas persistentes: estudiar {{ON IBP}}"],
+ ["AET en Lyon","Conclusivo: {{> 6%}} (OFF) o > 4% + > 80 episodios (ON). Contra ERGE: < 4% (OFF) o < 1% (ON)"],
+ ["Diferenciales","Acalasia (manometría de alta resolución antes de cirugía), EoE, esofagitis infecciosa o por fármacos, gastroparesia, dispepsia"]])],
+["tx","Tratamiento",tbl(["Opción","Puntos clave"],[
+ ["Medidas generales","Bajar de peso, elevar cabecera, fraccionar comidas y no acostarse en 2–3 h posteriores"],
+ ["IBP","{{Primera línea}} y más eficaces. Con estómago vacío, 30–60 min antes del desayuno (o cena si BID). Muy seguros: único riesgo real ↑ leve de infecciones entéricas (C. difficile, Campylobacter, SIBO)"],
+ ["P-CABs","Vonoprazan, tegoprazan: mejoría {{86,3%}} y cicatrización {{90,7%}} en esofagitis resistente a IBP; no son 1ª línea por costo y menor seguridad a largo plazo"],
+ ["Alginatos / antiácidos","Alivio sintomático a demanda"],
+ ["Funduplicatura laparoscópica","ERGE objetiva, LA C/D, hernia hiatal grande o refractariedad. {{80%}} suspende IBP; complicaciones 4%; recurrencia 18–40% a 5 años"],
+ ["Otros","Dispositivos y cirugía bariátrica (obesidad): derivar a centro especializado"]])],
+["alg","Algoritmo clínico: sospecha de ERGE",alg({t:"ERGE",n:[
+ ["a","s","Síntomas típicos de reflujo (pirosis, regurgitación)",[["","b"]]],
+ ["b","q","¿Signos de alarma? (disfagia, baja de peso, anemia, HDA, vómitos)",[["Sí","c"],["No","d"]]],
+ ["c","a","EDA precoz con biopsias",[]],
+ ["d","t","Prueba con IBP doble dosis 4–8 sem",[["","e"]]],
+ ["e","q","¿Respuesta y control sostenido?",[["Sí","f"],["No / recurre","g"]]],
+ ["f","t","Menor dosis efectiva y medidas de estilo de vida",[]],
+ ["g","c","EDA tras 2–4 sem sin IBP (clasificación LA)",[["LA B, C, D o Barrett","h"],["Normal o LA A","i"]]],
+ ["h","d","ERGE probada: optimizar IBP / P-CAB",[["Refractaria","k"]]],
+ ["i","c","Monitoreo pH / impedancio-pH OFF IBP",[["AET > 6%","j"],["AET < 4%","l"]]],
+ ["j","d","ERGE (erosiva o ERNE)",[]],
+ ["l","d","Hipersensibilidad o pirosis funcional",[]],
+ ["k","c","Impedancio-pH ON IBP y manometría",[["Persiste ERGE","m"]]],
+ ["m","t","Funduplicatura laparoscópica",[]]]})]
+]);
+L("g2","C2 · Disfagia",[
+["key","Clasificación, epidemiología y anamnesis",tbl(["Tema","Dato clave"],[
+ ["Definición","Subjetiva: dificultad para el paso del bolo. Objetiva: alteración demostrable de la deglución"],
+ ["Orofaríngea (D-ORO)","Falla de la fase alta/coordinación. Riesgo: {{aspiración}} y neumonía aspirativa. Etiología neuromuscular (ACV, Parkinson, ELA, demencia). Manejo: neurología, ORL, fonoaudiología"],
+ ["Esofágica (D-ESO)","Falla del transporte por el cuerpo esofágico/EEI. Prioridad: descartar {{cáncer de esófago}}. Etiología mecánica o motora (acalasia)"],
+ ["Epidemiología","3% de la población; 10–20% en adultos mayores; hasta 50% post-ACV (30% aspira); > 72% en demencia"],
+ ["Signo de alarma","Disfagia es {{signo de alarma mayor}}: investigar siempre con odinofagia, baja de peso, anemia, HDA"],
+ ["4 preguntas D-ORO","¿Dificultad para iniciar la deglución? ¿regurgitación nasal? ¿tos/atoro inmediato? ¿múltiples intentos por bolo? ≥ 1 sí → {{D-ORO}}. Orienta bien en 80–85%"],
+ ["Localización referida","Hasta {{30%}} de lesiones distales refieren molestia cervical: nunca asumir el nivel"],
+ ["Examen físico","Sarcopenia, anemia, deshidratación; esclerodactilia/Raynaud (aperistalsis); masas cervicales"],
+ ["Test del vaso de agua","Tamizaje a la cabecera (90 mL): positivo si tos/atoro o {{voz húmeda}} posdeglución"]])],
+["dx","Diagnóstico por tipo",tbl(["Método","Puntos clave"],[
+ ["FEES","Nasofibroscopía durante la deglución; portátil, sin radiación"],
+ ["VFSS","Videofluoroscopía: requiere traslado, colaboración y radiación. FEES y VFSS tienen S y E comparables: {{complementarias}}"],
+ ["Consistencia (D-ESO)","Sólidos y líquidos desde el inicio → motor; solo sólidos y progresiva → {{mecánica}} (estenosis, cáncer, anillos)"],
+ ["Curso (D-ESO)","Progresión lenta: benigna o motora. Intermitente con impactación por carnes: {{esofagitis eosinofílica}} (10–17% de D-ESO en EDA)"],
+ ["EDA","Examen {{inicial e impostergable}} (idealmente < 2 semanas); cáncer en solo 0,9%, pero muy letal. Tomar biopsias (EoE)"],
+ ["Manometría alta resolución","Chicago 4.0: 10 degluciones de 5 mL supino + 5 sentado. Diagnostica {{patrones}}, no enfermedades"],
+ ["Pseudoacalasia","Patrón de acalasia por tumor, opioides/tramadol, cannabis, Chagas, estenosis péptica severa o EoE"],
+ ["Trastornos motores","Hipercontráctil (Jackhammer, DCI > 8000), ausencia de contractilidad (esclerosis sistémica), motilidad inefectiva (> 70% débiles)"]])],
+["cl","Acalasia",tbl(["Tema","Dato clave"],[
+ ["Definición","{{EEI sin relajación}} + aperistalsis del cuerpo; prevalencia ~10/100.000, 5ª década"],
+ ["Tipo I (clásica)","Sin peristalsis ni presurización"],
+ ["Tipo II","Presurización {{panesofágica}} > 20% de degluciones: mejor respuesta terapéutica"],
+ ["Tipo III (espástica)","Contracciones espásticas prematuras distales > 20%: peor respuesta"],
+ ["Patogenia","Infiltrado T CD8+, Th1/Th17, eosinófilos, mastocitos; pérdida de neuronas inhibitorias (HLA-DQw1, virus gatillantes)"],
+ ["Tratamiento definitivo","{{POEM}} (miotomía endoscópica peroral) o miotomía de Heller laparoscópica"],
+ ["Transitorio / puente","Dilatación neumática, toxina botulínica (adultos mayores o no candidatos)"],
+ ["FLIP","Sonda de imagen funcional del lumen: mide distensibilidad del EEI (EGJ-DI); útil en casos dudosos y durante la cirugía"]])],
+["alg","Algoritmo clínico: disfagia",alg({t:"Disfagia",n:[
+ ["a","s","Paciente con disfagia",[["","b"]]],
+ ["b","q","¿Dificultad para iniciar, regurgitación nasal, tos inmediata o múltiples degluciones?",[["Sí","c"],["No","d"]]],
+ ["c","d","Disfagia orofaríngea",[["","e"]]],
+ ["d","d","Disfagia esofágica",[["","f"]]],
+ ["e","c","Test del vaso de agua → FEES / VFSS",[["","g"]]],
+ ["g","t","Fonoaudiología, texturas, tratar causa neurológica",[]],
+ ["f","c","EDA < 2 semanas con biopsias (cáncer, EoE)",[["Lesión / tumor","i"],["EDA normal","h"]]],
+ ["i","a","Etapificar y derivar a cirugía digestiva / oncología",[]],
+ ["h","c","Manometría de alta resolución (Chicago 4.0)",[["Acalasia","j"],["Otro trastorno motor","k"]]],
+ ["j","t","POEM o miotomía de Heller",[]],
+ ["k","t","Tratar según patrón y causa",[]]]})]
+]);
+L("g3","C3 · Dispepsia",[
+["key","Definición, Roma IV y fisiopatología",tbl(["Tema","Dato clave"],[
+ ["Clasificación inicial","Orgánica (úlcera, cáncer; solo {{20%}}), asociada a H. pylori y {{funcional}} (80% de EDA normales)"],
+ ["Epidemiología","7,2–8,4% mundial. Chile: úlcera gastroduodenal 3,5%, dispepsia funcional ≈ 14%, H. pylori 60–70% (ENS 2017)"],
+ ["Historia natural","Crónica y fluctuante; solo 20% queda asintomático. Más en mujeres; traslapo con SII en 10–27% (OR 8)"],
+ ["Roma IV","Síntomas {{3 meses}} con inicio ≥ {{6 meses}} antes y EDA sin lesión estructural"],
+ ["Síndrome de distrés postprandial","Plenitud postprandial y saciedad precoz con la ingesta; el más frecuente"],
+ ["Síndrome de dolor epigástrico","Dolor o ardor epigástrico severo; puede relacionarse con el ayuno"],
+ ["Mixto","Hasta 21% superpone ambos subtipos"],
+ ["Alexitimia","25–30% no logra describir sus sensaciones: usar pictogramas"],
+ ["Falla de acomodación","{{45%}}: el fondo no se relaja con la ingesta → plenitud con volúmenes pequeños"],
+ ["Vaciamiento y sensibilidad","Retardo del vaciamiento 30%; hipersensibilidad visceral 35%; microinflamación duodenal"],
+ ["Gastroparesia","Retención > {{10%}} a las 4 h en cintigrafía; ~40% migra entre DF y gastroparesia"]])],
+["dx","Algoritmo diagnóstico y signos de alarma",tbl(["Situación","Conducta"],[
+ ["≥ 40 años (GES Chile)","{{EDA}} con test de ureasa en todo paciente dispéptico"],
+ ["Signos de alarma","EDA inmediata a cualquier edad: baja de peso, disfagia, vómitos persistentes, anemia/HDA, masa, antecedente familiar de cáncer gástrico"],
+ ["< 40 años sin alarma","Estrategia {{test and treat}}: antígeno fecal o test de aliento"],
+ ["H. pylori positivo","Erradicar y evaluar síntomas (puede tardar 6–12 meses; hito a 3–6 meses)"],
+ ["H. pylori negativo","Prueba con IBP {{8 semanas}}"],
+ ["Falla de la prueba","Derivar a EDA"],
+ ["Diagnóstico final","Si remite tras erradicar: dispepsia asociada a H. pylori; si persiste: {{dispepsia funcional}}"]])],
+["tx","Tratamiento",tbl(["Opción","Puntos clave"],[
+ ["Erradicación de H. pylori","NNT {{14}} para resolver síntomas en dispepsia"],
+ ["IBP","1ª línea en SDE y SDP, 8 semanas (RR 0,88; NNT 11)"],
+ ["Terapias mente-intestino","TCC, hipnoterapia dirigida al intestino y mindfulness: RR 0,53–0,56"],
+ ["SDP: procinéticos","Primera línea en el síndrome de distrés postprandial"],
+ ["SDP: acomodadores","{{Buspirona}} (relaja el fondo); {{mirtazapina}} 15 mg si hay saciedad precoz con baja de peso"],
+ ["SDE: neuromoduladores","Tras falla de IBP: {{amitriptilina}} 12,5–25 mg/noche (mayor evidencia en dolor e hipersensibilidad)"]])],
+["alg","Algoritmo clínico: dispepsia",alg({t:"Dispepsia",n:[
+ ["a","s","Paciente con dispepsia",[["","b"]]],
+ ["b","q","¿≥ 40 años o signos de alarma?",[["Sí","c"],["No","d"]]],
+ ["c","c","EDA con test de ureasa",[["Lesión","e"],["Normal","f"]]],
+ ["e","d","Dispepsia orgánica (úlcera, cáncer)",[]],
+ ["f","d","Dispepsia funcional / asociada a H. pylori",[["","k"]]],
+ ["d","c","Test and treat: antígeno fecal o test de aliento",[["Positivo","g"],["Negativo","h"]]],
+ ["g","t","Erradicar H. pylori y reevaluar a los 3–6 meses",[["Persisten síntomas","c"]]],
+ ["h","t","IBP 8 semanas",[["Falla","c"]]],
+ ["k","q","¿Subtipo predominante?",[["Distrés postprandial","l"],["Dolor epigástrico","m"]]],
+ ["l","t","Procinético; buspirona o mirtazapina",[]],
+ ["m","t","IBP; luego amitriptilina en dosis baja",[]]]})]
+]);
+L("g4","C4 · H. pylori y gastritis autoinmune",[
+["key","Epidemiología, diagnóstico e indicaciones",tbl(["Tema","Dato clave"],[
+ ["Relevancia","Cultivada en 1983; carcinógeno {{grupo 1}} OMS/IARC (1994)"],
+ ["Epidemiología Chile","Seroprevalencia histórica 74%; en EDA de Santiago bajó de 76% (1995–2003) a ~{{29–30%}} (2010–2020)"],
+ ["Test rápido de ureasa","Invasivo. S 94–95%, E > 90%. Falsos negativos con IBP, antibióticos o sangrado activo"],
+ ["Histología (Giemsa)","S y E > 90%; además evalúa atrofia y metaplasia"],
+ ["Cultivo","E > 95%; S variable (50–80%): permite estudiar susceptibilidad"],
+ ["Prueba de aliento 13C/14C","{{No invasiva de elección}}. Suspender IBP 2 sem y antibióticos 4 sem"],
+ ["Antígeno fecal","S y E > 90%; excelente para confirmar erradicación"],
+ ["Serología IgG","> 80%; no distingue infección activa de contacto previo"],
+ ["Indicaciones absolutas","Úlcera péptica, linfoma MALT, cáncer gástrico (resecado), gastritis atrófica, familiares de primer grado de cáncer gástrico"],
+ ["Controversiales","Dispepsia funcional (NNT 14), anemia ferropriva inexplicada; estrategia {{test and treat}} OMS 2024 en riesgo intermedio–alto"]])],
+["tx","Tratamiento de erradicación",tbl(["Esquema","Detalle y eficacia"],[
+ ["Triple estándar","IBP + amoxicilina 1 g + claritromicina 500 mg c/12 h 14 d. Erradicación 69–81%: {{en desuso en Chile}} (resistencia a claritromicina 30–39%)"],
+ ["Concomitante sin bismuto (EACM14)","IBP + amoxicilina + metronidazol + claritromicina, 14 d: {{93,7%}}"],
+ ["Cuádruple con bismuto (ETMB14)","IBP c/12 h + bismuto + metronidazol 500 mg c/8 h + amoxicilina 1 g c/8 h (o tetraciclina/doxiciclina), 14 d: {{97,6%}}, {{gold estándar en Chile}}"],
+ ["Dual de altas dosis","IBP alto (omeprazol 40 mg c/8 h) + amoxicilina 1 g c/8 h: 88%"],
+ ["P-CABs","Fexuprazan, tegoprazan, vonoprazan: bloqueo ácido ~300 veces más potente, sin depender del polimorfismo CYP2C19"],
+ ["Resistencias","Claritromicina 30–39%, levofloxacino 32%, metronidazol 20% (superable con dosis altas)"],
+ ["Control","Verificar {{erradicación}} (aliento o antígeno fecal) ≥ 4 semanas tras antibióticos y 2 semanas sin IBP"]])],
+["cl","Gastritis crónica, cascada de Correa y gastritis autoinmune",tbl(["Tema","Dato clave"],[
+ ["Cascada de Correa","Gastritis crónica → atrofia → metaplasia intestinal → displasia → adenocarcinoma"],
+ ["Prevención","Erradicar precozmente: Islas Matsu bajó la prevalencia 64,2% → 15% y la incidencia de cáncer gástrico de 80 a 16/100.000"],
+ ["PREVECAN","< 30 años: inflamación sin atrofia; atrofia y metaplasia desde los 40 y aceleran > 50"],
+ ["Gastritis autoinmune","Compromete {{cuerpo y fondo}} y respeta el antro (tipo A); mujeres 3:1"],
+ ["Fisiopatología","Anticuerpos anti-célula parietal y anti-factor intrínseco → hipoclorhidria → hipergastrinemia → hiperplasia de células ECL"],
+ ["Consecuencias","Anemia {{perniciosa}} (B12), ferropenia, neuroendocrinos gástricos tipo 1; asociación a otras enfermedades autoinmunes"],
+ ["Seguimiento","Vigilancia endoscópica por riesgo oncológico; reponer vitamina B12"]])],
+["alg","Algoritmo clínico: H. pylori",alg({t:"H. pylori",n:[
+ ["a","s","Sospecha o indicación de estudiar H. pylori",[["","b"]]],
+ ["b","q","¿Requiere EDA (≥ 40 años, alarma)?",[["Sí","c"],["No","d"]]],
+ ["c","c","Test de ureasa + histología con biopsias",[["","e"]]],
+ ["d","c","Prueba de aliento o antígeno fecal (sin IBP 2 sem)",[["","e"]]],
+ ["e","q","¿H. pylori positivo?",[["Sí","f"],["No","g"]]],
+ ["f","t","Cuádruple con bismuto 14 d (o concomitante)",[["","h"]]],
+ ["h","c","Control de erradicación ≥ 4 sem después",[["Persiste","i"],["Erradicado","j"]]],
+ ["i","t","Esquema de rescate según resistencias",[]],
+ ["j","d","Erradicado: seguimiento si atrofia o metaplasia",[]],
+ ["g","d","Buscar otra causa (AINEs, funcional)",[]]]})]
+]);
+L("g5","C5 · Enfermedad úlceropéptica (EUP)",[
+["key","Definición, etiología y clínica",tbl(["Tema","Dato clave"],[
+ ["Definición","Solución de continuidad que alcanza al menos la {{submucosa}} (si no pasa la muscularis mucosae es erosión)"],
+ ["Prevalencia","5–10% en la vida; ~10% con H. pylori activo"],
+ ["Etiología principal","{{H. pylori}} 60–95% (90–95% de duodenales, 70–80% de gástricas) y {{AINEs}} 5–20%"],
+ ["Úlcera gástrica","Mujeres mayores; mecanismo atrófico/hiposecretor; riesgo de malignidad"],
+ ["Úlcera duodenal","Hipersecreción ácida; {{no degenera}} a cáncer"],
+ ["Clínica","Dolor epigástrico, pirosis 20–30%, náuseas, vómitos de retención si hay estenosis"],
+ ["Otras causas","Zollinger-Ellison, Crohn, tabaco, bisfosfonatos, corticoides con AINEs, infecciones (CMV, VHS)"],
+ ["Diagnóstico","{{EDA}} es el gold standard; biopsias de borde y de mucosa (H. pylori). Diferencial: cáncer (> 50 años, baja de peso, saciedad, anemia)"]])],
+["dx","Complicaciones",tbl(["Complicación","Detalle"],[
+ ["Hemorragia digestiva alta","La más frecuente; manejo endoscópico (ver C6)"],
+ ["Perforación","Necrosis transmural → abdomen agudo con neumoperitoneo; cirugía"],
+ ["Obstrucción pilórica","Síndrome pilórico: vómitos de retención por estenosis; dilatación o cirugía"],
+ ["Degeneración maligna","Úlcera gástrica: {{EDA de control a las 8 semanas}} con biopsias de la cicatriz"],
+ ["Penetración","A páncreas: dolor que cambia de carácter e irradia a la espalda"]])],
+["tx","Tratamiento y AINEs",tbl(["Tema","Puntos clave"],[
+ ["IBP","Dosis doble (omeprazol 20 mg c/12 h o esomeprazol 40 mg c/12 h) por {{6–8 semanas}}"],
+ ["P-CABs","Vonoprazan: bloqueo reversible y más potente"],
+ ["Erradicación","Siempre en H. pylori +; confirmar erradicación"],
+ ["Seguimiento","Gástrica: EDA a las 8 sem; duodenal: no requiere si evoluciona bien"],
+ ["Gastropatía por AINEs","Inhibición de COX-1 (↓ prostaglandinas protectoras). Daño gastroduodenal 15–40% en uso crónico; intestino delgado: inflamación en 70%"],
+ ["Riesgo relativo (HR)","Celecoxib/etoricoxib 1,5 · meloxicam 3 · ibuprofeno 4 · naproxeno/AAS 4–5 · ketoprofeno 6–8 · {{ketorolaco 11}}"],
+ ["Efecto paradojal","COX-2 + IBP duplica lesiones de intestino delgado (44% vs 17%): el IBP protege arriba, no abajo"],
+ ["Alto riesgo","Edad > 60–65, H. pylori, úlcera o HDA previa, anticoagulantes/corticoides: evitar AINEs o usar IBP"]])],
+["alg","Algoritmo clínico: úlcera péptica",alg({t:"EUP",n:[
+ ["a","s","Dispepsia con sospecha de úlcera",[["","b"]]],
+ ["b","c","EDA con biopsias (borde y H. pylori)",[["","c"]]],
+ ["c","d","Úlcera gástrica o duodenal",[["","d"]]],
+ ["d","q","¿Causa identificable?",[["H. pylori","e"],["AINEs","f"]]],
+ ["e","t","IBP 6–8 sem + erradicación (cuádruple con bismuto)",[["","g"]]],
+ ["f","t","Suspender AINE; IBP 6–8 sem",[["","g"]]],
+ ["g","q","¿Úlcera gástrica?",[["Sí","h"],["Duodenal","i"]]],
+ ["h","c","EDA a las 8 sem con biopsias de la cicatriz",[]],
+ ["i","d","Control clínico; confirmar erradicación",[]]]})]
+]);
+C.push(
+["g1","Definición de ERGE (Montreal)","Reflujo gástrico que causa síntomas molestos y/o complicaciones. Fisiológico: posprandial, breve, sin lesión."],
+["g1","Prueba terapéutica con IBP: rendimiento","Dosis doble 4–8 semanas en síntomas típicos sin alarma. Sensibilidad 78% y especificidad 54% (efecto placebo 10–25%)."],
+["g1","Hallazgos definitivos de ERGE en EDA","Esofagitis LA B, C o D, Barrett confirmado por biopsia (> 3 cm) y estenosis péptica. LA A es inconcluyente."],
+["g1","Estándar de oro para medir la carga de reflujo","Monitoreo ambulatorio: cápsula BRAVO (96 h) o impedancio-pH 24 h. El AET > 6% confirma (OFF IBP)."],
+["g1","Funduplicatura: balance","80% suspende IBP, 4% complicaciones agudas, recurrencia 18–40% a 5 años."],
+["g2","Cuatro preguntas para disfagia orofaríngea","Dificultad para iniciar, regurgitación nasal, tos o atoro inmediato y múltiples degluciones por bolo. Un «sí» basta."],
+["g2","Examen inicial indispensable en disfagia esofágica","EDA en menos de 2 semanas con biopsias: descarta cáncer (0,9%) y esofagitis eosinofílica."],
+["g2","Tipos de acalasia (Chicago 4.0)","I clásica; II con presurización panesofágica (mejor respuesta); III espástica."],
+["g2","Tratamiento definitivo de la acalasia","POEM o miotomía de Heller; transitorios: dilatación neumática o toxina botulínica."],
+["g3","Criterios de Roma IV para dispepsia funcional","Síntomas por 3 meses, inicio ≥ 6 meses antes y EDA sin lesión estructural."],
+["g3","Estrategia en < 40 años sin alarma","Test and treat con antígeno fecal o aliento; si es negativo, IBP 8 semanas; si falla, EDA."],
+["g3","Fármacos según subtipo","SDP: procinéticos, buspirona, mirtazapina. SDE: IBP y luego amitriptilina en dosis baja."],
+["g4","Gold estándar de erradicación en Chile","Cuádruple con bismuto 14 días (IBP, bismuto, metronidazol, amoxicilina o tetraciclina): 97,6%."],
+["g4","Por qué cayó la triple estándar","Resistencia a claritromicina de 30–39%: eficacia 69–81%."],
+["g4","Gastritis autoinmune","Atrofia de cuerpo y fondo con antro respetado; anticuerpos anti-célula parietal y factor intrínseco; anemia perniciosa."],
+["g5","Etiología de la úlcera","H. pylori (duodenal 90–95%, gástrica 70–80%) y AINEs."],
+["g5","Úlcera gástrica: control","EDA a las 8 semanas con biopsia de la cicatriz para descartar cáncer."],
+["g5","AINE de mayor riesgo digestivo","Ketorolaco (HR ~11); los selectivos COX-2 tienen el menor (1,5)."]
+);
+VF.push(
+["g1","La anamnesis sola es suficiente para diagnosticar ERGE antes de una cirugía antirreflujo.",false,"Su sensibilidad y especificidad son ≈ 60%: se requiere estudio objetivo."],
+["g1","La esofagitis LA grado A confirma por sí sola ERGE.",false,"Aparece en 5–20% de sanos; es inconcluyente."],
+["g1","El estudio de impedancio-pH en ERGE no probada se hace OFF IBP.",true,"Lyon 2.0: OFF si no está probada, ON si ya está probada."],
+["g1","Los IBP tienen como único efecto adverso confirmado un leve aumento de infecciones entéricas.",true,"Son fármacos muy seguros."],
+["g2","Hasta 30% de las lesiones esofágicas distales se perciben como molestia cervical.",true,"La localización referida es engañosa."],
+["g2","La manometría diagnostica enfermedades histopatológicas específicas.",false,"Diagnostica patrones; la acalasia-like puede ser tumor, opioides o Chagas."],
+["g2","En la acalasia el EEI no se relaja y hay aperistalsis.",true,""],
+["g2","FEES y VFSS tienen rendimiento diagnóstico muy distinto.",false,"Son comparables y complementarias."],
+["g3","La mayoría de las dispepsias en EDA tiene lesión orgánica.",false,"80% son EDA normales (funcional)."],
+["g3","En Chile todo dispéptico ≥ 40 años tiene indicación de EDA.",true,"Guías GES de cáncer gástrico."],
+["g3","La amitriptilina en dosis baja es útil en el dolor epigástrico refractario a IBP.",true,"Mayor evidencia en hipersensibilidad visceral."],
+["g4","La prueba de aliento puede hacerse tomando IBP.",false,"Suspender IBP 2 semanas y antibióticos 4 semanas."],
+["g4","La triple terapia estándar sigue siendo de primera línea en Chile.",false,"Resistencia a claritromicina > 30%."],
+["g4","La gastritis autoinmune respeta el antro.",true,"Compromete cuerpo y fondo."],
+["g5","La úlcera duodenal tiene riesgo de degeneración maligna.",false,"No degenera; la gástrica sí requiere control."],
+["g5","El ketorolaco es el AINE con mayor riesgo digestivo.",true,"HR ~11."],
+["g5","Asociar IBP a un COX-2 protege el intestino delgado.",false,"Duplica las lesiones del intestino delgado."]
+);
+MC.push(
+["g1","Sensibilidad de la prueba terapéutica con IBP","78%",["54%","60%","95%"]],
+["g1","AET que define ERGE conclusiva sin IBP","> 6%",["> 2%","> 4%","> 10%"]],
+["g2","Volumen clásico del test del vaso de agua","90 mL",["10 mL","30 mL","500 mL"]],
+["g2","Porcentaje de cáncer en EDA por disfagia","0,9%",["9%","20%","0,1%"]],
+["g3","Duración de la prueba con IBP en dispepsia","8 semanas",["2 semanas","6 meses","1 año"]],
+["g3","Falla de acomodación gástrica en dispepsia funcional","45%",["5%","75%","90%"]],
+["g4","Erradicación con cuádruple con bismuto","97,6%",["69%","81%","50%"]],
+["g4","Seroprevalencia actual de H. pylori en EDA en Santiago","29–30%",["76%","5%","90%"]],
+["g5","Duración del IBP en úlcera","6–8 semanas",["1 semana","6 meses","1 año"]],
+["g5","HR del ketorolaco","≈ 11",["1,5","3","20"]]
+);
+GP.dx.push(["Barrett confirmado por biopsia","ERGE definitiva (> 3 cm)"],["Lyon 2.0: ERGE no probada","Estudiar OFF IBP"],["Acalasia tipo II","Presurización panesofágica"],["Dispepsia funcional","Roma IV: 3 meses, inicio 6 meses antes"],["Gastritis autoinmune","Cuerpo y fondo, antro respetado"],["Úlcera gástrica","EDA de control a las 8 semanas"]);
+GP.tx.push(["Acalasia","POEM o miotomía de Heller"],["Erradicación H. pylori Chile","Cuádruple con bismuto 14 días"],["Distrés postprandial","Procinético, buspirona, mirtazapina"],["Dolor epigástrico refractario","Amitriptilina en dosis baja"],["ERGE refractaria operable","Funduplicatura laparoscópica"],["Úlcera péptica","IBP doble dosis 6–8 semanas"]);
+
+/* ============ GASTRO · C29, C30, C31 ============ */
+L("g29","C29 · Pancreatitis aguda",[
+["key","Etiología, clínica y diagnóstico",tbl(["Tema","Dato clave"],[
+ ["Epidemiología","Incidencia 13–45/100.000 hab-año; hospitalización 100%; 80% leve; mortalidad global ~2% (bifásica: precoz por SIRS/falla orgánica, tardía por infección)"],
+ ["Etiología","{{Biliar}} (litiasis/barro, la más frecuente), alcohol; infrecuentes: hipertrigliceridemia (> 1000 mg/dL), hipercalcemia, fármacos, post-CPRE, autoinmune, genética"],
+ ["Clínica","Dolor epigástrico intenso en barra irradiado a la espalda, náuseas/vómitos, íleo; signos de Cullen y Grey-Turner en necrohemorrágica"],
+ ["Criterios de Atlanta","{{2 de 3}}: dolor típico, lipasa/amilasa > 3 veces el límite superior, imagen compatible"],
+ ["Amilasa vs lipasa","Amilasa sube a las 6–12 h y cae en 24–48 h (vida media ~10 h); lipasa más específica y se mantiene más días"],
+ ["Imágenes","Ecografía en todos para ver etiología biliar; TAC con contraste después de 72 h si dudas diagnósticas o mala evolución (la necrosis se ve mejor tardíamente)"]])],
+["dx","Gravedad y pronóstico",tbl(["Categoría","Criterio"],[
+ ["Leve","Sin falla orgánica ni complicaciones locales/sistémicas"],
+ ["Moderadamente grave","Falla orgánica transitoria (< 48 h) o complicación local"],
+ ["Grave","Falla orgánica {{persistente}} (> 48 h)"],
+ ["SIRS persistente","≥ 2: T° > 38 o < 36; FC > 90; FR > 20 o pCO2 < 32; leucocitos > 12.000 o < 4.000. Persistencia > 48 h = mal pronóstico"],
+ ["BISAP (24 h)","BUN > 25, alteración de conciencia, SIRS, edad > 60, derrame pleural: 1 punto cada uno"],
+ ["APACHE II y CTSI/Balthazar","Saber que existen y sus cortes; CTSI 7–10 = alto riesgo (necrosis > 50%: mortalidad 17%)"],
+ ["Factores del huésped","Edad, obesidad, comorbilidades"]])],
+["tx","Manejo",tbl(["Aspecto","Conducta"],[
+ ["Hidratación","Precoz y {{moderada}} con Ringer lactato (mejor que suero fisiológico); evitar sobrehidratación"],
+ ["Analgesia","Multimodal, opioides si es necesario"],
+ ["Nutrición","Realimentación oral precoz según tolerancia; enteral si no tolera; evitar ayuno prolongado"],
+ ["Antibióticos","No profilácticos; solo si hay infección de necrosis o colangitis"],
+ ["Trombo-profilaxis","Se indica"],
+ ["Grave","UCI, monitorización y soporte de órgano"],
+ ["CPRE","Urgente (24–72 h) si hay colangitis concomitante u obstrucción biliar persistente"],
+ ["Colecistectomía","En pancreatitis biliar leve en la misma hospitalización para prevenir recurrencia"],
+ ["Necrosis infectada","Drenaje/necrosectomía mínimamente invasivo (step-up), idealmente tardío (> 4 semanas)"]])],
+["alg","Algoritmo clínico: pancreatitis aguda",alg({t:"PA",n:[
+ ["a","s","Dolor epigástrico + lipasa > 3 × normal",[["","b"]]],
+ ["b","c","Ecografía, perfil hepático, SIRS y BISAP",[["Colangitis u obstrucción","c"],["Sin colangitis","d"]]],
+ ["c","t","CPRE urgente 24–72 h",[]],
+ ["d","q","¿Falla orgánica > 48 h?",[["Sí","e"],["No","f"]]],
+ ["e","a","UCI; TAC si mala evolución",[]],
+ ["f","t","Ringer lactato moderado, analgesia, dieta precoz y colecistectomía si es biliar",[]]]})]
+]);
+L("g30","C30 · Pancreatitis crónica",[
+["key","Etiología, genética y clínica",tbl(["Tema","Dato clave"],[
+ ["Epidemiología","Prevalencia 40–70/100.000; evolución lenta y progresiva con fibrosis"],
+ ["Causas","{{Alcohol}} (45–70%), tabaco; clasificación TIGAR-O (tóxico-metabólica, idiopática, genética, autoinmune, recurrente/obstructiva)"],
+ ["Genética","PRSS1 (tripsinógeno catiónico, AD, activación precoz), CFTR (fibrosis quística), SPINK1 (inhibidor de tripsina), CTRC, CaSR, CLDN2"],
+ ["Dolor","Síntoma cardinal en 85–90%; 10–15% indoloros (diagnóstico incidental)"],
+ ["Insuficiencia exocrina","Tardía (> 10 años) con pérdida > {{90%}} de reserva: esteatorrea, déficit de vitaminas liposolubles"],
+ ["Insuficiencia endocrina","Aún más tardía (15–20 años): diabetes pancreatogénica (tipo 3c)"],
+ ["Complicaciones","Brotes agudos, pseudoquistes, estenosis biliar, trombosis esplénica, cáncer de páncreas"]])],
+["dx","Diagnóstico y tratamiento",tbl(["Tema","Dato clave"],[
+ ["Elastasa fecal","< 200 µg/g sugiere insuficiencia exocrina (baja sensibilidad en etapas iniciales)"],
+ ["Rx simple","Calcificaciones pancreáticas en L1–L2 (casi patognomónicas)"],
+ ["TAC","Calcificaciones, atrofia, dilatación ductal"],
+ ["Colangio-RM / USE","Mayor sensibilidad en etapas tempranas; RM con secretina"],
+ ["Dolor","Abstinencia de alcohol y tabaco, analgesia escalonada, enzimas; endoscopía o cirugía si ductal obstructivo"],
+ ["Exocrina","{{Enzimas pancreáticas}} con comidas + IBP; vitaminas liposolubles"],
+ ["Endocrina","Insulina (evitar sulfonilureas por hipoglucemia)"],
+ ["Pancreatitis autoinmune","Tipo 1: enfermedad relacionada a IgG4 (IgG4 elevada); tipo 2: ducto-céntrica sin IgG4. Tratamiento: {{corticoides}}; biopsia por USE si se duda de neoplasia"]])],
+["alg","Algoritmo clínico: dolor pancreático crónico",alg({t:"PC",n:[
+ ["a","s","Dolor abdominal crónico, antecedente de alcohol o episodios de pancreatitis",[["","b"]]],
+ ["b","c","TAC/colangio-RM ± Rx abdomen",[["Calcificaciones o atrofia","c"],["Normal","d"]]],
+ ["c","d","Pancreatitis crónica",[["","e"]]],
+ ["d","c","USE o RM con secretina, o IgG4 si hay sospecha autoinmune",[]],
+ ["e","t","Dejar alcohol/tabaco, analgesia, enzimas e insulina según insuficiencia",[]]]})]
+]);
+L("g31","C31 · Síndrome emético",[
+["key","Fisiopatología y causas",tbl(["Tema","Dato clave"],[
+ ["Definiciones","Náusea, vómito (expulsión activa), regurgitación (pasiva), rumiación (funcional)"],
+ ["Aferencias","Vagales (5-HT3 desde enterocromafines), vestibulares, corticales y la zona gatillo quimiorreceptora (CTZ) en el área postrema"],
+ ["Centro del vómito","Núcleo del tracto solitario; eferencias a diafragma, músculos abdominales y estómago"],
+ ["Receptores","5-HT3 (serotonina), D2 (dopamina), H1 y M1 (vestibular), NK1 (sustancia P)"],
+ ["Causas","Digestivas (gastroenteritis, obstrucción, pancreatitis, colecistitis, úlcera), neurológicas, metabólicas, embarazo, fármacos (quimioterapia, opioides, digoxina)"],
+ ["Temporalidad","Agudo < 1 mes; crónico > 1 mes (EDA, laboratorio e imágenes)"],
+ ["Signos de alarma","Deshidratación, hematemesis, dolor intenso, cefalea/focalidad, pérdida de peso, edad avanzada"]])],
+["tx","Manejo y fármacos",tbl(["Fármaco","Datos clave"],[
+ ["Metoclopramida","Antagonista D2 y 5-HT3 central; {{efectos extrapiramidales}}; única aprobada por FDA para gastroparesia"],
+ ["Ondansetrón","Antagonista 5-HT3 puro; muy seguro; riesgo mínimo de QTc; primera elección en emesis aguda"],
+ ["Doxilamina + piridoxina","Primera línea en el embarazo (categoría A FDA)"],
+ ["Embarazo","Jengibre (84% efectividad vs placebo); ondansetrón en hiperemesis refractaria (categoría B)"],
+ ["Pasos","1) corregir deshidratación y electrolitos; 2) buscar causa; 3) antiemético"],
+ ["Complicaciones","Hipokalemia, alcalosis metabólica hipoclorémica, Mallory-Weiss, síndrome de Boerhaave"]])],
+["dx","Entidades específicas",tbl(["Entidad","Datos clave"],[
+ ["Emesis crónica","EDA + imágenes; causas: gastroparesia, úlcera, neoplasias, pancreatitis crónica, trastornos de la conducta alimentaria, migraña, vómito cíclico"],
+ ["Hiperemesis por cannabinoides","Vómitos cíclicos en consumidores crónicos que mejoran con duchas calientes y suspensión del cannabis"],
+ ["Gastroparesia","Retardo del vaciamiento sin obstrucción; causa más frecuente {{diabetes}} (~50%; DM1 5%, DM2 1%); idiopática/post-viral 20%"],
+ ["Diagnóstico","Descartar obstrucción con EDA/TAC; {{cintigrafía de vaciamiento gástrico}} (retención a las 4 h) es el estándar"],
+ ["Tratamiento","Dieta fraccionada y baja en grasa, control glicémico, procinéticos (metoclopramida), antieméticos"]])],
+["alg","Algoritmo clínico: vómitos",alg({t:"Emesis",n:[
+ ["a","s","Paciente con vómitos",[["","b"]]],
+ ["b","q","¿Signos de alarma o deshidratación?",[["Sí","c"],["No","d"]]],
+ ["c","a","Hidratación EV, electrolitos, exámenes e imágenes",[]],
+ ["d","q","¿Duración mayor a 1 mes?",[["Sí","e"],["No","f"]]],
+ ["e","c","EDA, imágenes y cintigrafía si se sospecha gastroparesia",[]],
+ ["f","t","Tratar causa (gastroenteritis, fármaco) y ondansetrón",[]]]})]
+]);
+C.push(
+["g29","Criterios de Atlanta (diagnóstico)","2 de 3: dolor típico, lipasa > 3 veces normal, imagen compatible."],
+["g29","Solución de elección para hidratar en pancreatitis aguda","Ringer lactato, de forma moderada."],
+["g29","Cuándo CPRE de urgencia","Colangitis concomitante, en las primeras 24–72 h."],
+["g30","Causa más frecuente de pancreatitis crónica","Alcohol (45–70%)."],
+["g30","Hallazgo radiológico clásico","Calcificaciones pancreáticas en L1–L2."],
+["g30","Elastasa fecal sugerente de insuficiencia exocrina","< 200 µg/g."],
+["g31","Fármaco de elección en el embarazo","Doxilamina + piridoxina."],
+["g31","Estándar para diagnosticar gastroparesia","Cintigrafía de vaciamiento gástrico."],
+["g31","Causa más frecuente de gastroparesia","Diabetes mellitus (~50%)."]
+);
+VF.push(
+["g29","Los antibióticos profilácticos se indican de rutina en pancreatitis grave.",false,"Solo si hay infección."],
+["g29","La etiología biliar es la más frecuente de pancreatitis aguda.",true,"Seguida del alcohol."],
+["g29","Una falla orgánica persistente > 48 h define pancreatitis grave.",true,"Clasificación de Atlanta."],
+["g30","Todos los pacientes con pancreatitis crónica tienen dolor.",false,"10–15% son indoloros."],
+["g30","La insuficiencia endocrina aparece antes que la exocrina.",false,"Es más tardía."],
+["g31","La metoclopramida no cruza la barrera hematoencefálica.",false,"Cruza y causa extrapiramidalismo."],
+["g31","El ondansetrón es una opción segura en emesis aguda.",true,"Riesgo mínimo de QTc."]
+);
+MC.push(
+["g29","Incidencia de pancreatitis aguda (por 100.000 hab-año)","13–45",["1–3","100–200","500–800"]],
+["g29","Triglicéridos que desencadenan pancreatitis","> 1000 mg/dL",["> 150 mg/dL","> 200 mg/dL","> 400 mg/dL"]],
+["g30","Pérdida de reserva para insuficiencia exocrina","> 90%",["> 10%","> 30%","> 50%"]],
+["g30","Años hasta insuficiencia endocrina","15–20",["< 1","2–3","40–50"]],
+["g31","Eficacia del jengibre vs placebo en embarazo","84%",["10%","30%","99%"]]
+);
+GP.dx.push(["Calcificaciones L1–L2","Pancreatitis crónica"],["Cullen y Grey-Turner","Pancreatitis necrohemorrágica"],["Cintigrafía gástrica","Gastroparesia"],["IgG4","Pancreatitis autoinmune tipo 1"]);
+GP.tx.push(["Pancreatitis aguda","Ringer lactato moderado y dieta precoz"],["Pancreatitis crónica con IPE","Enzimas pancreáticas + IBP"],["Hiperemesis gravídica","Doxilamina + piridoxina"],["Pancreatitis autoinmune","Corticoides"]);
+
+/* ============ GASTRO · C35, C36, C37 ============ */
+L("g35","C35 · Cánceres digestivos",[
+["key","Páncreas, vesícula e hígado",tbl(["Cáncer","Datos clave"],[
+ ["Adenocarcinoma de páncreas","Incidencia 9–12/100.000; factores: {{tabaco}}, pancreatitis crónica (×3–15), diabetes, genética. Clínica: ictericia indolora, pérdida de peso, dolor epigástrico a la espalda, signo de Courvoisier-Terrier; marcador Ca 19-9"],
+ ["Cáncer de vesícula","Litiasis presente en 75–98% (OR 2,5–7); alta incidencia en Chile; secuencia metaplasia → displasia → carcinoma in situ → invasor; colecistectomía profiláctica según criterios (cálculo ≥ 2,5 cm, pólipos ≥ 10 mm, vesícula en porcelana)"],
+ ["Transaminasas masivas","Hígado de shock (GOT > 5.000), hepatitis virales, tóxica (paracetamol) y coledocolitiasis"],
+ ["HCC","VHB/VHC (VHC cirrótico 2–3%/año), alcohol, EHGNA. Diagnóstico no invasivo por TAC/RM con realce arterial y lavado; biopsia contraindicada si el patrón es típico. Tamizaje eco ± AFP c/6 meses; estadificación BCLC"]])],
+["dx","Colorrectal y gástrico",tbl(["Cáncer","Datos clave"],[
+ ["Colorrectal (CCR)","~1.000.000 casos/año en el mundo; secuencia adenoma-carcinoma. Clínica: sangrado, cambio de hábito, anemia ferropénica, baja de peso"],
+ ["Tamizaje CCR","Test inmunológico fecal (TIF) anual/bienal y colonoscopía desde los {{50 años}} (antes si hay antecedente familiar)"],
+ ["Tratamiento CCR","Resección quirúrgica con linfadenectomía; QT adyuvante en estadio III (y II de alto riesgo); metástasis hepática resecable"],
+ ["Gástrico","Chile: incidencia 23,3/100.000 hombres; precoz (T1) sobrevida a 5 años > 90%"],
+ ["Cascada de Correa","Gastritis atrófica (0,8%) → metaplasia intestinal (1,8%) → displasia baja (3,9%) → displasia alta ({{32,7%}}) → cáncer (riesgo a 10 años)"],
+ ["Prevención","Erradicar {{H. pylori}}; EDA de tamizaje en grupos de riesgo; resección endoscópica (ESD/EMR) del precoz"]])],
+["alg","Algoritmo clínico: ictericia indolora + baja de peso",alg({t:"Cáncer páncreas",n:[
+ ["a","s","Ictericia indolora, baja de peso, tabaquismo",[["","b"]]],
+ ["b","c","Ecografía y TAC de páncreas en fase pancreática; Ca 19-9",[["Masa en cabeza","c"],["Sin masa","d"]]],
+ ["c","q","¿Resecable (sin invasión vascular ni metástasis)?",[["Sí","e"],["No","f"]]],
+ ["d","c","Colangio-RM o USE",[]],
+ ["e","t","Cirugía (Whipple) + quimioterapia",[]],
+ ["f","t","Quimioterapia y paliación (drenaje biliar)",[]]]})]
+]);
+L("g36","C36 · Rayos de abdomen I (modalidades)",[
+["key","Modalidades y dosis",tbl(["Modalidad","Datos clave"],[
+ ["Sin radiación","Ecografía y RM"],
+ ["Con radiación","Rx simple, fluoroscopía, TAC (la TAC es la de mayor dosis)"],
+ ["Dosis efectiva","Rx tórax 0,02 mSv; Rx columna lumbar 1,3 mSv; TAC abdomen-pelvis ~10 mSv"],
+ ["Rx simple","Rendimiento bajo; útil en obstrucción, perforación, cuerpo extraño y control de sondas"],
+ ["Fluoroscopía","Estudios contrastados (esófago-estómago-duodeno, tránsito, enema baritado)"],
+ ["TC multidetector","Adquisición helicoidal; fase arterial a 20–25 s, portovenosa a 60–70 s"],
+ ["Entero-TC / coloclisis","Enteroclisis aumenta la sensibilidad en obstrucción de bajo grado a 85–90% (convencional ~50%)"],
+ ["Colonoscopía virtual","Alternativa por TC para pólipos"]])],
+["dx","Ecografía y RM",tbl(["Modalidad","Datos clave"],[
+ ["Ecografía","Sin radiación, accesible; {{operador dependiente}} y limitada en obesos o gas; primera prueba en dolor de hipocondrio derecho, vía biliar, hígado, Doppler vascular"],
+ ["RM","Campo magnético 30.000–60.000 veces el terrestre, protones de H+, secuencias T1/T2, contraste gadolinio; estudios de 20–30 min"],
+ ["Colangio-RM","Vía biliar y pancreática sin contraste"],
+ ["Seguridad RM","Contraindicada con marcapasos no compatibles, implantes ferromagnéticos y claustrofobia severa"],
+ ["Ventajas de RM","Sin radiación, mejor contraste de tejidos blandos; desventajas: costo, disponibilidad y tiempo"]])],
+["alg","Algoritmo: elegir imagen en abdomen",alg({t:"Imágenes",n:[
+ ["a","s","Dolor abdominal agudo",[["","b"]]],
+ ["b","q","¿Dolor en hipocondrio derecho o embarazada?",[["Sí","c"],["No","d"]]],
+ ["c","t","Ecografía",[]],
+ ["d","q","¿Abdomen agudo grave o trauma?",[["Sí","e"],["No","f"]]],
+ ["e","t","TAC con contraste",[]],
+ ["f","t","Rx simple o ecografía según sospecha",[]]]})]
+]);
+L("g37","C37 · Rayos de abdomen II (lectura)",[
+["key","Gas intraluminal y obstrucción",tbl(["Tema","Dato clave"],[
+ ["Proyecciones","Decúbito supino, de pie y decúbito lateral"],
+ ["Densidades","Aire (negro), grasa, partes blandas/líquido, calcio y metal (blanco)"],
+ ["Orden de lectura","Gas intraluminal → gas extraluminal → calcificaciones → partes blandas"],
+ ["Calibres normales","Yeyuno < {{3,5 cm}}, íleon < 2,5 cm, colon < 5 cm, ciego < 9 cm"],
+ ["Delgado vs grueso","Válvulas conniventes cruzan toda la pared (central); haustras incompletas (periférico)"],
+ ["Megacolon tóxico","Colon transverso > 6 cm con pérdida de haustras y engrosamiento"],
+ ["Vólvulo","Sigmoides en «grano de café» / «tubo de bicicleta»; cecal con ciego dilatado en el cuadrante superior izquierdo"],
+ ["Íleo biliar","{{Tríada de Rigler}}: obstrucción intestinal, neumobilia y cálculo ectópico"]])],
+["dx","Neumoperitoneo, calcificaciones y masas",tbl(["Tema","Dato clave"],[
+ ["Neumoperitoneo","Perforación de víscera hueca; signos: aire subdiafragmático, signo de Rigler (doble pared), ligamento falciforme"],
+ ["Mejor proyección","Radiografía de {{tórax de pie}} (detecta 5–10 cc de aire)"],
+ ["Calcificaciones","Litiasis renal (radiopaca), biliar (< 10% visible), vascular, pancreática, vesícula en porcelana"],
+ ["Masas","Globo vesical (masa pelviana central), visceromegalias, fecaloma rectal"],
+ ["Otras áreas","Evaluar huesos, cuerpos extraños, material quirúrgico y periferia de la imagen"]])],
+["alg","Algoritmo: Rx de abdomen en dolor agudo",alg({t:"Rx abdomen",n:[
+ ["a","s","Rx de abdomen de pie y supino",[["","b"]]],
+ ["b","q","¿Aire libre bajo el diafragma?",[["Sí","c"],["No","d"]]],
+ ["c","a","Perforación: cirugía urgente",[]],
+ ["d","q","¿Asas dilatadas con niveles hidroaéreos?",[["Sí","e"],["No","f"]]],
+ ["e","c","Obstrucción: TAC para causa y nivel",[]],
+ ["f","c","Ecografía o TAC si persiste la sospecha",[]]]})]
+]);
+C.push(
+["g35","Cascada de Correa: lesión de mayor riesgo","Displasia de alto grado (32,7% a 10 años)."],
+["g35","Edad de tamizaje de CCR","Desde los 50 años (TIF y colonoscopía)."],
+["g35","Factor de riesgo más relevante de cáncer de vesícula","Colelitiasis."],
+["g36","Calibre normal del yeyuno en Rx","< 3,5 cm."],
+["g36","Imagen sin radiación para vía biliar","Ecografía o colangio-RM."],
+["g37","Tríada de Rigler","Obstrucción, neumobilia y cálculo ectópico."],
+["g37","Mejor proyección para neumoperitoneo","Rx de tórax de pie."],
+["g37","Megacolon tóxico","Transverso > 6 cm."]
+);
+VF.push(
+["g35","H. pylori debe erradicarse como prevención primaria de cáncer gástrico.",true,"Reduce el riesgo."],
+["g35","El HCC con patrón típico requiere siempre biopsia.",false,"Diagnóstico por imagen."],
+["g36","La resonancia usa radiación ionizante.",false,"Usa campo magnético."],
+["g36","La ecografía es operador dependiente.",true,"Y limitada en obesos."],
+["g37","Más del 90% de los cálculos biliares se ven en Rx simple.",false,"Menos de 10%."],
+["g37","El íleon normal mide menos de 2,5 cm.",true,"Yeyuno < 3,5 cm."]
+);
+MC.push(
+["g35","Riesgo de cáncer gástrico a 10 años en displasia de alto grado","32,7%",["0,8%","1,8%","3,9%"]],
+["g35","Cobertura de litiasis en cáncer de vesícula","75–98%",["1–5%","10–20%","30–40%"]],
+["g36","Tiempo de fase arterial en TAC","20–25 s",["5 s","60 s","5 min"]],
+["g37","Calibre normal del ciego","< 9 cm",["< 1 cm","< 3 cm","< 20 cm"]],
+["g37","Volumen mínimo de aire libre detectable de pie","5–10 cc",["1 L","500 cc","100 cc"]]
+);
+GP.dx.push(["Courvoisier-Terrier","Cáncer de cabeza de páncreas"],["Tríada de Rigler","Íleo biliar"],["Neumoperitoneo","Rx de tórax de pie"],["Válvulas conniventes","Intestino delgado"]);
+GP.tx.push(["Gástrico precoz","Resección endoscópica"],["CCR estadio III","Cirugía + quimioterapia"],["Perforación de víscera hueca","Cirugía urgente"],["Pancreático resecable","Whipple + quimioterapia"]);
+
+/* ============ GASTRO · C12–C14 ============ */
+L("g12","C12 · Diarrea aguda",[
+["key","Definición, etiología y clínica",tbl(["Tema","Dato clave"],[
+ ["Definición","≥ 3 deposiciones/día con ↑ del contenido acuoso; aguda: duración ≤ {{14 días}}"],
+ ["Epidemiología Chile","ENS 2009–2010: 18% refiere un episodio reciente"],
+ ["Latencia","< 6 h: toxinas preformadas (S. aureus, B. cereus) o virus; 8–16 h: C. perfringens; > 16 h: infecciones (enteroinvasivas, virus)"],
+ ["No inflamatoria (acuosa)","Virus, ETEC, V. cholerae, Giardia: sin sangre ni fiebre alta; compromiso de delgado"],
+ ["Inflamatoria (disentérica)","Shigella, Campylobacter, Salmonella, E. coli invasivo, E. histolytica: sangre, pus, fiebre, tenesmo; colon"],
+ ["Estudio","Solo si {{fiebre, sangre, deshidratación}}, inmunosupresión, brote, hospitalización o > 7 días. Coprocultivo, leucocitos fecales, toxina de C. difficile, PCR multiplex (FilmArray: 22 patógenos en 65 min)"]])],
+["tx","Tratamiento",tbl(["Medida","Puntos clave"],[
+ ["SRO (OMS)","Por litro: 3 g NaCl + 2,5 g NaHCO3 + 1,5 g KCl + {{20 g glucosa}}. La hidratación es el pilar"],
+ ["Shock hipovolémico","Bolo 500–1.000 mL de SF o Ringer en 10–15 min por 2 vías gruesas"],
+ ["Dieta","Realimentación precoz; evitar lácteos y azúcares simples si empeora"],
+ ["Antibiótico empírico","Solo disentería, fiebre alta, inmunosupresión o diarrea del viajero: ciprofloxacino 500 mg c/12 h o azitromicina 500 mg/día × 3–5 d"],
+ ["Dirigido","Campylobacter/Shigella: azitromicina o cipro 3 d · Salmonella: cipro 10 d · Yersinia: cotrimoxazol 5 d · C. difficile: vancomicina 125 mg c/6 h o metronidazol 10–14 d · E. histolytica: metronidazol 10 d · Giardia: metronidazol 250 mg c/8 h 5–7 d · Vibrio cholerae: doxiciclina 300 mg única"],
+ ["Viajero","Azitromicina 1 g única o 500 mg × 3 d (Sudeste asiático/India); loperamida asociada solo si no hay sangre ni fiebre"],
+ ["Probióticos","Evidencia modesta; opcional"]])],
+["alg","Algoritmo clínico: diarrea aguda",alg({t:"Diarrea aguda",n:[
+ ["a","s","Diarrea de ≤ 14 días",[["","b"]]],
+ ["b","t","Evaluar deshidratación; rehidratar con SRO o EV",[["","c"]]],
+ ["c","q","¿Fiebre, sangre, inmunosupresión o hospitalización?",[["No","d"],["Sí","e"]]],
+ ["d","t","Dieta, SRO y control; loperamida si no hay disentería",[]],
+ ["e","c","Coprocultivo / PCR multiplex y toxina de C. difficile",[["","f"]]],
+ ["f","t","Azitromicina o ciprofloxacino 3–5 días",[["C. difficile","g"],["E. coli Shiga","h"]]],
+ ["g","t","Vancomicina oral 125 mg c/6 h",[]],
+ ["h","a","Sin antibióticos: vigilar SHU",[]]]})]
+]);
+L("g13","C13 · Diarrea crónica",[
+["key","Definición y fisiopatología",tbl(["Tema","Dato clave"],[
+ ["Definición","Heces Bristol {{5–7}} por > {{4 semanas}}; el peso fecal ≥ 200 g/24 h ya no se usa"],
+ ["Epidemiología","ENS 2009–10: 10,6% refiere cambio con predominio diarreico en 3 meses; 7–14% en adultos mayores"],
+ ["Osmótica","Cede con ayuno. Gap osmótico = 290 − 2 × (Na + K fecal) {{> 100}} mOsm/kg; Na fecal < 60, pH < 6 (malabsorción de carbohidratos, laxantes osmóticos)"],
+ ["Secretora","No cede con ayuno; gap {{< 50}}; Na fecal > 90; > 1 L/día (VIP, carcinoide, ácidos biliares, laxantes estimulantes, enfermedad de Addison)"],
+ ["Inflamatoria","Sangre, pus, ↑ calprotectina (EII, colitis infecciosa, neoplasia)"],
+ ["Motilidad","Hipermotilidad (SII, hipertiroidismo) e hipomotilidad con SIBO (diabetes, esclerodermia)"],
+ ["Fármacos","IBP, antiácidos con magnesio, 5-ASA, metformina, laxantes, AINEs"],
+ ["Orgánica vs funcional","Orgánica: nocturna, baja de peso, anemia, volumen alto. Funcional: diurna, con dolor aliviado por defecar"]])],
+["dx","Estudio y manejo",tbl(["Tema","Puntos clave"],[
+ ["Estudio inicial","Hemograma, PCR/VHS, albúmina, TSH, serología celíaca, calprotectina, parásitos en deposiciones"],
+ ["Colonoscopía","Con biopsias escalonadas (colitis microscópica); ileocolonoscopía si sospecha de Crohn"],
+ ["Otros","Malabsorción (esteatorrea, elastasa), SIBO, ácidos biliares (SeHCAT), cápsula endoscópica"],
+ ["Manejo","Tratar causa; loperamida; colestiramina en diarrea por ácidos biliares; antidiarreicos con cautela en inflamatoria"],
+ ["Derivar","Banderas rojas, sangrado, baja de peso, anemia, inicio > 50 años, fracaso del tratamiento empírico"]])],
+["alg","Algoritmo clínico: diarrea crónica",alg({t:"Diarrea crónica",n:[
+ ["a","s","Diarrea > 4 semanas",[["","b"]]],
+ ["b","q","¿Sangre, pus o calprotectina elevada?",[["Sí","c"],["No","d"]]],
+ ["c","c","Colonoscopía con biopsias; estudio de EII e infecciones",[]],
+ ["d","c","Heces acuosas: gap osmótico y prueba de ayuno",[["Gap > 100","e"],["Gap < 50","f"],["Grasa fecal","g"]]],
+ ["e","d","Osmótica: lactosa, fármacos, malabsorción",[]],
+ ["f","d","Secretora: ácidos biliares, laxantes, tumores neuroendocrinos",[]],
+ ["g","d","Malabsorción: celiaquía, pancreático, SIBO",[]]]})]
+]);
+L("g14","C14 · Estreñimiento crónico",[
+["key","Definición, fenotipos y diagnóstico",tbl(["Tema","Dato clave"],[
+ ["Roma IV","≥ 2 de: pujo, heces duras, evacuación incompleta, obstrucción, maniobras manuales, < 3 deposiciones/semana, en > 25% de defecaciones por 3 meses (inicio 6 meses antes)"],
+ ["Fenotipos","Tránsito normal (el más {{frecuente}}), tránsito lento y trastorno funcional de la defecación (disinergia)"],
+ ["Disinergia","Contracción paradójica o relajación < 20% del piso pélvico; ~50% tiene además tránsito lento secundario"],
+ ["Causas secundarias","Hipotiroidismo, diabetes, hipercalcemia, Parkinson, esclerosis múltiple; fármacos: opioides, anticolinérgicos, antidepresivos, calcioantagonistas, hierro"],
+ ["Síntomas","Pujo/tenesmo 79%, heces duras 71%, dolor 62%, distensión 57%"],
+ ["Alarma","Baja de peso > 10% en 3 meses, sangrado, anemia, antecedente familiar de CCR, inicio > 50 años: colonoscopía"],
+ ["Tacto rectal dinámico","Imprescindible: tono, fecaloma, contracción paradójica al pujar"],
+ ["Pruebas","Manometría anorrectal de alta resolución (MAR) y prueba de expulsión del balón (PEB) primero; tránsito colónico después; defecografía por RM"]])],
+["tx","Tratamiento",tbl(["Opción","Puntos clave"],[
+ ["Medidas generales","Hidratación, actividad física, rutina evacuatoria (posición con pies elevados)"],
+ ["Fibra","20–30 g/día; psyllium soluble de inicio"],
+ ["Laxantes","Osmóticos (PEG, lactulosa) y estimulantes de rescate. Si no hay respuesta en {{4–8 semanas}}: pruebas fisiológicas"],
+ ["Secretagogos","Linaclotida, plecanatida, lubiprostona"],
+ ["Prucaloprida","Agonista 5-HT4 en tránsito lento tras falla de lo anterior; efectos adversos en las primeras 24 h"],
+ ["Biofeedback","Primera elección en defecación disinérgica"],
+ ["Cirugía","Colectomía subtotal solo en inercia colónica refractaria seleccionada"]])],
+["alg","Algoritmo clínico: estreñimiento crónico",alg({t:"Estreñimiento",n:[
+ ["a","s","Estreñimiento crónico (Roma IV)",[["","b"]]],
+ ["b","q","¿Signos de alarma o > 50 años sin tamizaje?",[["Sí","c"],["No","d"]]],
+ ["c","c","Colonoscopía",[]],
+ ["d","t","Fibra, hidratación y laxante osmótico 4–8 semanas",[["Responde","e"],["No responde","f"]]],
+ ["e","d","Estreñimiento funcional controlado",[]],
+ ["f","c","Manometría anorrectal y prueba de expulsión del balón",[["Disinergia","g"],["Normal","h"]]],
+ ["g","t","Biofeedback",[]],
+ ["h","c","Tránsito colónico",[["Lento","i"]]],
+ ["i","t","Secretagogo o prucaloprida",[]]]})]
+]);
+C.push(
+["g12","Definición de diarrea aguda","≥ 3 deposiciones/día por ≤ 14 días."],
+["g12","Composición de la SRO de la OMS","3 g NaCl, 2,5 g NaHCO3, 1,5 g KCl y 20 g de glucosa por litro de agua."],
+["g12","Tratamiento de C. difficile","Vancomicina 125 mg c/6 h (o metronidazol) por 10–14 días."],
+["g12","Indicación de estudio etiológico","Fiebre, sangre, deshidratación, inmunosupresión, brote o más de 7 días."],
+["g13","Gap osmótico fecal","290 − 2 × (Na + K fecales). > 100: osmótica; < 50: secretora."],
+["g13","Diarrea que cede con el ayuno","Osmótica."],
+["g13","Definición de diarrea crónica","Bristol 5–7 por más de 4 semanas."],
+["g14","Fenotipo más frecuente de estreñimiento funcional","Tránsito normal."],
+["g14","Primera elección en defecación disinérgica","Biofeedback."],
+["g14","Estudios fisiológicos de primera línea","Manometría anorrectal y prueba de expulsión del balón."]
+);
+VF.push(
+["g12","En toda diarrea aguda se debe indicar antibiótico empírico.",false,"Solo en disentería, fiebre, inmunosupresión o viajero con cuadro severo."],
+["g12","Los antibióticos están contraindicados en infección por E. coli productora de Shiga.",true,"Riesgo de síndrome hemolítico urémico."],
+["g12","La SRO de la OMS contiene 20 g de glucosa por litro.",true,"Facilita la absorción de sodio y agua."],
+["g13","La diarrea secretora cede con el ayuno.",false,"No cede; la osmótica sí."],
+["g13","Un gap osmótico fecal > 100 mOsm/kg indica diarrea osmótica.",true,"Con Na fecal < 60 y pH < 6."],
+["g14","El estreñimiento funcional más frecuente es el de tránsito lento.",false,"Es el de tránsito normal."],
+["g14","El biofeedback es el tratamiento de elección de la defecación disinérgica.",true,""],
+["g14","La prucaloprida es un agonista 5-HT4.",true,"Para tránsito lento tras falla de lo convencional."]
+);
+MC.push(
+["g12","Límite de duración de la diarrea aguda","14 días",["3 días","30 días","60 días"]],
+["g12","Dosis de vancomicina oral en C. difficile","125 mg c/6 h",["500 mg c/12 h","1 g c/24 h","250 mg c/48 h"]],
+["g13","Semanas para definir diarrea crónica","4 semanas",["1 semana","2 semanas","12 semanas"]],
+["g13","Gap osmótico en diarrea osmótica","> 100 mOsm/kg",["< 50 mOsm/kg","< 20 mOsm/kg","= 0"]],
+["g14","Fibra diaria recomendada","20–30 g",["5 g","60 g","100 g"]],
+["g14","Frecuencia de pujo/tenesmo en estreñimiento","79%",["10%","30%","99%"]]
+);
+GP.dx.push(["Diarrea secretora","Gap osmótico < 50 y no cede con ayuno"],["Diarrea osmótica","Gap osmótico > 100 y cede con ayuno"],["Disentería","Sangre, fiebre y tenesmo (colon)"],["Disinergia defecatoria","Contracción paradójica del piso pélvico"]);
+GP.tx.push(["Diarrea aguda deshidratante","SRO con 20 g de glucosa/L"],["Defecación disinérgica","Biofeedback"],["Tránsito lento refractario","Prucaloprida"],["C. difficile","Vancomicina 125 mg c/6 h"]);
+
+/* ============ GASTRO · C23, C27, C28 ============ */
+L("g23","C23 · Hepatitis virales",[
+["key","Virología, VHA, VHE y VHB",tbl(["Virus","Datos clave"],[
+ ["Mortalidad mundial","> 1,45 millones/año (VHC ~0,70 M; VHB ~0,69 M)"],
+ ["VHA y VHE","Fecal-oral; {{no cronifican}} (VHE puede cronificar en inmunosuprimidos). VHA incubación 15–50 días; IgM anti-VHA. Vacuna VHA en el PNI de Chile desde 2018 (> 98% eficacia). VHE: zoonosis (cerdo), grave en embarazadas"],
+ ["Hepatitis aguda","Fases prodrómica, ictérica y convalecencia; 4 preguntas mínimas (viajes, fármacos/hierbas, transmisión parenteral/sexual, alcohol)"],
+ ["Falla hepática aguda","INR > 1,5 o TP < 50%, bilirrubina > 10 mg/dL o {{encefalopatía}}: derivar a centro de trasplante"],
+ ["VHB: virus","ADN parcialmente bicatenario (Hepadnaviridae); incubación 30–180 días; cronicidad inversamente proporcional a la edad (neonatos ~90%, adultos < 5%)"],
+ ["HBsAg","Infección activa (aguda o crónica); anti-HBs + solo: vacunado/inmune"],
+ ["Anti-HBc IgM","Infección aguda o reactivación; anti-HBc IgG total: contacto previo"],
+ ["Fases de la HBC","Inmunotolerancia (HBeAg +, ADN alto, ALT normal), inmunoeliminación (ALT ↑), portador inactivo (anti-HBe +, ADN bajo), reactivación"],
+ ["Tratamiento VHB","Análogos nucleós(t)idos de alta barrera ({{entecavir}}, tenofovir) en hepatitis crónica con ADN y ALT elevados o cirrosis; profilaxis en inmunosupresión"]])],
+["dx","Hepatitis C y errores frecuentes",tbl(["Tema","Dato clave"],[
+ ["Historia natural VHC","Cronifica en ~75%; 20% desarrolla cirrosis en > 30 años; HCC 1–4%/año en cirrosis"],
+ ["Factores de riesgo Chile","Transfusión antes de 1996 (51%), procedimientos parenterales (41%), drogas EV (5%), sexual (1%)"],
+ ["Tamizaje","Anti-VHC una vez en la vida a toda persona > {{45 años}}"],
+ ["Diagnóstico","Anti-VHC (+) → {{ARN-VHC}} (carga viral) para confirmar infección activa; genotipo ya no es esencial"],
+ ["Tratamiento","Antivirales de acción directa: {{sofosbuvir + velpatasvir}} 1 comp/día por 12 semanas (RVS > 95%)"],
+ ["Errores","Pedir solo anti-VHC sin ARN, no vacunar contactos de VHB, retrasar la derivación de falla hepática"]])],
+["alg","Algoritmo clínico: hepatitis viral aguda",alg({t:"Hepatitis viral",n:[
+ ["a","s","Hepatitis aguda (ictericia, ALT muy elevada)",[["","b"]]],
+ ["b","c","IgM anti-VHA, HBsAg, IgM anti-HBc, anti-VHC y ARN, IgM anti-VHE",[["IgM VHA (+)","c"],["HBsAg o IgM anti-HBc (+)","d"],["Anti-VHC / ARN (+)","e"]]],
+ ["c","t","Soporte y vacuna a contactos",[]],
+ ["d","q","¿INR > 1,5 o encefalopatía?",[["Sí","f"],["No","g"]]],
+ ["f","a","Derivar a centro de trasplante; antiviral",[]],
+ ["g","t","Soporte y seguimiento de HBsAg a 6 meses",[]],
+ ["e","t","Antivirales de acción directa 12 semanas",[]]]})]
+]);
+L("g27","C27 · Lesiones focales hepáticas (LFH)",[
+["key","Lesiones quísticas",tbl(["Lesión","Datos clave"],[
+ ["Quiste simple","Frecuente, asintomático; anecoico con refuerzo posterior, sin septos ni pared; observar (tratar solo si es sintomático o gigante)"],
+ ["Poliquistosis hepática","Múltiples quistes; asociada a poliquistosis renal; biopsia contraindicada; manejo sintomático"],
+ ["Quiste hidatídico","{{Echinococcus granulosus}}; quiste con membranas y «vesículas hijas»; serología, albendazol y PAIR/cirugía; complicaciones: ruptura, sobreinfección"],
+ ["Absceso hepático","Fiebre, dolor en hipocondrio derecho, sepsis; piógeno (vía biliar, portal) o amebiano; drenaje + antibióticos (metronidazol si amebiano)"]])],
+["dx","Lesiones sólidas",tbl(["Lesión","Datos clave"],[
+ ["Hemangioma","Más frecuente benigna; realce periférico nodular con llenado centrípeto; observación"],
+ ["Hiperplasia nodular focal","Cicatriz central estrellada; mujeres jóvenes; benigna; observación"],
+ ["Adenoma","ACO y esteroides; riesgo de {{ruptura/hemorragia}} y malignización; resecar si > 5 cm, hombres, sintomático o con β-catenina"],
+ ["Metástasis","Lesión sólida más común en hígado no cirrótico; múltiples; biopsia/primario"],
+ ["Colangiocarcinoma","Hígado no cirrótico o con CEP; Ca 19-9 elevado"],
+ ["Carcinoma hepatocelular","En cirrosis. Vigilancia: ecografía ± AFP cada {{6 meses}}. Nódulo < 1 cm: repetir eco en 3–4 meses; > 1 cm: TAC/RM multifásica: realce arterial con lavado portal = HCC sin biopsia"],
+ ["Estadificación","BCLC 0–D"],
+ ["Curativo","Resección, ablación por radiofrecuencia (< 3 cm; sobrevida 5 años 78–91%) y {{trasplante}} (criterios de Milán: 1 nódulo ≤ 5 cm o hasta 3 ≤ 3 cm; UCSF ampliados)"],
+ ["Paliativo","TACE (BCLC-B), terapia sistémica/inmunoterapia (BCLC-C)"]])],
+["alg","Algoritmo clínico: nódulo hepático",alg({t:"LFH",n:[
+ ["a","s","Lesión focal hepática en imágenes",[["","b"]]],
+ ["b","q","¿Cirrosis o hepatopatía crónica?",[["Sí","c"],["No","d"]]],
+ ["c","c","TAC o RM multifásica",[["Realce arterial + lavado","e"],["No característico","f"]]],
+ ["e","d","Carcinoma hepatocelular",[["","g"]]],
+ ["f","c","Biopsia o repetir imagen",[]],
+ ["g","t","Resección, ablación o trasplante según BCLC",[]],
+ ["d","c","Eco/TAC/RM: ¿quística o sólida?",[["Quística","h"],["Sólida","i"]]],
+ ["h","t","Quiste simple: observar; hidatídico: albendazol + drenaje",[]],
+ ["i","c","Hemangioma, HNF, adenoma o metástasis según realce",[]]]})]
+]);
+L("g28","C28 · Litiasis biliar y complicaciones",[
+["key","Epidemiología, diagnóstico y cuadros",tbl(["Tema","Dato clave"],[
+ ["Composición","Colesterol (> 70%), mixtos (12%), pigmentarios (5%)"],
+ ["Chile","Prevalencia > 20 años: {{30% mujeres}}, 17% hombres; aumenta con la edad"],
+ ["Ecografía","Primera elección: S y E > 95% para cálculos ≥ 3 mm"],
+ ["Colangio-RM / USE","Para coledocolitiasis y barro biliar; CPRE solo terapéutica"],
+ ["Cólico biliar","Dolor en hipocondrio derecho/epigastrio de 30 min a 5 h, postprandial; sin fiebre; recurre en 60–70% a 2 años"],
+ ["GES Chile","Colecistectomía garantizada a toda persona de {{35 a 49 años}} con colecistolitiasis (en 6 meses)"],
+ ["Colecistitis aguda","Cístico obstruido + inflamación: dolor > 6 h, fiebre, Murphy; ecografía con pared > 4 mm, líquido perivesicular. {{Colecistectomía laparoscópica en 24–72 h}} + antibióticos"],
+ ["Coledocolitiasis","Obstrucción con patrón colestásico y bilirrubina ↑; colangio-RM o USE → CPRE con papilotomía"],
+ ["Colangitis aguda","{{Tríada de Charcot}} (fiebre con escalofríos, dolor, ictericia: 50–75%); péntada de Reynolds (+ shock y compromiso mental). Antibióticos + drenaje biliar urgente (CPRE)"]])],
+["tx","Pólipos y cáncer de vesícula",tbl(["Tema","Dato clave"],[
+ ["Pólipos","Pequeños (< 10 mm) son 95% colesterolosis (no neoplásicos). Operar si ≥ 10 mm, crecimiento, edad > 50–60, litiasis o sintomáticos"],
+ ["Cáncer vesicular","Sobrevida a 5 años en etapas avanzadas 0–10%; en Chile es muy frecuente"],
+ ["Factor de riesgo","Colelitiasis presente en 75–98% (OR 2,5–7); alto riesgo: cálculo único ≥ {{2,5 cm}}, múltiples > 10 mL, vesícula en porcelana"],
+ ["Prevención","Colecistectomía profiláctica en litiasis; vigilar vesícula porcelana y pólipos"]])],
+["alg","Algoritmo clínico: dolor biliar",alg({t:"Litiasis",n:[
+ ["a","s","Dolor en hipocondrio derecho",[["","b"]]],
+ ["b","c","Ecografía + hemograma, PCR, perfil hepático",[["Cálculos sin fiebre","c"],["Fiebre + pared engrosada","d"],["Fiebre, ictericia y dolor","e"]]],
+ ["c","t","Analgesia; colecistectomía electiva (GES 35–49 años)",[]],
+ ["d","t","Antibióticos + colecistectomía laparoscópica en 24–72 h",[]],
+ ["e","d","Colangitis aguda (Charcot)",[["","f"]]],
+ ["f","t","Antibióticos EV + drenaje biliar por CPRE urgente",[]]]})]
+]);
+C.push(
+["g23","Marcadores de infección aguda por VHB","HBsAg e IgM anti-HBc."],
+["g23","Tratamiento estándar de hepatitis C","Sofosbuvir + velpatasvir 12 semanas."],
+["g23","Tamizaje de VHC en Chile","Anti-VHC una vez en la vida a toda persona mayor de 45 años."],
+["g23","Falla hepática aguda","INR > 1,5, bilirrubina > 10 o encefalopatía: derivar a centro de trasplante."],
+["g27","Vigilancia del hepatocarcinoma","Ecografía ± AFP cada 6 meses en cirróticos."],
+["g27","Diagnóstico no invasivo de HCC","TAC/RM multifásica con realce arterial y lavado."],
+["g27","Adenoma hepático","Riesgo de ruptura; resecar si > 5 cm o en hombres."],
+["g28","Tríada de Charcot","Fiebre con escalofríos, dolor en hipocondrio derecho e ictericia."],
+["g28","Oportunidad de colecistectomía en colecistitis aguda","Laparoscópica en 24–72 horas."],
+["g28","Riesgo alto de cáncer vesicular","Cálculo único ≥ 2,5 cm o múltiples con volumen > 10 mL."]
+);
+VF.push(
+["g23","El VHA evoluciona a hepatitis crónica.",false,"No cronifica."],
+["g23","El genotipo viral es imprescindible para elegir tratamiento de VHC actual.",false,"Los esquemas pangenotípicos lo evitan."],
+["g23","En adultos la hepatitis B aguda cronifica en menos de 5%.",true,"Neonatos: ~90%."],
+["g27","El hemangioma requiere cirugía de rutina.",false,"Se observa."],
+["g27","La biopsia es necesaria en un nódulo > 1 cm con realce arterial y lavado en cirrosis.",false,"Imagen típica diagnostica HCC."],
+["g28","La ecografía es el examen inicial de elección en colecistolitiasis.",true,"S y E > 95%."],
+["g28","En colangitis aguda se difiere el drenaje biliar.",false,"El drenaje es urgente."],
+["g28","Los pólipos < 10 mm suelen ser colesterolosis.",true,"95% no neoplásicos."]
+);
+MC.push(
+["g23","Duración de sofosbuvir + velpatasvir","12 semanas",["2 semanas","6 meses","3 años"]],
+["g23","Edad de tamizaje de VHC en Chile","> 45 años",["> 18 años","> 65 años","> 80 años"]],
+["g27","Intervalo de vigilancia del HCC","6 meses",["1 mes","2 años","5 años"]],
+["g28","Prevalencia de litiasis en mujeres chilenas > 20 años","30%",["3%","50%","90%"]],
+["g28","Tamaño de cálculo de alto riesgo de cáncer vesicular","≥ 2,5 cm",["≥ 3 mm","≥ 1 cm","≥ 10 cm"]]
+);
+GP.dx.push(["Tríada de Charcot","Colangitis aguda"],["HBsAg","Infección activa por VHB"],["Hemangioma","Realce periférico nodular centrípeto"],["Colesterolosis","Pólipo vesicular pequeño no neoplásico"]);
+GP.tx.push(["Colangitis aguda","Antibióticos + drenaje biliar"],["VHC","Sofosbuvir + velpatasvir 12 semanas"],["Colecistitis aguda","Colecistectomía laparoscópica en 24–72 h"],["HCC en cirrosis","Resección, ablación o trasplante"]);
+
+/* ============ GASTRO · C19–C22 ============ */
+L("g19","C19 · Alteración de pruebas hepáticas",[
+["key","Patrones y fisiología",tbl(["Tema","Dato clave"],[
+ ["Epidemiología","Alteración asintomática en ≈ {{2,5%}}; fibrosis subclínica ~1,6%"],
+ ["Hepatocelular","↑ AST/ALT. Factor R = (ALT/LSN) ÷ (FA/LSN) {{> 5}}"],
+ ["Colestásico","↑ FA y GGT (± bilirrubina). R {{< 2}}"],
+ ["Mixto","R entre {{2 y 5}} (fármacos, patología biliar aguda)"],
+ ["Función sintética","Albúmina (vida media ~21 d) e INR/TP: reflejan función, no daño"],
+ ["> 1.000 UI/L","Hepatitis viral aguda, hepatitis isquémica («hígado de shock»), paracetamol"],
+ ["De Ritis (AST/ALT)","{{> 2}}: hepatopatía alcohólica; < 1: MASLD, virales, etc."],
+ ["MASLD","Causa más frecuente en Chile y Occidente (~30%)"],
+ ["Hierro","Saturación de transferrina > 45% + ferritina alta: hemocromatosis (HFE)"],
+ ["Causas no hepáticas de ↑ AST/ALT","Músculo (CK), tiroides, celiaquía, ejercicio intenso"],
+ ["Bilirrubina indirecta aislada","< 30% directa: {{Gilbert}} (benigno) y hemólisis"],
+ ["GGT aislada","Alcohol, fármacos, MASLD, inducción enzimática"]])],
+["dx","Estudio por patrón",tbl(["Patrón","Estudio y causas"],[
+ ["Hepatocelular","Virus (VHA, VHB, VHC, VHE), autoinmune (ANA, ASMA, IgG), hemocromatosis, Wilson, déficit de α1-antitripsina, fármacos"],
+ ["Colestásico","{{Ecografía}} primero. Dilatación biliar: colangio-RM/CPRE (litiasis, tumor). Sin dilatación: anti-mitocondriales (CBP), colangio-RM (CEP), fármacos"],
+ ["Fibrosis","FIB-4 y elastografía; la {{biopsia no es rutina}} en MASLD"],
+ ["Derivar","Transaminasas > 5 veces el LSN, ↑ bilirrubina, INR alterado, sospecha de fibrosis avanzada o falla de diagnóstico tras 6 meses"]])],
+["alg","Algoritmo clínico: pruebas hepáticas alteradas",alg({t:"PHA",n:[
+ ["a","s","Pruebas hepáticas alteradas",[["","b"]]],
+ ["b","c","Factor R = (ALT/LSN) ÷ (FA/LSN)",[["> 5","c"],["2–5","d"],["< 2","e"]]],
+ ["c","c","Hepatocelular: serologías virales, autoinmunidad, hierro, metabólico",[["","f"]]],
+ ["d","c","Mixto: fármacos y ecografía",[]],
+ ["e","c","Colestásico: ecografía hepática y de vía biliar",[["Vía biliar dilatada","g"],["No dilatada","h"]]],
+ ["g","c","Colangio-RM / CPRE",[]],
+ ["h","c","Anticuerpos antimitocondriales y colangio-RM",[]],
+ ["f","c","FIB-4 y elastografía para fibrosis",[["Avanzada","i"]]],
+ ["i","a","Derivar a hepatología",[]]]})]
+]);
+L("g20","C20 · Síndrome ascítico y cirrótico",[
+["key","Fisiopatología y diagnóstico de la ascitis",tbl(["Tema","Dato clave"],[
+ ["Etiología","Cirrosis 80%, neoplasias peritoneales 10%, insuficiencia cardíaca, TBC, pancreática, nefrótica"],
+ ["Fisiopatología","Hipertensión portal sinusoidal → vasodilatación esplácnica → hipovolemia arterial efectiva → activación de {{renina-angiotensina-aldosterona}} → retención de sodio y agua"],
+ ["GASA (SAAG)","Albúmina sérica − albúmina del líquido. {{≥ 1,1}}: hipertensión portal (cirrosis, IC, Budd-Chiari). < 1,1: peritoneal (cáncer, TBC)"],
+ ["Proteínas del líquido","< 2,5 g/dL: cirrosis; ≥ 2,5: cardiaca, Budd-Chiari"],
+ ["Paracentesis diagnóstica","Recuento de PMN, cultivo en frascos de hemocultivo, albúmina, proteínas; citología, ADA o triglicéridos según sospecha"],
+ ["Ascitis refractaria","Resistente a diuréticos (pérdida < 1,5 kg/semana con espironolactona 400 mg + furosemida 160 mg y dieta < 80 mEq Na) o intratable por efectos adversos"]])],
+["tx","Tratamiento y complicaciones",tbl(["Tema","Puntos clave"],[
+ ["Dieta","Restricción de sodio ({{< 2 g/día}}); no restringir líquidos salvo Na < 125"],
+ ["Diuréticos","Espironolactona 100 mg + furosemida 40 mg; escalar cada 3–5 días hasta 400/160 mg"],
+ ["Grado 3 (tensa)","Paracentesis evacuadora total + albúmina 6–8 g por litro extraído (> 5 L)"],
+ ["Refractaria","Paracentesis seriadas con albúmina, TIPS, trasplante hepático"],
+ ["Evitar","AINEs, IECA/ARA II y aminoglucósidos"],
+ ["PBE: diagnóstico","{{PMN ≥ 250/µL}} en líquido ascítico; E. coli 43%; Klebsiella 8%"],
+ ["PBE: tratamiento","Cefotaxima 2 g c/8 h o ceftriaxona 2 g/día ≥ 5 días + {{albúmina}} 1,5 g/kg día 1 y 1 g/kg día 3 (previene síndrome hepatorrenal)"],
+ ["Profilaxis primaria","HDA (ceftriaxona 1 g/día) o proteínas del líquido < 1,5 g/dL con falla hepática o renal: norfloxacino/ciprofloxacino"],
+ ["Profilaxis secundaria","Ciprofloxacino 500 mg/día o norfloxacino 400 mg/día de forma indefinida tras una PBE"],
+ ["Síndrome hepatorrenal","Terlipresina + albúmina; suspender diuréticos y nefrotóxicos; trasplante"]])],
+["alg","Algoritmo clínico: ascitis",alg({t:"Ascitis",n:[
+ ["a","s","Ascitis de reciente aparición o hospitalización",[["","b"]]],
+ ["b","c","Paracentesis diagnóstica: PMN, cultivo, albúmina, proteínas",[["PMN ≥ 250","c"],["PMN < 250","d"]]],
+ ["c","t","Cefotaxima o ceftriaxona + albúmina 1,5 g/kg día 1",[]],
+ ["d","c","GASA",[["≥ 1,1","e"],["< 1,1","f"]]],
+ ["e","d","Ascitis portal hipertensiva (cirrosis, cardiaca)",[["","g"]]],
+ ["f","d","Ascitis peritoneal: citología, ADA",[]],
+ ["g","t","Restricción de sodio + espironolactona y furosemida",[["Refractaria","h"],["Grado 3","i"]]],
+ ["h","a","Paracentesis seriadas, TIPS, evaluación de trasplante",[]],
+ ["i","t","Paracentesis total con albúmina",[]]]})]
+]);
+L("g21","C21 y 22 · Cirrosis",[
+["key","Diagnóstico no invasivo y etapificación",tbl(["Tema","Dato clave"],[
+ ["Epidemiología","> 100 millones con cirrosis compensada; asintomática 15–20 años. Chile: mortalidad 23,6/100.000"],
+ ["FIB-4","< 1,30: descarta fibrosis avanzada (VPN alto); {{≥ 1,30}} (≥ 2,0 en > 65 años): confirmar con elastografía"],
+ ["FibroScan","Normal ~5 kPa; F3 ≥ 8–9; cirrosis (F4) ≥ {{12–15 kPa}}"],
+ ["Baveno VII","Rigidez < 15 kPa y plaquetas > 150.000: descarta HTP clínicamente significativa y evita EDA; HVPG ≥ 10 mmHg o FibroScan ≥ 20–25 kPa: iniciar carvedilol"],
+ ["Compensada","Sin complicaciones cardinales; supervivencia a 2 años > 90%"],
+ ["Descompensada","Ascitis, hemorragia variceal, encefalopatía o ictericia"],
+ ["Child-Pugh","Bilirrubina, albúmina, INR, ascitis y encefalopatía: A 5–6, B 7–9, C 10–15"],
+ ["MELD","Bilirrubina, INR, creatinina (± Na): prioriza trasplante"]])],
+["dx","Complicaciones",tbl(["Complicación","Puntos clave"],[
+ ["Hemorragia variceal","Vasoactivo + antibiótico + LVE; {{TIPS precoz}} en 24–72 h si Child C (10–13) o B con sangrado activo"],
+ ["Encefalopatía hepática","Hiperamonemia + inflamación. West-Haven I–IV. Precipitantes: infección, HDA, deshidratación, hipokalemia, sedantes, estreñimiento"],
+ ["Tratamiento de la EH","Corregir el precipitante; {{lactulosa}} y luego {{rifaximina}} para prevenir recurrencias"],
+ ["Ascitis y PBE","Ver C20"],
+ ["Síndrome hepatorrenal","Clasificación ADQI–ICA 2024 por tiempo de evolución; terlipresina + albúmina"],
+ ["Carcinoma hepatocelular","Vigilancia con {{ecografía ± AFP cada 6 meses}} en cirróticos"]])],
+["tx","Tratamiento general",tbl(["Tema","Puntos clave"],[
+ ["Causa","Tratar la etiología (antivirales, abstinencia, pérdida de peso) puede lograr recompensación"],
+ ["Prevención","Carvedilol/betabloqueadores no selectivos en HTP significativa; vacunas (VHA, VHB, neumococo, influenza)"],
+ ["Nutrición","Aporte proteico adecuado, snack nocturno; evitar ayunos"],
+ ["Trasplante","MELD ≥ 15 o descompensación; CHC dentro de criterios"]])],
+["alg","Algoritmo clínico: cirrosis",alg({t:"Cirrosis",n:[
+ ["a","s","Factores de riesgo hepático (alcohol, MASLD, virus)",[["","b"]]],
+ ["b","c","Calcular FIB-4",[["< 1,30","c"],["≥ 1,30","d"]]],
+ ["c","d","Bajo riesgo: control en 1–3 años",[]],
+ ["d","c","Elastografía (FibroScan)",[["< 8 kPa","c"],["≥ 12–15 kPa","e"]]],
+ ["e","d","Cirrosis probable",[["","f"]]],
+ ["f","q","Baveno VII: ¿rigidez < 15 y plaquetas > 150.000?",[["Sí","g"],["No","h"]]],
+ ["g","t","Sin EDA; vigilancia",[]],
+ ["h","t","EDA de tamizaje; carvedilol si HTP significativa",[["","i"]]],
+ ["i","t","Ecografía ± AFP cada 6 meses; evaluar trasplante según MELD",[]]]})]
+]);
+C.push(
+["g19","Factor R","(ALT/LSN) ÷ (FA/LSN): > 5 hepatocelular; 2–5 mixto; < 2 colestásico."],
+["g19","Índice AST/ALT > 2","Sugiere hepatopatía alcohólica."],
+["g19","Hiperbilirrubinemia indirecta aislada","Síndrome de Gilbert o hemólisis."],
+["g20","GASA ≥ 1,1 g/dL","Ascitis por hipertensión portal."],
+["g20","Diagnóstico de PBE","PMN ≥ 250/µL en líquido ascítico; iniciar cefalosporina sin esperar cultivo."],
+["g20","Albúmina en PBE","1,5 g/kg día 1 y 1 g/kg día 3 para prevenir el síndrome hepatorrenal."],
+["g20","Tratamiento de ascitis a tensión","Paracentesis total con albúmina."],
+["g21","FIB-4","< 1,30 descarta fibrosis avanzada; ≥ 1,30 requiere elastografía."],
+["g21","Baveno VII","Rigidez < 15 kPa y plaquetas > 150.000 permiten evitar la EDA de tamizaje."],
+["g21","Tratamiento de la encefalopatía hepática","Corregir precipitante y lactulosa; rifaximina para prevenir recurrencias."],
+["g21","Vigilancia del hepatocarcinoma","Ecografía ± AFP cada 6 meses."]
+);
+VF.push(
+["g19","Un factor R < 2 indica patrón colestásico.",true,""],
+["g19","La biopsia hepática es de rutina en la evaluación de MASLD.",false,"Se usan métodos no invasivos."],
+["g20","En PBE se espera el cultivo antes de iniciar antibióticos.",false,"Se inicia con PMN ≥ 250 sin esperar."],
+["g20","La albúmina en PBE reduce el riesgo de falla renal.",true,""],
+["g20","Se debe restringir líquidos en toda ascitis.",false,"Solo si hay hiponatremia severa."],
+["g21","FIB-4 < 1,30 descarta fibrosis avanzada con alto VPN.",true,""],
+["g21","El INR alto de un cirrótico siempre obliga a plasma antes de procedimientos.",false,"Refleja mal la coagulación; se evita."],
+["g21","La lactulosa se usa en la encefalopatía hepática.",true,"Con rifaximina para prevenir recaídas."]
+);
+MC.push(
+["g19","Factor R de patrón mixto","2–5",["< 2","> 5","> 10"]],
+["g20","PMN que definen PBE","≥ 250/µL",["≥ 25/µL","≥ 1.000/µL","≥ 5.000/µL"]],
+["g20","Albúmina día 1 en PBE","1,5 g/kg",["0,1 g/kg","5 g/kg","20 g/kg"]],
+["g21","Rigidez hepática que sugiere cirrosis","≥ 12–15 kPa",["≥ 3 kPa","≥ 5 kPa","≥ 80 kPa"]],
+["g21","Puntaje Child-Pugh clase C","10–15",["5–6","7–9","1–3"]]
+);
+GP.dx.push(["PBE","PMN ≥ 250/µL en líquido ascítico"],["GASA ≥ 1,1","Ascitis portal hipertensiva"],["Child-Pugh B","7–9 puntos"],["Gilbert","Hiperbilirrubinemia indirecta benigna"]);
+GP.tx.push(["PBE","Cefalosporina + albúmina"],["Ascitis a tensión","Paracentesis total + albúmina"],["Encefalopatía hepática","Lactulosa ± rifaximina"],["Hemorragia variceal","Terlipresina + LVE + ceftriaxona"]);
+
+/* ============ GASTRO · C6–C8 ============ */
+L("g6","C6 · Hemorragia digestiva alta no variceal",[
+["key","Epidemiología, evaluación y estratificación",tbl(["Tema","Dato clave"],[
+ ["Definición","HDA: sangrado proximal al {{ángulo de Treitz}}. Es la causa más frecuente de hospitalización por patología digestiva: 50–150/100.000 adultos al año"],
+ ["Mortalidad","Global ~10%; no variceal (péptica) ~{{4%}}; variceal mucho mayor"],
+ ["Etiología","Úlcera péptica 55%, várices 10–20%, Mallory-Weiss y esofagitis, angiodisplasias, tumores, Dieulafoy"],
+ ["Presentación","Hematemesis, melena (tránsito ≥ 8 h), hematoquezia en 10–15% de HDA masivas. Siempre hacer {{tacto rectal}}"],
+ ["Inestabilidad","PAS < 100 mmHg o FC > 100: shock hipovolémico. ABC, 2 vías gruesas (16–18G), cristaloides"],
+ ["Transfusión restrictiva","Meta Hb {{7–9 g/dL}}; sobrepasar 9–10 ↑ presión portal, resangrado y mortalidad"],
+ ["Glasgow-Blatchford (GBS)","Previo a EDA. {{GBS 0–1}} = bajo riesgo: manejo ambulatorio sin EDA urgente. > 1 hospitaliza; > 7 alto riesgo de endoterapia"],
+ ["AIMS65","Albúmina < 3, INR > 1,5, estado mental alterado, PAS < 90, edad > 65. Mortalidad: 1 punto 1,7%; 3 puntos 7,2%; 4 puntos 26%"]])],
+["tx","Manejo farmacológico, EDA y seguimiento",tbl(["Tema","Dato clave"],[
+ ["IBP preendoscópico","Bolo EV y luego {{omeprazol 40 mg EV c/12 h}} 72 h; después IBP oral 14 días"],
+ ["Ácido tranexámico","{{No usar}}: HALT-IT (12.000 pacientes) sin reducir mortalidad y ↑ eventos tromboembólicos"],
+ ["Momento de la EDA","Precoz < 24 h; de urgencia < 12 h en inestables. EDA < 6 h no mejora mortalidad ni resangrado vs 6–24 h"],
+ ["Forrest Ia / Ib","Sangrado activo (en chorro / en napa): hemostasia endoscópica obligatoria. Resangrado 55%"],
+ ["Forrest IIa / IIb","Vaso visible / coágulo adherido: tratar. Resangrado 43% y 22%"],
+ ["Forrest IIc / III","Mácula plana (10%) y base limpia (5%): {{solo tratamiento farmacológico}}"],
+ ["Terapia endoscópica","Adrenalina 1:10.000 nunca sola. {{Doble terapia}} (adrenalina + térmica o clip): eficacia > 95%"],
+ ["Alto riesgo post-EDA","Hospitalizar 72 h con IBP EV. Resangrado: repetir EDA; si falla, angioembolización o cirugía"],
+ ["Prevención secundaria","Erradicar {{H. pylori}} (resangrado 5,6% → 1,6%), suspender AINEs y gastroprotección"]])],
+["alg","Algoritmo clínico: HDA no variceal",alg({t:"HDA",n:[
+ ["a","s","Hematemesis o melena",[["","b"]]],
+ ["b","q","¿Inestable (PAS < 100 o FC > 100)?",[["Sí","c"],["No","d"]]],
+ ["c","t","ABC, 2 vías gruesas, cristaloides; transfundir si Hb < 7",[["","e"]]],
+ ["d","c","Score de Glasgow-Blatchford",[["GBS 0–1","f"],["GBS > 1","e"]]],
+ ["f","t","Alta y control ambulatorio",[]],
+ ["e","t","IBP EV 40 mg c/12 h (sin ácido tranexámico)",[["","g"]]],
+ ["g","c","EDA < 24 h (< 12 h si inestable)",[["","h"]]],
+ ["h","q","Clasificación de Forrest",[["Ia, Ib, IIa, IIb","i"],["IIc, III","j"]]],
+ ["i","t","Doble terapia endoscópica + IBP 72 h",[["Resangrado","k"]]],
+ ["j","t","IBP oral; alta precoz",[]],
+ ["k","a","Repetir EDA; angioembolización o cirugía",[]]]})]
+]);
+L("g7","C7 · Várices esofágicas y HDA variceal",[
+["key","Hipertensión portal y várices",tbl(["Tema","Dato clave"],[
+ ["Prevalencia","VGE en ~{{50%}} de cirróticos: 30–40% compensados y 85% descompensados"],
+ ["Historia natural","Várices nuevas 7–8% al año; paso de pequeñas a grandes 10–12% anual"],
+ ["Mortalidad","Hemorragia variceal: {{15–25%}} a las 6 semanas; recurrencia 60% a 1–2 años sin profilaxis secundaria"],
+ ["Gástricas (Sarin)","GOV1 (curvatura menor, 75%), GOV2 (hacia el fondo, 25%), IGV1 (fúndicas), IGV2 (cuerpo, antro, duodeno)"],
+ ["Riesgo de sangrado","IGV1 > GOV2 > GOV1 > IGV2; en fúndicas el GPVH > 12 mmHg predice menos"]])],
+["tx","Manejo de la hemorragia variceal aguda",tbl(["Medida","Puntos clave"],[
+ ["Reanimación","Transfusión {{restrictiva}}; INR y plasma fresco no reflejan la coagulación real del cirrótico: evitar PFC"],
+ ["Antibióticos","{{Ceftriaxona 1 g/día}} hasta 7 días: infección 13% vs 36%, resangrado 24% vs 45%, mortalidad 19% vs 22%"],
+ ["Vasoactivos","{{Terlipresina}} (control de sangrado en 4/4 RCT; ARR mortalidad 18%) u octreotide/somatostatina; iniciar antes de la EDA"],
+ ["Endoscopia","Dentro de {{12 horas}}. Ligadura variceal (LVE) de primera línea: control en ~90%, mejor que escleroterapia"],
+ ["Seguimiento LVE","Repetir cada 3–4 semanas; erradicación en 2–4 sesiones; asociar betabloqueador"],
+ ["Balón (Sengstaken / Minnesota)","Puente: hemostasia 90%, máximo {{24 h}} (ideal 12); complicaciones 12%, letalidad 6%"],
+ ["Stent esofágico (SEMS)","Cubierto autoexpandible, 7–14 días, permite ingesta oral"],
+ ["TIPS de rescate","Para falla de control o resangrado precoz"],
+ ["Várices fúndicas","{{Cianoacrilato}} (GOV2, IGV1): hemostasia 90%, resangrado 10–20%. {{No ligar}} (resangrado 30–90%)"],
+ ["Guiado por EUS","Coils + cianoacrilato: obliteración precoz 84% vs 63%; recurrencia 9% vs 18%"]])],
+["alg","Algoritmo clínico: HDA variceal",alg({t:"Várices",n:[
+ ["a","s","Cirrótico con hematemesis o melena",[["","b"]]],
+ ["b","t","Reanimar: transfusión restrictiva, vía aérea, UCI",[["","c"]]],
+ ["c","t","Terlipresina (u octreotide) + ceftriaxona 1 g/día",[["","d"]]],
+ ["d","c","EDA en menos de 12 horas",[["Várice esofágica","e"],["Várice fúndica","f"]]],
+ ["e","t","Ligadura variceal (LVE)",[["Sangrado persiste","g"],["Controlado","h"]]],
+ ["f","t","Cianoacrilato (± guía EUS)",[["Sangrado persiste","g"]]],
+ ["g","a","Balón < 24 h o stent; TIPS de rescate",[]],
+ ["h","t","LVE c/3–4 sem + betabloqueador",[]]]})]
+]);
+L("g8","C8 · Hemorragia del intestino delgado",[
+["key","Definición, etiología y diagnóstico",tbl(["Tema","Dato clave"],[
+ ["Intestino delgado","5–6 m (primer tercio yeyuno, 2/3 íleon); «caja negra» hasta la cápsula (2001)"],
+ ["Definición","Sangrado persistente o recurrente con {{EDA y colonoscopia negativas}}"],
+ ["Presentación","Manifiesta (melena/hematoquezia) u oculta (anemia ferropénica)"],
+ ["Second look","Repetir EDA y colonoscopia rinde 20–30% y evita estudios invasivos"],
+ ["< 40 años","Crohn, tumores/pólipos, {{divertículo de Meckel}}, Behçet, Dieulafoy"],
+ ["≥ 40 años","{{Angioectasias}}, tumores (GIST, TNE, linfoma), úlceras por AINEs, várices por hipertensión portal"],
+ ["Meckel","Persistencia del conducto onfalomesentérico a 45–90 cm de la válvula ileocecal; sangrado en niños y adultos jóvenes (< 30 años)"],
+ ["Peutz-Jeghers","AD: pigmentación mucocutánea y pólipos hamartomatosos del delgado"],
+ ["Masa que sangra","GIST hasta demostrar lo contrario"],
+ ["Cápsula endoscópica","Rendimiento 40–90%, VPN 80–100%; mejor en 48–72 h del sangrado. Retención 1–2% (contraindicada si hay estenosis conocida)"],
+ ["Otros estudios","AngioTAC (sangrado activo > 0,3–0,5 mL/min), cintigrama Tc-99m (> 0,1 mL/min), enteroscopia asistida"]])],
+["tx","Algoritmo terapéutico y técnicas",tbl(["Tema","Dato clave"],[
+ ["Guía ESGE","EDA y colonoscopia → cápsula precoz (48–72 h) → enteroscopia dirigida por hallazgo"],
+ ["Yano-Yamamoto","2a: puntiforme con sangrado pulsátil → térmica + clip. 2b: protrusión roja sin dilatación venosa → terapia combinada"],
+ ["Argón plasma","Angiodisplasias: gas 0,8 L/min, 40 W pulsado"],
+ ["Várices yeyunales","Cianoacrilato + lipiodol; máximo 2–3 inyecciones por sesión"],
+ ["Hemospray","Polvo hemostático para sangrado difuso (úlceras isquémicas, linfoma)"],
+ ["Recurrencia","Hasta {{35%}} al año tras tratar lesiones vasculares; ↑ riesgo con cardiopatía (HR 2,04) y sangrado manifiesto (HR 1,78)"]])],
+["alg","Algoritmo clínico: sangrado de intestino delgado",alg({t:"HID",n:[
+ ["a","s","Anemia o sangrado digestivo con EDA y colonoscopia normales",[["","b"]]],
+ ["b","c","Repetir EDA y colonoscopia (second look)",[["Negativo","c"],["Causa","k"]]],
+ ["c","q","¿Sangrado activo con inestabilidad?",[["Sí","d"],["No","e"]]],
+ ["d","c","AngioTAC; arteriografía y embolización",[]],
+ ["e","c","Cápsula endoscópica en 48–72 h",[["Lesión","f"],["Negativa","g"]]],
+ ["f","t","Enteroscopia asistida: APC o clips según Yano-Yamamoto",[]],
+ ["g","c","EnteroTAC / enteroRM; reevaluar",[]],
+ ["k","d","Tratar la causa identificada",[]]]})]
+]);
+C.push(
+["g6","Glasgow-Blatchford ≤ 1","Bajo riesgo: manejo ambulatorio sin EDA urgente. Más de 1 requiere ingreso."],
+["g6","Meta de hemoglobina en HDA","7–9 g/dL (transfusión restrictiva): umbrales mayores aumentan resangrado y mortalidad."],
+["g6","Ácido tranexámico en HDA","No se usa: HALT-IT mostró más eventos tromboembólicos sin menor mortalidad."],
+["g6","Forrest que requieren terapia endoscópica","Ia, Ib, IIa y IIb (doble terapia). IIc y III: solo IBP."],
+["g7","Antibiótico de profilaxis en hemorragia variceal","Ceftriaxona 1 g/día por hasta 7 días."],
+["g7","Tratamiento endoscópico de várices esofágicas","Ligadura variceal dentro de 12 horas; repetir cada 3–4 semanas."],
+["g7","Várices fúndicas (GOV2, IGV1)","Cianoacrilato; la ligadura está contraindicada por resangrado de 30–90%."],
+["g7","Balón de Sengstaken-Blakemore","Puente de menos de 24 h; letalidad 6%."],
+["g8","Definición de hemorragia del intestino delgado","Sangrado recurrente con EDA y colonoscopia normales."],
+["g8","Primera línea tras EDA y colono negativas","Cápsula endoscópica en 48–72 horas del sangrado."],
+["g8","Causa más frecuente en ≥ 40 años","Angioectasias; en < 40 años: Crohn, tumores y Meckel."]
+);
+VF.push(
+["g6","El ácido tranexámico reduce la mortalidad por HDA.",false,"HALT-IT: no la reduce y aumenta eventos tromboembólicos."],
+["g6","La EDA en menos de 6 horas disminuye la mortalidad frente a 6–24 h.",false,"No hay diferencia en mortalidad ni resangrado."],
+["g6","Adrenalina sola es suficiente como terapia endoscópica.",false,"Nunca en monoterapia por el alto resangrado."],
+["g6","En Forrest III basta con tratamiento farmacológico.",true,"Base limpia: resangrado 5%."],
+["g7","El INR elevado del cirrótico obliga a corregirlo con plasma fresco.",false,"No refleja la coagulación real; se evita el PFC."],
+["g7","La terlipresina mejora el control del sangrado en la hemorragia variceal.",true,"Beneficio en 4/4 RCT."],
+["g7","La ligadura con bandas es el tratamiento de elección de varices fúndicas.",false,"Se usa cianoacrilato."],
+["g8","La retención de la cápsula ocurre en 1–2% de los casos.",true,"Suele marcar el sitio de la lesión."],
+["g8","El divertículo de Meckel es causa frecuente de sangrado en mayores de 60 años.",false,"Es de niños y adultos jóvenes (< 30 años)."]
+);
+MC.push(
+["g6","GBS que permite manejo ambulatorio","0–1",["2–3","4–5","≥ 7"]],
+["g6","Dosis de omeprazol EV tras el bolo","40 mg c/12 h",["20 mg c/24 h","80 mg c/6 h","10 mg c/12 h"]],
+["g7","Horas para realizar la EDA en HDA variceal","12 horas",["2 horas","48 horas","72 horas"]],
+["g7","Mortalidad a las 6 semanas del sangrado variceal","15–25%",["1–2%","40–50%","80%"]],
+["g8","Ventana ideal para cápsula endoscópica tras el sangrado","48–72 horas",["1 hora","10 días","1 mes"]],
+["g8","Recurrencia al año tras tratar lesiones vasculares","35%",["5%","60%","90%"]]
+);
+GP.dx.push(["Forrest Ia","Sangrado activo en chorro"],["Glasgow-Blatchford 0–1","Bajo riesgo ambulatorio"],["Divertículo de Meckel","45–90 cm de la válvula ileocecal"],["IGV1","Várices aisladas del fondo gástrico"]);
+GP.tx.push(["HDA péptica de alto riesgo","Doble terapia endoscópica + IBP 72 h"],["Várice esofágica sangrante","Ligadura + terlipresina + ceftriaxona"],["Várice fúndica sangrante","Cianoacrilato"],["Hemorragia de ID sin causa","Cápsula endoscópica"]);
+
+/* ============ GASTRO · C24–C26 ============ */
+L("g24","C24 · Patología hepática autoinmune",[
+["key","Colangitis biliar primaria (CBP) y esclerosante primaria (CEP)",tbl(["Tema","Dato clave"],[
+ ["CBP: epidemiología","10–40/100.000; la hepatopatía autoinmune más prevalente; mujeres 40–60 años"],
+ ["CBP: clínica","Prurito, fatiga, xantelasmas, hepatomegalia; asociada a Sjögren (72–100%), acidosis tubular renal, hipotiroidismo, CREST"],
+ ["CBP: laboratorio","Patrón colestásico ({{FA y GGT ↑}}), IgM ↑"],
+ ["CBP: diagnóstico","2 de 3: colestasis bioquímica, {{AMA ≥ 1:40}} o ANA específicos (gp210, Sp100), histología compatible. Sin dilatación biliar en ecografía"],
+ ["CBP: tratamiento","{{Ácido ursodesoxicólico}} (UDCA) 13–15 mg/kg/día; 30–40% responde incompleto → segunda línea (ác. obeticólico, fibratos, elafibranor/seladelpar). Prurito: colestiramina, rifampicina, naltrexona"],
+ ["CEP","~6/100.000; {{hombres 70%}}; asociada a colitis ulcerosa; colangio-RM con estenosis y dilataciones («rosario»); riesgo de colangiocarcinoma y cáncer de colon"],
+ ["CEP: manejo","No hay tratamiento médico eficaz; tratar colangitis, vigilancia oncológica y trasplante"]])],
+["dx","Hepatitis autoinmune (HAI) y sobreposición",tbl(["Tema","Dato clave"],[
+ ["Epidemiología","Prevalencia ~17/100.000; predominio femenino; bimodal"],
+ ["Clínica","Fatiga 85%, ictericia 46%; puede debutar como hepatitis aguda o cirrosis"],
+ ["Laboratorio","AST/ALT ↑ (< 500–1000), FA discreta, {{IgG ↑}} (90%)"],
+ ["HAI tipo 1","ANA y/o anti-músculo liso (ASMA); anti-SLA/LP"],
+ ["HAI tipo 2","Anti-LKM-1 y anti-LC1; niños; más agresiva"],
+ ["Score simplificado IAIHG","Autoanticuerpos, IgG, histología (hepatitis de interfase, rosetas, emperipolesis) y ausencia de virus: ≥ 6 probable, ≥ 7 definida"],
+ ["Inducción","Prednisona 0,5–1 mg/kg (hasta 40–60 mg) ± azatioprina"],
+ ["Mantención","{{Azatioprina}} 1–2 mg/kg ahorrador de esteroides; remisión bioquímica 65% a 18 meses; esperanza de vida normal"],
+ ["Intolerancia/refractaria","Micofenolato, tacrolimus; ~15% respuesta insuficiente"],
+ ["Overlap","HAI-CBP o HAI-CEP: combinar inmunosupresión y UDCA"]])],
+["alg","Algoritmo clínico: hepatopatía autoinmune",alg({t:"Autoinmune",n:[
+ ["a","s","Mujer con colestasis o hipertransaminasemia sin causa viral",[["","b"]]],
+ ["b","c","Ecografía + AMA, ANA, ASMA, IgG",[["AMA +","c"],["ANA/ASMA + con IgG ↑","d"],["Dilatación o estenosis biliar","e"]]],
+ ["c","d","Colangitis biliar primaria",[["","f"]]],
+ ["d","d","Hepatitis autoinmune (biopsia)",[["","g"]]],
+ ["e","c","Colangio-RM → CEP (buscar EII)",[]],
+ ["f","t","Ácido ursodesoxicólico 13–15 mg/kg",[["Respuesta incompleta","h"]]],
+ ["g","t","Prednisona + azatioprina",[]],
+ ["h","t","Segunda línea: obeticólico, fibratos",[]]]})]
+]);
+L("g25","C25 · Esteatosis hepática metabólica (MASLD)",[
+["key","Nomenclatura, epidemiología y criterios",tbl(["Tema","Dato clave"],[
+ ["Nuevo nombre","MASLD (esteatosis metabólica) reemplaza NAFLD; MASH reemplaza NASH; {{MetALD}} cuando hay alcohol moderado"],
+ ["Alcohol (MASLD)","< 20 g/día mujeres (140 g/sem) y < 30 g/día hombres (210 g/sem)"],
+ ["MetALD","20–50 g/día mujeres; 30–60 g/día hombres"],
+ ["Definición","Esteatosis + ≥ {{1 criterio cardiometabólico}}: IMC/cintura, glucemia ≥ 100 o DM2, PA ≥ 130/85, TG ≥ 150, HDL bajo (< 40 hombres, < 50 mujeres)"],
+ ["Epidemiología","Latinoamérica > 33–38%; Chile ~30%. Se asocia a DM2 y obesidad"],
+ ["Historia natural","12–40% de MASL progresa a MASH; ~20% con fibrosis de progresión rápida"],
+ ["AUDIT-C","≥ 3 mujeres, ≥ 4 hombres: consumo no saludable"],
+ ["NAS","Esteatosis (0–3) + inflamación lobulillar (0–3) + balonización (0–2); ≥ 5 sugiere MASH"],
+ ["Mortalidad","Principal causa: {{cardiovascular}}, luego cáncer; hepática al final"]])],
+["tx","Estratificación y tratamiento",tbl(["Tema","Puntos clave"],[
+ ["FIB-4 (atención primaria)","< 1,3 bajo riesgo; ≥ 1,3 (≥ 2,0 en > 65) pasar a elastografía"],
+ ["Elastografía","≥ 8–9 kPa sugiere fibrosis avanzada; derivar a hepatología"],
+ ["Biopsia","Solo si hay dudas, pruebas no invasivas discordantes o sospecha de otra enfermedad"],
+ ["Estilo de vida","Bajar {{≥ 5%}} mejora esteatosis, {{7–10%}} la inflamación y {{≥ 10%}} la fibrosis; dieta mediterránea, ejercicio, sin alcohol"],
+ ["Resmetirom","Agonista selectivo de THR-β: MASH con fibrosis F2–F3 (FDA). Resolución de MASH 25,9% y mejoría de fibrosis 24,2%"],
+ ["Semaglutida","Agonista GLP-1 2,4 mg SC: resolución de MASH 62,9%; beneficio cardiometabólico"],
+ ["Cirugía bariátrica","Opción en obesidad con MASH"],
+ ["Riesgos cardiovasculares","Estatinas son seguras y recomendadas; manejar DM2, HTA y dislipidemia"]])],
+["alg","Algoritmo clínico: MASLD",alg({t:"MASLD",n:[
+ ["a","s","Esteatosis en ecografía o transaminasas ↑ con riesgo metabólico",[["","b"]]],
+ ["b","c","AUDIT-C y descartar otras causas",[["","c"]]],
+ ["c","c","Calcular FIB-4",[["< 1,3","d"],["≥ 1,3","e"]]],
+ ["d","t","Estilo de vida; control cardiometabólico; repetir en 1–3 años",[]],
+ ["e","c","Elastografía",[["< 8 kPa","d"],["≥ 8–9 kPa","f"]]],
+ ["f","d","Posible MASH con fibrosis avanzada",[["","g"]]],
+ ["g","t","Derivar a hepatología; resmetirom (F2–F3) o GLP-1",[]]]})]
+]);
+L("g26","C26 · Enfermedad hepática alcohólica",[
+["key","Definición, fisiopatología y diagnóstico",tbl(["Tema","Dato clave"],[
+ ["EHRA / MetALD","Umbral: > 10 tragos/semana en mujeres (140 g) y > 15 en hombres (210 g)"],
+ ["Trago estándar","14 g de alcohol: lata de cerveza 350 mL = 1; copa de vino 150 mL = 1; shot de pisco 50 mL = 1; botella de vino = {{5}}; terremoto ≈ 3"],
+ ["Fisiopatología","Etanol → acetaldehído (hepatotóxico), estrés oxidativo, lipogénesis de novo, intestino permeable, inflamación"],
+ ["Espectro","Esteatosis → esteatohepatitis → fibrosis → cirrosis; hepatitis alcohólica aguda como evento severo"],
+ ["Clínica","Hepatomegalia, ictericia, estigmas crónicos; Wernicke-Korsakoff (ataxia, oftalmoplejía, confusión)"],
+ ["Laboratorio","AST/ALT > {{2}} (AST < 300), GGT ↑, VCM ↑, IgA ↑"],
+ ["Biomarcadores","{{PEth}} (fosfatidiletanol; semanas), EtG/EtS en orina (días), índice MAPI para subreporte"],
+ ["Tamizaje","AUDIT / AUDIT-C"]])],
+["tx","Tratamiento y hepatitis alcohólica aguda",tbl(["Tema","Puntos clave"],[
+ ["Abstinencia","Pilar del pronóstico; manejo del trastorno por uso de alcohol"],
+ ["Fármacos AUD","Baclofeno, gabapentina, naltrexona (evitar en cirrosis descompensada), acamprosato; {{disulfiram contraindicado}} en cirrosis"],
+ ["Nutrición","30–35 kcal/kg/día; tiamina 300 mg/día EV 1–2 sem; ácido fólico, B12, zinc 50 mg"],
+ ["Hepatitis alcohólica (NIAAA)","Ictericia reciente, AST > 50 y < 400, AST/ALT > 1,5, bilirrubina > 3 mg/dL, consumo > 60–40 g/día por > 6 meses y abstinencia < 60 días"],
+ ["Gravedad","{{MELD > 20}} o Maddrey ≥ 32"],
+ ["Corticoides","Prednisolona 40 mg/día × 28 días si es grave y sin contraindicación (mejor beneficio con MELD 21–39); reducen mortalidad a 30 d (HR 0,59)"],
+ ["Lille","Al día 7: > 0,45 = no respuesta → suspender corticoide"],
+ ["Trasplante","Precoz en casos seleccionados sin respuesta"]])],
+["alg","Algoritmo clínico: hepatitis alcohólica",alg({t:"EHRA",n:[
+ ["a","s","Ictericia reciente con consumo importante de alcohol",[["","b"]]],
+ ["b","c","Criterios NIAAA, AST/ALT, bilirrubina, INR; descartar otras causas",[["","c"]]],
+ ["c","c","Gravedad: MELD o Maddrey",[["MELD ≤ 20","d"],["MELD > 20","e"]]],
+ ["d","t","Soporte, abstinencia, nutrición y tiamina",[]],
+ ["e","t","Prednisolona 40 mg × 28 días",[["","f"]]],
+ ["f","c","Score de Lille al día 7",[["≤ 0,45","g"],["> 0,45","h"]]],
+ ["g","t","Completar 28 días",[]],
+ ["h","a","Suspender esteroides; evaluar trasplante precoz",[]]]})]
+]);
+C.push(
+["g24","Autoanticuerpo de la CBP","Anticuerpos antimitocondriales (AMA) ≥ 1:40; tratamiento con ácido ursodesoxicólico."],
+["g24","CEP: perfil","Hombres jóvenes con colitis ulcerosa; colangio-RM con estenosis; riesgo de colangiocarcinoma."],
+["g24","Hepatitis autoinmune: marcador bioquímico","IgG elevada (90%) con ANA/ASMA; tratamiento prednisona + azatioprina."],
+["g24","HAI tipo 2","Anti-LKM-1 y anti-LC1; más frecuente en niños y más agresiva."],
+["g25","Definición de MASLD","Esteatosis más al menos un criterio cardiometabólico, con alcohol < 20–30 g/día."],
+["g25","Fármaco aprobado para MASH F2–F3","Resmetirom (agonista THR-β)."],
+["g25","Pérdida de peso en MASLD","≥ 5% esteatosis, 7–10% inflamación, ≥ 10% fibrosis."],
+["g26","Fármaco contraindicado en cirrosis alcohólica","Disulfiram (hepatotoxicidad fulminante)."],
+["g26","Hepatitis alcohólica grave","MELD > 20; prednisolona 40 mg × 28 días con evaluación por Lille al día 7."],
+["g26","Biomarcador directo de consumo semanal","Fosfatidiletanol (PEth)."]
+);
+VF.push(
+["g24","La CEP afecta predominantemente a mujeres de mediana edad.",false,"70% son hombres; se asocia a colitis ulcerosa."],
+["g24","El tratamiento de primera línea de la CBP es el ácido ursodesoxicólico.",true,""],
+["g24","La HAI se mantiene con azatioprina como ahorrador de esteroides.",true,""],
+["g25","MASLD exige al menos un factor de riesgo cardiometabólico.",true,""],
+["g25","La principal causa de muerte en MASLD es hepática.",false,"Es cardiovascular."],
+["g26","El cociente AST/ALT > 2 sugiere etiología alcohólica.",true,""],
+["g26","El score de Lille > 0,45 indica no respuesta a corticoides.",true,"Se suspende el tratamiento."],
+["g26","El disulfiram es seguro en cirrosis.",false,"Contraindicado."]
+);
+MC.push(
+["g24","Dosis de UDCA en CBP","13–15 mg/kg/día",["1 mg/kg/día","50 mg/kg/día","100 mg/día"]],
+["g24","Predominio de sexo en CEP","70% hombres",["70% mujeres","50%","95% mujeres"]],
+["g25","Pérdida de peso para mejorar fibrosis","≥ 10%",["1%","3%","25%"]],
+["g25","Prevalencia de MASLD en Latinoamérica","> 33–38%",["5%","10%","80%"]],
+["g26","Dosis de prednisolona en hepatitis alcohólica","40 mg/día",["5 mg/día","100 mg/día","1 g/día"]],
+["g26","Tragos estándar en una botella de vino","5",["1","10","20"]]
+);
+GP.dx.push(["AMA positivo","Colangitis biliar primaria"],["Anti-LKM-1","Hepatitis autoinmune tipo 2"],["MetALD","Alcohol moderado más disfunción metabólica"],["PEth","Biomarcador de consumo de semanas"],["MELD > 20","Hepatitis alcohólica grave"]);
+GP.tx.push(["CBP","Ácido ursodesoxicólico"],["Hepatitis autoinmune","Prednisona + azatioprina"],["MASH F2–F3","Resmetirom"],["Hepatitis alcohólica grave","Prednisolona 40 mg × 28 días"]);
+
+POOLS.g_dx={name:"Gastro · Diagnóstico",p:GP.dx};
+POOLS.g_tx={name:"Gastro · Tratamiento",p:GP.tx};
+
+/* ===== Traumatología · esquemas de algoritmo clínico por capítulo ===== */
+const AT=(ch,title,spec)=>{const ls=LESSONS.filter(l=>l.ch===ch);if(!ls.length)return;ls[ls.length-1].blocks.push(["alg",title,alg(spec)])};
+AT("t1","Algoritmo clínico: sospecha de fractura oculta",{t:"Fractura oculta",n:[
+ ["a","s","Caída con mano extendida y dolor en tabaquera anatómica",[["","b"]]],
+ ["b","c","Rx de muñeca con proyección de escafoides",[["Fractura visible","c"],["Rx normal","d"]]],
+ ["c","t","Inmovilizar y derivar a traumatología",[]],
+ ["d","q","¿Persiste la sospecha clínica?",[["Sí","e"],["No","f"]]],
+ ["e","t","Inmovilizar con valva y repetir Rx o pedir TAC/RM",[]],
+ ["f","t","Alta con control y retorno si persiste el dolor",[]]]});
+AT("t2","Algoritmo clínico: lectura de una Rx de trauma",{t:"Rx de trauma",n:[
+ ["a","s","Paciente con sospecha de fractura",[["","b"]]],
+ ["b","c","2 proyecciones (AP y lateral) con articulaciones proximal y distal",[["","c"]]],
+ ["c","q","¿Hay fractura visible?",[["Sí","d"],["No","e"]]],
+ ["d","c","Describir hueso, rasgo, desplazamiento, compromiso articular y buscar una segunda lesión",[]],
+ ["e","c","Signos indirectos: partes blandas, almohadilla grasa, lipohemartrosis",[["Presentes","f"],["Ausentes","g"]]],
+ ["f","t","Tratar como fractura oculta: inmovilizar y repetir Rx o TAC/RM",[]],
+ ["g","t","Alta con control clínico",[]]]});
+AT("t3","Algoritmo clínico: politraumatizado (ATLS)",{t:"ATLS",n:[
+ ["a","s","Politraumatizado: mecanismo, signos vitales y acciones prehospitalarias",[["","b"]]],
+ ["b","c","A vía aérea con control cervical · B ventilación · C hemorragia",[["","c"]]],
+ ["c","q","¿Shock hemorrágico?",[["Sí","d"],["No","e"]]],
+ ["d","t","Compresión o torniquete, fijar pelvis, ácido tranexámico y transfusión masiva",[["","f"]]],
+ ["e","c","D déficit neurológico · E exposición, evitar hipotermia, FAST y Rx",[]],
+ ["f","a","Triada de la muerte: hipotermia + acidosis + coagulopatía (± hipocalcemia)",[]]]});
+AT("t4","Algoritmo clínico: fractura expuesta",{t:"Expuesta",n:[
+ ["a","s","Fractura con herida comunicante",[["","b"]]],
+ ["b","c","ABCDE, pulsos y examen neurológico distal",[["Sin pulso o frialdad","c"],["Pulsos presentes","d"]]],
+ ["c","a","Sospecha de lesión vascular: AngioTAC o cirugía urgente",[]],
+ ["d","t","Analgesia, aseo en box, foto, antitetánica e inmovilización",[["","e"]]],
+ ["e","q","Clasificación de Gustilo",[["I","f"],["II-III","g"]]],
+ ["f","t","Cefazolina 48-72 h",[]],
+ ["g","t","Cefazolina + gentamicina; penicilina si ambiente agrícola. Aseo quirúrgico urgente",[]]]});
+AT("t4","Algoritmo clínico: sospecha de artritis séptica",{t:"Art. séptica",n:[
+ ["a","s","Articulación dolorosa, caliente, con fiebre e impotencia",[["","b"]]],
+ ["b","c","Hemograma, VHS/PCR, hemocultivos y Rx",[["","c"]]],
+ ["c","c","Artrocentesis: recuento celular, Gram, cristales, cultivo",[["Purulento o > 50.000 leucocitos","d"],["Cristales","e"]]],
+ ["d","t","Lavado artroscópico o quirúrgico + antibiótico EV",[]],
+ ["e","t","Manejo de artritis microcristalina",[]]]});
+AT("t5","Algoritmo clínico: hombro doloroso",{t:"Hombro",n:[
+ ["a","s","Dolor de hombro",[["","b"]]],
+ ["b","q","¿Hay trauma?",[["Sí","c"],["No","d"]]],
+ ["c","c","Rx AP verdadera, Y escapular y axilar",[["Fractura o luxación","e"],["Normal","f"]]],
+ ["d","q","¿Banderas rojas (fiebre, neoplasia) o dolor referido?",[["Sí","g"],["No","h"]]],
+ ["e","t","Inmovilizar y derivar",[]],
+ ["f","t","Sospechar rotura del manguito: ecografía o RM",[]],
+ ["g","a","Descartar artritis séptica, tumor o causa cervical/torácica",[]],
+ ["h","t","Síndrome subacromial (Neer, Hawkins, Jobe): AINE y kinesioterapia",[]]]});
+AT("t6","Algoritmo clínico: caída con apoyo en la muñeca",{t:"Muñeca",n:[
+ ["a","s","Caída con mano en extensión y dolor de muñeca",[["","b"]]],
+ ["b","c","Rx AP y lateral; sumar proyección de escafoides",[["Radio distal","c"],["Escafoides","d"],["Normal con dolor","e"]]],
+ ["c","q","¿Reductible y estable?",[["Sí","f"],["No","g"]]],
+ ["d","t","Yeso antebraquial con pulgar; quirúrgico si hay desplazamiento",[]],
+ ["e","t","Inmovilizar y repetir Rx o TAC/RM a los 10-14 días",[]],
+ ["f","t","Reducción cerrada, valva y control Rx",[]],
+ ["g","t","Osteosíntesis con placa volar",[]]]});
+AT("t7","Algoritmo clínico: dolor lumbar",{t:"Lumbago",n:[
+ ["a","s","Paciente con dolor lumbar",[["","b"]]],
+ ["b","q","¿Banderas rojas o cauda equina?",[["Sí","c"],["No","d"]]],
+ ["c","a","Anestesia en silla de montar, alteración de esfínteres o déficit progresivo: RM urgente y derivar",[]],
+ ["d","q","¿Irradiación bajo la rodilla?",[["Sí","e"],["No","f"]]],
+ ["e","t","Lumbociática: AINE, ejercicio; RM si persiste más de 6 semanas",[]],
+ ["f","t","Lumbago mecánico: mantener actividad, AINE por corto plazo, sin reposo",[]]]});
+AT("t8","Algoritmo clínico: dolor de cadera",{t:"Cadera",n:[
+ ["a","s","Dolor de cadera",[["","b"]]],
+ ["b","q","¿Dónde duele?",[["Inguinal","c"],["Lateral","d"],["Posterior","e"]]],
+ ["c","c","Rx de pelvis AP y axial: artrosis, pinzamiento femoroacetabular, necrosis",[]],
+ ["d","t","Tendinopatía glútea o bursitis trocantérea: kinesioterapia y AINE",[]],
+ ["e","t","Estudiar columna lumbar y sacroilíaca",[]]]});
+AT("t9","Algoritmo clínico: fractura de cadera en el adulto mayor",{t:"Fx cadera",n:[
+ ["a","s","Caída, dolor inguinal y miembro acortado en rotación externa",[["","b"]]],
+ ["b","c","Rx de pelvis AP y cadera axial",[["Cuello femoral","c"],["Intertrocantérica","d"],["Subtrocantérica","e"]]],
+ ["c","q","¿Desplazada?",[["Sí","f"],["No","g"]]],
+ ["d","t","DHS (estable) o clavo cefalomedular (inestable)",[]],
+ ["e","t","Clavo cefalomedular",[]],
+ ["f","t","Artroplastía parcial o total",[]],
+ ["g","t","Osteosíntesis con tornillos",[]]]});
+AT("t9","Algoritmo clínico: manejo ortogeriátrico",{t:"Ortogeriatría",n:[
+ ["a","s","Fractura de cadera en el adulto mayor",[["","b"]]],
+ ["b","t","Analgesia (paracetamol + bloqueo de fascia ilíaca) y prevención de delirium",[["","c"]]],
+ ["c","q","¿Operable antes de 48 h?",[["Sí","d"],["Warfarina","e"]]],
+ ["d","t","Cirugía precoz (menor mortalidad)",[["","f"]]],
+ ["e","t","Revertir con vitamina K y operar",[["","f"]]],
+ ["f","t","Rehabilitación y prevención secundaria de osteoporosis",[]]]});
+AT("t10","Algoritmo clínico: rodilla traumática aguda",{t:"Rodilla trauma",n:[
+ ["a","s","Trauma de rodilla con dolor y derrame",[["","b"]]],
+ ["b","q","¿Cumple reglas de Ottawa (> 55 años, dolor rotuliano o peroneo, no flexiona 90°, no da 4 pasos)?",[["Sí","c"],["No","d"]]],
+ ["c","c","Rx de 4 proyecciones",[["Fractura","e"],["Normal","d"]]],
+ ["d","c","Examen: Lachman, McMurray, estrés en valgo y varo",[["LCA o menisco","f"],["Colaterales","g"]]],
+ ["e","t","Inmovilizar y derivar",[]],
+ ["f","t","RM y derivar a ortopedia deportiva",[]],
+ ["g","t","Ortesis y rehabilitación",[]]]});
+AT("t11","Algoritmo clínico: dolor de rodilla atraumático",{t:"Rodilla atraumática",n:[
+ ["a","s","Dolor de rodilla sin trauma",[["","b"]]],
+ ["b","q","¿Derrame con fiebre?",[["Sí","c"],["No","d"]]],
+ ["c","c","Artrocentesis (séptica o cristales)",[]],
+ ["d","q","¿Edad?",[["Niño o adolescente","e"],["Adulto","f"]]],
+ ["e","c","Osgood-Schlatter, Sinding-Larsen, osteocondritis; epifisiolisis si hay dolor de cadera referido",[]],
+ ["f","t","Artrosis, tendinopatía o síndrome patelofemoral; Rx si hay duda",[]]]});
+AT("t12","Algoritmo clínico: artrosis",{t:"Artrosis",n:[
+ ["a","s","Adulto mayor con dolor mecánico, rigidez < 30 min, crepitaciones",[["","b"]]],
+ ["b","c","Rx con carga: pinzamiento, osteofitos, esclerosis",[["","c"]]],
+ ["c","t","Educación, bajar de peso, ejercicio y paracetamol/AINE tópico",[["Mala respuesta","d"]]],
+ ["d","t","AINE oral por corto plazo o infiltración intraarticular",[["Falla","e"]]],
+ ["e","t","Artroplastía total",[]]]});
+AT("t13","Algoritmo clínico: pie y tobillo doloroso",{t:"Pie y tobillo",n:[
+ ["a","s","Tobillo o pie doloroso",[["","b"]]],
+ ["b","q","¿Localización?",[["Retropié","c"],["Mediopié","d"],["Antepié","e"]]],
+ ["c","t","Fascitis plantar, tendinopatía de Aquiles, tarsiano",[]],
+ ["d","t","Pie plano doloroso, disfunción del tibial posterior",[]],
+ ["e","t","Hallux valgus, metatarsalgia, neuroma de Morton",[]]]});
+AT("t14","Algoritmo clínico: esguince de tobillo (Ottawa)",{t:"Esguince",n:[
+ ["a","s","Inversión de tobillo con dolor maleolar",[["","b"]]],
+ ["b","q","¿Dolor óseo en borde posterior o punta del maléolo (6 cm), base del 5.º MT, navicular o no da 4 pasos?",[["Sí","c"],["No","d"]]],
+ ["c","c","Rx en AP, mortaja y lateral con carga",[["Fractura","e"],["Normal","d"]]],
+ ["d","t","Esguince: PEACE & LOVE, tape o férula semirrígida y ejercicio precoz",[]],
+ ["e","t","Inmovilizar; osteosíntesis si es inestable o desplazada",[]]]});
+AT("t15","Algoritmo clínico: lesión muscular en el deporte",{t:"Lesión muscular",n:[
+ ["a","s","Deportista con pinchazo súbito e impotencia funcional",[["","b"]]],
+ ["b","q","¿Tipo de lesión?",[["Contusión directa","c"],["Desgarro indirecto","d"],["Sobrecarga funcional","e"]]],
+ ["c","t","Hielo, descanso relativo y vigilar síndrome compartimental",[]],
+ ["d","c","Ecografía o RM para graduar el desgarro",[["","f"]]],
+ ["e","t","Descanso, estiramiento y reducir la carga",[]],
+ ["f","t","Rehabilitación progresiva con retorno al deporte por criterios",[]]]});
+AT("t16","Algoritmo clínico: sospecha de tumor musculoesquelético",{t:"Tumor",n:[
+ ["a","s","Masa o dolor óseo nocturno o de reposo",[["","b"]]],
+ ["b","c","Rx simple en 2 proyecciones",[["Lesión agresiva","c"],["Lesión benigna","d"]]],
+ ["c","c","RM, TAC de tórax y cintigrama óseo",[["","e"]]],
+ ["d","t","Observar o resecar si es sintomático",[]],
+ ["e","a","Biopsia planificada por el equipo que operará; derivar a centro de sarcomas",[]]]});
+AT("t17","Algoritmo clínico: displasia del desarrollo de cadera",{t:"DDC",n:[
+ ["a","s","Recién nacido con factores de riesgo o examen alterado",[["","b"]]],
+ ["b","c","Examen: Ortolani, Barlow, abducción y Galeazzi",[["Alterado","c"],["Normal con riesgo","d"]]],
+ ["c","c","Ecografía de cadera (2-6 semanas)",[["Cadera inestable","e"]]],
+ ["d","c","Ecografía a las 4-6 semanas y Rx de pelvis a los 3 meses",[]],
+ ["e","t","Arnés de Pavlik",[["Falla","f"]]],
+ ["f","t","Reducción cerrada o abierta con yeso pelvipédico",[]]]});
+AT("t18","Algoritmo clínico: niño que cojea",{t:"Cojera",n:[
+ ["a","s","Niño que cojea",[["","b"]]],
+ ["b","q","¿Fiebre y rechazo a caminar?",[["Sí","c"],["No","d"]]],
+ ["c","c","Kocher: fiebre > 38,5, no camina, leucocitos > 12.000, VHS > 40, PCR > 2",[["Cumple criterios","e"],["No cumple","f"]]],
+ ["d","c","Rx y ecografía según edad",[["Fractura","g"],["Normal","f"]]],
+ ["e","a","Artritis séptica: drenaje quirúrgico + antibiótico",[]],
+ ["f","t","Sinovitis transitoria: reposo, AINE y control",[]],
+ ["g","t","Inmovilizar y derivar",[]]]});
+
 /* ===== sprites pixel art ===== */
 const PAL={k:"#5b2a63",w:"#ffffff",r:"#ff3b6b",R:"#b3153f",b:"#8fd3f4",B:"#4a9bd1",p:"#ff8fbf",P:"#e0559a",y:"#ffd84a",Y:"#e0a800",g:"#d4d4e6",G:"#8a8aa6",s:"#ffd9c2",h:"#c44fd0",e:"#3b2147",n:"#c98a55",N:"#8a5a32",o:"#ff9a3c",O:"#ff5a1f",m:"#7fe0b0",l:"#E8D7F1",c:"#bff0ff"};
 function spr(rows){
@@ -7109,8 +8749,9 @@ check:spr(["..........mm","........mmm.","mm.....mmm..","mmm...mmm...",".mmm.mmm
 });
 SP.lung=spr(["....kwwk....","....kwwk....","..kkkwwkkk..",".kppkwwkppk.","kpwpkwwkpwpk","kppPkkkkPppk","kpppPkkPpppk","kppppkkppppk",".kpppkkpppk.","..kkkk.kkkk."]);
 SP.bone=spr([".kkk....kkk.","kwwwk..kwwwk","kwwwwkkwwwwk",".kwwwwwwwwk.","..kwwwwwwk..","...kwwwwk...","...kwwwwk...","..kwwwwwwk..",".kwwwwwwwwk.","kwwwwkkwwwwk","kwwwk..kwwwk",".kkk....kkk."]);
-const SECICO={int:SP.syringe,lab:SP.scope,hem:SP.drop,der:SP.skin,res:SP.lung,tra:SP.bone};
-const SECNAME={int:"Medicina interna",lab:"Laboratorio clínico",hem:"Hematología",der:"Dermatología",res:"Respiratorio",tra:"Traumatología"};
+SP.stomach=spr(["..kkkk......",".kppppk.....",".kppwppkk...","kppppppppk..","kppppwpppppk","kpppppppPPPk",".kppppppPPk.","..kpppppkk..","...kkkkk...."]);
+const SECICO={int:SP.syringe,lab:SP.scope,hem:SP.drop,der:SP.skin,res:SP.lung,gas:SP.stomach,tra:SP.bone};
+const SECNAME={int:"Medicina interna",lab:"Laboratorio clínico",hem:"Hematología",der:"Dermatología",res:"Respiratorio",gas:"Gastroenterología",tra:"Traumatología"};
 
 /* ===== gamificación retro ===== */
 const LEVELS=[[0,"Estudiante Iluso"],[100,"Interno Sobreviviente de Guardia"],[250,"Médico General en Entrenamiento"],[450,"Residente Estrella"],[700,"Residente Jefe Cafeinado"],[1000,"Becado de Alta Complejidad"],[1400,"Especialista en Formación"],[1900,"Subespecialista Legendario"],[2500,"Jefe de Servicio Imparable"],[3200,"Especialista Graduado con Honores"],[4200,"Doctora Suprema Belén Murillo"]];
@@ -7126,7 +8767,7 @@ const BADGES=[
  {id:"hada_der",name:"Hada Madrina · Derma",desc:"Todas las preguntas de Dermatología acertadas al menos una vez",sp:"fairy"},
  {id:"hada_tra",name:"Hada Madrina · Trauma",desc:"Todas las preguntas de Traumatología acertadas al menos una vez",sp:"fairy"}];
 const RIVALS=[["Dra. Hada Madrina",4650],["Dr. Cafeína Infinita",2870],["Int. Ojeras Profundas",2240],["Dra. Sutura Perfecta",1760],["Dr. Turno de 36 h",1320],["Int. Pasillo Frío",880],["Est. Iluso Feliz",420]];
-const secOfCh=ch=>ch[0]==="t"?"tra":ch[0]==="l"?"lab":ch[0]==="h"?"hem":ch[0]==="d"?"der":ch[0]==="r"?"res":"int";
+const secOfCh=ch=>ch[0]==="g"?"gas":ch[0]==="t"?"tra":ch[0]==="l"?"lab":ch[0]==="h"?"hem":ch[0]==="d"?"der":ch[0]==="r"?"res":"int";
 function secProg(sec){let d=0,n=0;VF.forEach((r,i)=>{if(secOfCh(r[0])===sec){n++;if(save.ok["vf"+i])d++;}});MC.forEach((r,i)=>{if(secOfCh(r[0])===sec){n++;if(save.ok["mc"+i])d++;}});return [d,n];}
 /* ===== repetición espaciada (estilo Anki) ===== */
 const MIN=6e4,DAY=864e5,STEPS=[1,10],RELEARN=10,GRAD=1,EASYIV=4,MAT=21;
@@ -7329,7 +8970,7 @@ function renderHall(){
   const lv=levelOf(save.xp);
   let h='<section><h3>★ TOP SCORES DE LA SALA DE MÉDICOS</h3><table class="lb"><tbody>'+rows.map((r,i)=>'<tr'+(r===me?' class="me"':"")+"><td>#"+(i+1)+"</td><td>"+esc(r[0])+'<small class="lvt">NV '+(levelOf(r[1])+1)+" · "+esc(LEVELS[levelOf(r[1])][1])+"</small></td><td>"+r[1].toLocaleString("es-CL")+" XP</td></tr>").join("")+'</tbody></table><p class="chal">'+chal+" Mejor racha: "+(save.bestRun||0)+" · Mejor ronda: "+(save.bestRound||0)+"/10</p></section>";
   h+=srsPanel();h+=badgeHTML();
-  h+='<section><h3>✦ PRECISIÓN POR ESPECIALIDAD</h3><div class="pb">'+["int","lab","hem","der","res","tra"].map(s=>{const x=save.st[s]||{c:0,n:0};return '<div class="pbr"><span>'+SECNAME[s]+"</span>"+pctBar(x.c,x.n)+"<span>"+(x.n?Math.round(x.c/x.n*100)+"% ("+x.c+"/"+x.n+")":"sin datos")+"</span></div>";}).join("")+"</div></section>";
+  h+='<section><h3>✦ PRECISIÓN POR ESPECIALIDAD</h3><div class="pb">'+["int","lab","hem","der","res","gas","tra"].map(s=>{const x=save.st[s]||{c:0,n:0};return '<div class="pbr"><span>'+SECNAME[s]+"</span>"+pctBar(x.c,x.n)+"<span>"+(x.n?Math.round(x.c/x.n*100)+"% ("+x.c+"/"+x.n+")":"sin datos")+"</span></div>";}).join("")+"</div></section>";
   el.innerHTML=h;
 }
 function sessStats(){
@@ -7353,11 +8994,11 @@ function persist(){try{localStorage.setItem("interna-v1",JSON.stringify(save));}
 
 let section="int",tab="learn",sel=new Set(TOPICS.map(t=>t[0])),ses=null,recite=false,poolKey="sc",exShow=false;
 const exPick={};
-const topics=()=>section==="tra"?TTOPICS:section==="lab"?LTOPICS:section==="hem"?HTOPICS:section==="der"?DTOPICS:section==="res"?RTOPICS:TOPICS;
-const secOf=k=>k.indexOf("t_")===0?"tra":k.indexOf("l_")===0?"lab":k.indexOf("h_")===0?"hem":k.indexOf("d_")===0?"der":k.indexOf("r_")===0?"res":"int";
+const topics=()=>section==="gas"?GTOPICS:section==="tra"?TTOPICS:section==="lab"?LTOPICS:section==="hem"?HTOPICS:section==="der"?DTOPICS:section==="res"?RTOPICS:TOPICS;
+const secOf=k=>k.indexOf("g_")===0?"gas":k.indexOf("t_")===0?"tra":k.indexOf("l_")===0?"lab":k.indexOf("h_")===0?"hem":k.indexOf("d_")===0?"der":k.indexOf("r_")===0?"res":"int";
 const poolKeys=()=>Object.keys(POOLS).filter(k=>secOf(k)===section);
-const tabsFor=()=>section==="tra"?[["learn","Aprender"],["cards","Tarjetas"],["vf","V o F"],["mc","Cifras"],["mt","Parejas"],["tatl","🩻 Atlas"],["t3d","🦴 3D"]]:section==="der"||section==="res"?[["learn","Aprender"],["cards","Tarjetas"],["vf","V o F"],["mc","Cifras"],["mt","Parejas"]]:section!=="int"?[["learn","Aprender"],["cards","Tarjetas"],["vf","V o F"],["mc","Cifras"],["mt","Parejas"],["ex","Prueba"]]:[["learn","Aprender"],["cards","Tarjetas"],["vf","V o F"],["mc","Cifras"],["mt","Parejas"],["t10","⏱ 10 s"]];
-const KIND={key:"Claves",dx:"Criterios dg",dd:"Dg diferencial",cl:"Clasificación",tx:"Tratamiento",ex:"Exámenes"};
+const tabsFor=()=>section==="tra"?[["learn","Aprender"],["cards","Tarjetas"],["vf","V o F"],["mc","Cifras"],["mt","Parejas"],["tatl","🩻 Atlas"],["t3d","🦴 3D"]]:section==="der"||section==="res"||section==="gas"?[["learn","Aprender"],["cards","Tarjetas"],["vf","V o F"],["mc","Cifras"],["mt","Parejas"]]:section!=="int"?[["learn","Aprender"],["cards","Tarjetas"],["vf","V o F"],["mc","Cifras"],["mt","Parejas"],["ex","Prueba"]]:[["learn","Aprender"],["cards","Tarjetas"],["vf","V o F"],["mc","Cifras"],["mt","Parejas"],["t10","⏱ 10 s"]];
+const KIND={alg:"Algoritmo",key:"Claves",dx:"Criterios dg",dd:"Dg diferencial",cl:"Clasificación",tx:"Tratamiento",ex:"Exámenes"};
 
 function gain(n){save.xp+=n;if(ses)ses.xp=(ses.xp||0)+n;persist();renderHeader();renderHall();checkLevel();}
 function renderHeader(){
@@ -7368,7 +9009,7 @@ function renderHeader(){
 }
 function renderTabs(){
   const TABS=tabsFor();$("#tabs").style.setProperty("--nt",TABS.length);
-  $("#secsw").innerHTML=["int","lab","hem","der","res","tra"].map(k=>'<button aria-pressed="'+(section===k)+'" data-act="sec" data-s="'+k+'">'+SECICO[k]+"<span>"+SECNAME[k]+"</span></button>").join("");
+  $("#secsw").innerHTML=["int","lab","hem","der","res","gas","tra"].map(k=>'<button aria-pressed="'+(section===k)+'" data-act="sec" data-s="'+k+'">'+SECICO[k]+"<span>"+SECNAME[k]+"</span></button>").join("");
   $("#tabs").innerHTML=TABS.map(t=>'<button class="tab" role="tab" aria-selected="'+(tab===t[0])+'" data-act="tab" data-t="'+t[0]+'">'+t[1]+"</button>").join("");
 }
 function renderChips(){
@@ -9129,7 +10770,7 @@ function abInit(){
 function applyAbbr(blk){
   abInit();
   textNodes(blk).forEach(function(n){
-    var p=n.parentElement;if(!p||p.closest(".cl,mark,button,summary,h3,script,style,textarea,.ab"))return;
+    var p=n.parentElement;if(!p||p.closest(".cl,mark,button,summary,h3,script,style,textarea,.ab,svg"))return;
     var v=n.nodeValue;if(v.length<2)return;
     ABRE.lastIndex=0;var m,idx=0,frag=null;
     while((m=ABRE.exec(v))){
@@ -10028,11 +11669,11 @@ window.__MH_NOTES="H4sIAASL62oC/+y9eXMjOZYn+P9+ClaWxVioSlS6A3C4O9XZ293VnbZtNjXbN
 (function(){
 /* ===== Esqueleto estilo ChinaStudyFree: barra lateral + camino de lecciones + panel de logros, adaptado a educación médica ===== */
 var SEMS=[{id:"s",name:"Semestre actual",desc:"Clínicas II e Integrado IV",subj:[
- {id:"c2",name:"Clínicas II",desc:"Medicina interna, laboratorio, hematología, dermatología, respiratorio y traumatología",specs:["int","lab","hem","der","res","tra"]},
+ {id:"c2",name:"Clínicas II",desc:"Medicina interna, laboratorio, hematología, dermatología, respiratorio, gastroenterología y traumatología",specs:["int","lab","hem","der","res","gas","tra"]},
  {id:"i4",name:"Integrado IV",desc:"En proceso de creación",soon:true}]}];
-var SPD={int:"Casos clínicos y pasantía",lab:"Ciclo, interpretación y seguridad",hem:"Aplasia, leucemias, linfomas",der:"Acné a melanoma",res:"Fisiología, asma, EPOC",tra:"Lesiones en el modelo 3D, atlas y temas"};
-var PAL=[["#d9b3ef","#a56bc7"],["#f9b4d6","#d4769f"],["#c3b8f3","#8878cf"],["#fbcfb0","#d99a6c"],["#b5ead7","#6cb89b"],["#f7b6c4","#d17b8f"]];
-var SPI={int:0,lab:1,hem:4,der:3,res:2,tra:5};
+var SPD={int:"Casos clínicos y pasantía",lab:"Ciclo, interpretación y seguridad",hem:"Aplasia, leucemias, linfomas",der:"Acné a melanoma",res:"Fisiología, asma, EPOC",gas:"Esófago a páncreas, con algoritmos clínicos",tra:"Lesiones en el modelo 3D, atlas y temas"};
+var PAL=[["#d9b3ef","#a56bc7"],["#f9b4d6","#d4769f"],["#c3b8f3","#8878cf"],["#fbcfb0","#d99a6c"],["#b5ead7","#6cb89b"],["#f7b6c4","#d17b8f"],["#ffd8a8","#e09a55"]];
+var SPI={int:0,lab:1,hem:4,der:3,res:2,gas:6,tra:5};
 var MODES={learn:["Aprender","book"],cards:["Tarjetas","cards"],vf:["V o F","check"],mc:["Cifras","num"],mt:["Parejas","link"],t10:["10 segundos","bolt"],ex:["Prueba","trophy"]};
 var IC={
  book:'<svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 6.2C10.3 4.8 8 4 5 4v14c3 0 5.3.8 7 2.2 1.7-1.4 4-2.2 7-2.2V4c-3 0-5.300.8-7 2.200z"/><path d="M12 6.500v13" stroke="#fff" stroke-width="1.600" opacity=".55" fill="none"/></svg>',
@@ -10081,7 +11722,7 @@ function applyTheme(){H.removeAttribute("data-theme");var t=ST.theme;if(t==="aut
 applyTheme();
 var lk=document.createElement("link");lk.rel="stylesheet";lk.href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&family=IBM+Plex+Mono:wght@500;600&display=swap";document.head.appendChild(lk);
 /* ---------- datos del camino ---------- */
-function topicsOf(s){return {int:G("TOPICS"),lab:G("LTOPICS"),hem:G("HTOPICS"),der:G("DTOPICS"),res:G("RTOPICS"),tra:G("TTOPICS")}[s]||[]}
+function topicsOf(s){return {int:G("TOPICS"),lab:G("LTOPICS"),hem:G("HTOPICS"),der:G("DTOPICS"),res:G("RTOPICS"),gas:G("GTOPICS"),tra:G("TTOPICS")}[s]||[]}
 function secName(s){var n=G("SECNAME");return n?n[s]:s}
 function modesFor(s){var m=["learn","cards","vf","mc","mt"];if(s==="int")m.push("t10");else if(s==="lab"||s==="hem")m.push("ex");return m}
 function shortT(t){return t.replace(/^[A-Z]+\s?\d+\s*[·.:-]?\s*/,"")}
@@ -10268,7 +11909,7 @@ var SIDX=null;
 function norm(x){return String(x||"").toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g,"")}
 function sidx(){
  if(SIDX)return SIDX;SIDX=[];
- ["int","lab","hem","der","res","tra"].forEach(function(sp){
+ ["int","lab","hem","der","res","gas","tra"].forEach(function(sp){
   SIDX.push({t:secName(sp),s:"Curso · Clínicas II",k:"c",sp:sp,q:norm(secName(sp)+" curso")});
   unitsOf(sp).forEach(function(u){
    if(u.kind==="top")SIDX.push({t:u.title,s:secName(sp)+" · capítulo",k:"u",sp:sp,u:u.id,q:norm(u.title+" "+secName(sp)+" capitulo resumen")});
@@ -10337,4 +11978,5 @@ if(EM){
 })();
 
 </script>
+
 </body></html>
