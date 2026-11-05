@@ -9600,257 +9600,6 @@ POOLS.t_dx2={name:"Trauma · cuadros clínicos",p:[["Dolor en tabaquera anatómi
 /* ===== Traumatología: se ocultan las preguntas antiguas (fáciles) y se agrega banco difícil ===== */
 VF.forEach(r=>{if(/^t\d+$/.test(r[0])&&!r[4])r[0]="zhid"});
 MC.forEach(r=>{if(/^t\d+$/.test(r[0])&&!r[4])r[0]="zhid"});
-/* ===== Banco DIFÍCIL de Traumatología (anatomía · nervios · movimientos · clínica) ===== */
-TQ_ADD("t1",[
-["¿Qué raíz explica la debilidad de la extensión del hallux y la hipoestesia del dorso del pie?","L5",["S1","L4","S2"]],
-["Una pseudoartrosis hipertrófica ('pata de elefante') indica buena biología pero fijación inestable.",true,"Requiere estabilidad mecánica; la atrófica requiere además biología (injerto)."],
-["¿Qué miotoma explora la extensión de la muñeca?","C6",["C5","C8","T1"]],
-["En la consolidación con compresión absoluta (placa) se forma abundante callo externo.",false,"Con estabilidad absoluta la consolidación es primaria, sin callo visible."],
-["¿Qué reflejo se pierde en una radiculopatía S1?","Aquíleo",["Rotuliano","Bicipital","Tricipital"]],
-["La ley de Wolff plantea que el hueso se remodela según las cargas mecánicas que recibe.",true,"Explica la remodelación del callo y la osteopenia por desuso."],
-["¿Qué raíz inerva principalmente la flexión de dedos de la mano (miotoma)?","C8",["C5","C6","L5"]],
-["Un paciente tabaquista, diabético y que consume AINE crónicos tiene más riesgo de retraso de consolidación.",true,"Tabaco, DM y AINE alteran la angiogénesis y el callo."],
-["¿Qué dermatoma cubre la cara lateral del pie y el 5.º dedo?","S1",["L4","L5","S2"]],
-["En la escala MRC una fuerza 3/5 permite vencer la gravedad pero no la resistencia.",true,"4/5 vence resistencia parcial; 5/5 resistencia completa."],
-["¿Qué fase de la consolidación ósea secundaria sigue al callo blando?","Callo duro (osificación endocondral)",["Hematoma inicial","Remodelación","Inflamatoria"]],
-["La inmovilización de una fractura de diáfisis debe incluir la articulación proximal y la distal.",true,"Controla las fuerzas rotacionales y de acortamiento."],
-["El miotoma L3 corresponde principalmente a la extensión de rodilla.",true,"Cuádriceps L2-L4, predominio L3."],
-["¿Cuál es el miotoma de la abducción de hombro (deltoides, supraespinoso)?","C5",["C7","C8","T1"]]]);
-TQ_ADD("t6",[
-["¿Qué músculo tenar NO inerva el nervio mediano?","Aductor del pulgar",["Abductor corto del pulgar","Oponente del pulgar","Flexor corto del pulgar (cabeza superficial)"]],
-["En el síndrome del túnel carpiano la rama cutánea palmar del mediano suele respetarse, por lo que la eminencia tenar conserva la sensibilidad.",true,"Nace proximal al retináculo flexor."],
-["¿Qué compartimiento extensor está comprometido en la tenosinovitis de De Quervain?","1.º: abductor largo y extensor corto del pulgar",["2.º: extensores radiales del carpo","3.º: extensor largo del pulgar","4.º: extensor común de los dedos"]],
-["El signo de Froment evalúa el aductor del pulgar y detecta lesión del nervio cubital.",true,"El paciente compensa con flexión del flexor largo del pulgar (mediano)."],
-["¿Qué compromete la lesión del nervio interóseo anterior?","Flexión de la interfalángica del pulgar e índice (pinza 'OK' alterada), sin pérdida sensitiva",["Pérdida sensitiva de la eminencia tenar","Garra cubital","Muñeca caída"]],
-["En la fractura de escafoides el polo proximal tiene riesgo de necrosis avascular por la irrigación retrógrada.",true,"Los vasos entran por el polo distal (rama dorsal de la radial)."],
-["¿Qué estructura se lesiona en el 'dedo en martillo' (mallet)?","Inserción del extensor en la falange distal",["Banda central en la IFP","Polea A1","Flexor profundo"]],
-["La contractura de Dupuytren compromete la fascia palmar y afecta sobre todo a los dedos anular y meñique.",true,"Flexión fija de MCF e IFP, sin dolor."],
-["¿Qué nervio se comprime en el canal de Guyon?","Cubital",["Mediano","Radial superficial","Interóseo posterior"]],
-["Una lesión alta del nervio radial produce pérdida de la extensión de muñeca y de MCF ('muñeca caída'), con flexión conservada.",true,"Los extensores radiales y el extensor común dejan de actuar."],
-["¿Qué signo clínico sugiere disociación escafolunar?","Watson positivo (resalte doloroso del escafoides)",["Finkelstein","Tinel en canal cubital","Phalen"]],
-["En la lesión del nervio cubital a nivel de la muñeca el signo de Wartenberg corresponde a la abducción del meñique por pérdida del interóseo palmar.",true,"Persiste la acción del extensor del meñique (radial)."],
-["¿Cuál es la lesión característica de la polea A1?","Dedo en gatillo",["Dedo en botonera","Dedo en martillo","Dedo en cuello de cisne"]],
-["La luxación perilunar con desplazamiento del lunato volar puede producir síndrome de túnel carpiano agudo.",true,"El lunato desplazado comprime el nervio mediano."]]);
-TQ_ADD("t15",[
-["¿Qué músculo isquiotibial se lesiona con más frecuencia en el esprint?","Bíceps femoral, cabeza larga",["Semimembranoso","Semitendinoso","Recto interno"]],
-["Las lesiones musculares indirectas ocurren típicamente durante la contracción excéntrica.",true,"Unión miotendinosa del músculo biarticular."],
-["¿Qué músculo se rompe en el 'tennis leg'?","Cabeza medial del gastrocnemio",["Sóleo exclusivamente","Tibial posterior","Peroneo largo"]],
-["La miositis osificante aparece tras un hematoma de cuádriceps mal manejado, con masa dolorosa y calcificación en la Rx a las 3-4 semanas.",true,"El masaje y el calor precoz favorecen su aparición."],
-["¿Qué prueba confirma la rotura completa del tendón de Aquiles?","Thompson (sin flexión plantar al comprimir el tríceps sural)",["Lachman","Squeeze test","Apley"]],
-["La rotura de la cabeza larga del bíceps braquial provoca un abultamiento distal ('signo de Popeye') con poca pérdida funcional.",true,"Supina y flexiona codo conservados por el braquial y la cabeza corta."],
-["¿Qué músculo se asocia con avulsión de la espina ilíaca anteroinferior en adolescentes?","Recto femoral",["Sartorio","Isquiotibiales","Aductor largo"]],
-["El mecanismo clásico de rotura del aductor largo es la abducción forzada con el muslo en extensión.",true,"Se presenta en fútbol con dolor inguinal y a la aducción resistida."],
-["¿Qué movimiento está dañado en una rotura del pectoral mayor?","Aducción y rotación interna del brazo",["Abducción","Rotación externa","Elevación del hombro"]],
-["En una lesión muscular grado II hay rotura parcial con pérdida funcional moderada.",true,"Grado I es elongación; III es rotura completa."],
-["¿Qué nervio se encuentra próximo al origen de los isquiotibiales y puede irritarse en la tendinopatía proximal?","Ciático",["Femoral","Obturador","Glúteo superior"]],
-["El síndrome compartimental por contusión muscular intensa debe sospecharse ante dolor desproporcionado con estiramiento pasivo.",true,"El pulso distal puede estar conservado."],
-["¿Qué lesión se asocia a la rotura del tendón del cuádriceps?","Incapacidad para extender la rodilla contra gravedad",["Bloqueo en flexión","Signo del cajón anterior","Hiperextensión de tobillo"]]]);
-TQ_ADD("t3",[
-["¿Qué porcentaje de pérdida de volemia define el shock hemorrágico clase III?","30-40%",["<15%","15-30%",">40%"]],
-["En el shock neurogénico la hipotensión se acompaña de bradicardia y piel caliente.",true,"Pérdida del tono simpático por lesión medular alta."],
-["¿Qué componentes forman la tríada letal del trauma?","Hipotermia, acidosis y coagulopatía",["Hipoxia, hipotensión y hipoglicemia","Fiebre, taquicardia y anemia","Dolor, edema e isquemia"]],
-["Un paciente con shock, ingurgitación yugular, ruidos cardíacos apagados e hipotensión sugiere taponamiento cardíaco (tríada de Beck).",true,"Se confirma con FAST/eFAST."],
-["¿Qué es lo primero que se evalúa en la 'A' del ATLS?","Vía aérea con control de la columna cervical",["Pulso femoral","Escala de Glasgow","Exposición"]],
-["En una fractura inestable de pelvis la faja pélvica se coloca a nivel de los trocánteres mayores.",true,"Reduce volumen pélvico y sangrado venoso."],
-["¿Qué dato contraindica la instalación de sonda vesical sin estudio previo?","Sangre en el meato uretral",["Orina clara","Hematuria microscópica","Dolor suprapúbico leve"]],
-["La reposición excesiva de cristaloides en trauma agrava la coagulopatía y la hipotermia.",true,"Se prefiere hemoderivados balanceados."],
-["¿Dentro de qué plazo se administra ácido tranexámico en trauma hemorrágico?","Primeras 3 horas",["Primeras 24 horas","Sólo tras cirugía","Después de 6 horas"]],
-["Una fractura de fémur puede producir una pérdida de 1-1,5 L de sangre.",true,"Puede generar shock clase II-III."],
-["¿Dónde se realiza la descompresión con aguja del neumotórax a tensión?","5.º espacio intercostal, línea axilar anterior",["2.º espacio, línea axilar media","7.º espacio posterior","Subclavicular exclusivamente"]],
-["La hipotensión permisiva está indicada en el trauma craneoencefálico grave.",false,"En TEC se evita hipotensión para mantener la perfusión cerebral."],
-["¿Qué sitio de sangrado oculto se explora con FAST además del abdomen?","Pericardio y espacio pleural",["Retroperitoneo completo","Columna lumbar","Pelvis menor sólo"]],
-["El mecanismo de 'volante' o 'dashboard' se asocia a luxación posterior de cadera y lesión de rodilla.",true,"Fuerza axial sobre fémur flexionado."]]);
-TQ_ADD("t16",[
-["¿Cuál es la localización más frecuente del osteosarcoma?","Metáfisis de fémur distal y tibia proximal",["Epífisis de fémur proximal","Diáfisis de húmero","Cuerpo vertebral"]],
-["El triángulo de Codman y los rayos de sol son típicos del osteosarcoma.",true,"Reacción perióstica agresiva."],
-["¿Qué translocación caracteriza al sarcoma de Ewing?","t(11;22) EWS-FLI1",["t(9;22)","t(8;14)","t(X;18)"]],
-["El tumor de células gigantes se localiza en la epífisis de huesos largos en adultos jóvenes con fisis cerrada.",true,"Lesión lítica excéntrica, 'burbujas de jabón'."],
-["¿Qué hallazgo clínico es típico del osteoma osteoide?","Dolor nocturno que cede con AINE",["Dolor que empeora con AINE","Fiebre elevada","Masa indolora"]],
-["El osteocondroma de la cabeza del peroné puede provocar parálisis del nervio peroneo común.",true,"Pie caído con pérdida de dorsiflexión y eversión."],
-["¿Qué tumor óseo presenta niveles líquido-líquido en la RM?","Quiste óseo aneurismático",["Osteosarcoma","Condroma","Fibroma no osificante"]],
-["La causa más común de tumor óseo maligno en un adulto mayor es la metástasis.",true,"Mama, próstata, pulmón, riñón y tiroides."],
-["¿Qué principio es crítico antes de biopsiar una sospecha de sarcoma?","Planificar el trayecto de biopsia que será resecado en bloque",["Biopsia abierta transversal","Realizarla en urgencias","Evitar imágenes previas"]],
-["Un condrosarcoma de pelvis en adulto tiene mala respuesta a quimioterapia y se trata con resección amplia.",true,"Matriz cartilaginosa con calcificaciones en 'palomitas'."],
-["¿Qué clasificación evalúa el riesgo de fractura patológica en lesiones líticas?","Mirels",["Gartland","Garden","Salter-Harris"]],
-["El dolor nocturno y en reposo en un paciente con antecedente oncológico obliga a descartar metástasis.",true,"Banderas rojas de dolor mecánico vs tumoral."],
-["¿Qué genes se alteran en la osteocondromatosis hereditaria múltiple?","EXT1 y EXT2",["RB1","FGFR3","COL1A1"]]]);
-
-TQ_ADD("t17",[
-["¿Qué maniobra reduce una cadera luxable o luxada en el recién nacido?","Ortolani (resalte de reducción)",["Barlow","Galeazzi","Trendelenburg"]],
-["La maniobra de Barlow detecta una cadera luxable al llevar la aducción con presión posterior.",true,"Ortolani reduce; Barlow luxa."],
-["En el arnés de Pavlik la posición correcta es flexión de cadera ~100° y abducción limitada.",true,"Abducción excesiva aumenta el riesgo de necrosis avascular."],
-["¿Qué complicación se asocia a una flexión excesiva de cadera en el arnés de Pavlik?","Parálisis del nervio femoral",["Parálisis del ciático","Síndrome compartimental","Fractura del cuello femoral"]],
-["¿Qué examen de imagen se prefiere en DDC antes de los 4-6 meses?","Ecografía de cadera (Graf)",["TAC","Resonancia","Rx de pelvis sin más"]],
-["El signo de Galeazzi indica acortamiento aparente por diferencia de altura de las rodillas.",true,"Suele deberse a luxación unilateral de cadera."],
-["¿Qué edad es típica de la enfermedad de Perthes?","4-8 años",["0-2 años","10-16 años","Mayores de 40 años"]],
-["La epifisiolisis femoral capital se presenta en adolescentes obesos y puede manifestarse como dolor de rodilla por referencia obturatriz.",true,"El miembro adopta rotación externa al flexionar la cadera (Drehmann)."],
-["¿Qué línea radiológica se usa para detectar epifisiolisis femoral?","Línea de Klein",["Línea de Shenton","Línea de Hilgenreiner","Línea de Perkin"]],
-["La corrección del pie zambo congénito inicia con yesos seriados de Ponseti y tenotomía del Aquiles.",true,"Componentes: cavo, aducto, varo y equino."],
-["¿Qué ángulo define la escoliosis estructural?","Cobb ≥10°",["≥5°","≥30°","≥50° exclusivamente"]],
-["El test de Adams evidencia una giba costal por rotación vertebral.",true,"Flexión anterior del tronco."],
-["¿Cuál es la alteración angular fisiológica a los 3-4 años?","Genu valgo",["Genu varo","Recurvatum","Rotación femoral externa"]]]);
-TQ_ADD("t18",[
-["¿Cuáles son los criterios de Kocher para artritis séptica de cadera en niños?","Fiebre >38,5, no apoyo, VHS >40 y leucocitos >12.000",["Dolor, edema, eritema y calor","Fiebre, tos y dolor abdominal","PCR>5, apoyo parcial y plaquetas altas"]],
-["Ante sospecha de artritis séptica de cadera la artrocentesis y el drenaje son urgentes.",true,"Previenen destrucción del cartílago."],
-["¿Cuál es el nervio más lesionado en las fracturas supracondíleas de húmero tipo extensión?","Interóseo anterior (mediano)",["Cubital","Axilar","Musculocutáneo"]],
-["La arteria braquial puede comprometerse en la fractura supracondílea de húmero con desplazamiento posterior.",true,"Evaluar pulso y perfusión."],
-["¿Qué es una pronación dolorosa o 'codo de niñera'?","Subluxación de la cabeza radial bajo el ligamento anular",["Fractura supracondílea","Luxación de codo posterior","Fractura de olécranon"]],
-["La reducción del codo de niñera se logra con supinación y flexión o hiperpronación.",true,"Edad típica 1-4 años."],
-["¿Qué tipo de Salter-Harris es el más frecuente?","Tipo II",["Tipo I","Tipo IV","Tipo V"]],
-["Una fractura por compresión de la fisis (Salter-Harris V) tiene alto riesgo de cierre prematuro.",true,"Difícil de ver al inicio."],
-["¿Qué fractura sugiere maltrato infantil en un lactante?","Fractura metafisaria en esquina o 'asa de balde'",["Fractura en tallo verde del antebrazo","Fractura de clavícula del recién nacido","Fractura en torus de radio"]],
-["Las fracturas costales posteriores en lactantes son altamente específicas de maltrato.",true,"Mecanismo de compresión torácica."],
-["¿Qué estructura se compromete en la fractura del cóndilo lateral del húmero con riesgo de no unión?","Superficie articular del cóndilo y cápsula",["Epicóndilo medial exclusivamente","Cabeza radial","Olécranon"]],
-["La osteomielitis hematógena pediátrica afecta típicamente la metáfisis.",true,"Vasos terminales lentos."],
-["¿Cuál es el sitio de crecimiento del miembro inferior más importante?","Cerca de la rodilla (fémur distal y tibia proximal)",["Cadera","Tobillo","Pie"]]]);
-TQ_ADD("t5",[
-["¿Qué nervio inerva el supraespinoso y el infraespinoso?","Supraescapular",["Axilar","Subescapular","Musculocutáneo"]],
-["El supraespinoso inicia la abducción (0-15°) y es el más frecuente en el síndrome subacromial.",true,"Prueba de Jobe."],
-["¿Qué prueba evalúa el subescapular?","Lift-off de Gerber o Bear hug",["Patte","Jobe","Speed"]],
-["La rotación externa se pierde en una rotura de infraespinoso y redondo menor.",true,"Infraespinoso (supraescapular) y redondo menor (axilar)."],
-["¿Qué nervio se lesiona en la luxación anterior de hombro?","Axilar",["Radial","Musculocutáneo","Torácico largo"]],
-["La pérdida de sensibilidad de la 'charretera' lateral del hombro indica lesión axilar.",true,"Deltoides débil."],
-["¿Qué signo radiológico se ve en la luxación posterior de hombro?","Signo de la bombilla",["Signo de la media luna","Signo del surco","Signo de Codman"]],
-["La luxación posterior de hombro se asocia a convulsiones y electrocución.",true,"Contracción muscular intensa."],
-["¿Qué lesión del labrum anteroinferior ocurre tras luxación anterior?","Bankart",["SLAP","Hill-Sachs","Kim"]],
-["El Hill-Sachs es una impactación posterolateral de la cabeza humeral.",true,"Contra el borde glenoideo anterior."],
-["¿Qué nervio provoca escápula alada si se lesiona?","Torácico largo (serrato anterior)",["Espinal accesorio","Dorsal escapular","Supraescapular"]],
-["La capsulitis adhesiva se caracteriza por pérdida de movilidad activa y pasiva, sobre todo rotación externa.",true,"Diabetes es factor de riesgo."],
-["¿Qué grado de Rockwood corresponde a ruptura completa AC y CC con clavícula desplazada superior?","III",["I","II","VI"]]]);
-TQ_ADD("t8",[
-["¿Qué nervio inerva el glúteo medio?","Glúteo superior",["Ciático","Femoral","Obturador"]],
-["En la marcha de Trendelenburg hay caída de la pelvis contralateral por debilidad del glúteo medio.",true,"Inclina el tronco hacia el lado afectado para compensar."],
-["¿Qué estructura nerviosa se atrapa bajo el ligamento inguinal en la meralgia parestésica?","Femorocutáneo lateral (L2-L3)",["Femoral","Obturador","Ilioinguinal exclusivamente"]],
-["La meralgia parestésica provoca hipoestesia en cara lateral del muslo sin debilidad motora.",true,"Es puramente sensitiva."],
-["¿Qué ángulo >55° se asocia a pinzamiento femoroacetabular tipo cam?","Ángulo alfa",["Ángulo de Wiberg","Ángulo de Cobb","Ángulo de Böhler"]],
-["La maniobra FADIR duele en el pinzamiento femoroacetabular.",true,"Flexión, aducción y rotación interna."],
-["¿Qué arteria nutre principalmente la cabeza femoral?","Circunfleja femoral medial",["Circunfleja lateral","Obturatriz","Glútea superior"]],
-["Los corticoides y el alcohol son factores de riesgo de necrosis avascular de cabeza femoral.",true,"Signo de la medialuna en Rx."],
-["¿Qué movimiento se limita primero en la artrosis de cadera?","Rotación interna",["Extensión","Rotación externa","Aducción"]],
-["El síndrome doloroso trocantérico mayor se asocia a tendinopatía del glúteo medio y mínimo.",true,"Dolor lateral con apoyo unipodal."],
-["¿Qué test evalúa la contractura en flexión de cadera?","Thomas",["Ober","Faber","Patrick invertido"]],
-["La cadera en resorte interno se produce por el tendón del iliopsoas sobre la eminencia iliopectínea.",true,"Chasquido audible al extender desde flexión."],
-["¿Qué músculo aduce la cadera inervado por el nervio obturador?","Aductor largo",["Sartorio","Tensor de la fascia lata","Recto femoral"]]]);
-TQ_ADD("t9",[
-["¿Cómo se acorta y rota el miembro en una fractura desplazada de cuello femoral?","Acortado y en rotación externa",["Alargado y en rotación interna","Flexionado y aducido","Rotación interna y abducción"]],
-["La necrosis avascular se asocia a fracturas de cuello femoral desplazadas por lesión de la circunfleja medial.",true,"Retinaculares."],
-["¿Qué clasificación define el desplazamiento de fractura de cuello femoral?","Garden",["Kellgren","Schatzker","Gustilo"]],
-["Una Garden I-II (no desplazada) se fija con tornillos.",true,"Conserva la cabeza."],
-["¿Qué implante se prefiere en intertrocantéricas inestables o subtrocantéricas?","Clavo cefalomedular",["DHS","Tornillos canulados","Yeso pelvipédico"]],
-["Un 'tip-apex distance' >25 mm aumenta el riesgo de corte del tornillo cefálico.",true,"Se mide en Rx AP y lateral."],
-["¿Cómo queda la cadera en una luxación posterior?","Flexión, aducción y rotación interna",["Extensión y rotación externa","Abducción y rotación externa","Alargada y flexionada"]],
-["La luxación posterior de cadera puede lesionar el nervio ciático (porción peronea).",true,"Pie caído."],
-["¿Qué tiempo es ideal para reducir la luxación de cadera?","Antes de 6 horas",["24 horas","3 días","1 semana"]],
-["La fractura de la cabeza femoral asociada a luxación se clasifica según Pipkin.",true,"Pipkin I-IV."],
-["¿Qué proyecciones evalúan el acetábulo?","Judet (obturatriz e iliaca oblicua)",["Mortaja","Axial de Lauenstein exclusiva","Skyline"]],
-["La cirugía precoz (<48 h) mejora la sobrevida en fractura de cadera.",true,"Se acompaña de manejo ortogeriátrico."],
-["¿Qué prótesis se indica en cuello femoral desplazado, paciente activo y cognitivamente sano?","Artroplastía total",["Hemiartroplastía bipolar siempre","Clavo","Tornillos"]]]);
-
-TQ_ADD("t13",[
-["¿Qué nervio se comprime en el síndrome del túnel tarsiano?","Tibial posterior",["Peroneo profundo","Sural","Safeno"]],
-["La disfunción del tibial posterior produce pie plano adquirido con signo de 'demasiados dedos'.",true,"Incapacidad para elevarse en un pie."],
-["¿Qué espacio compromete la neuroma de Morton?","3.er espacio intermetatarsiano (nervio digital común)",["1.er espacio","5.º espacio","Dorso del pie"]],
-["La fascitis plantar duele en el tubérculo medial del calcáneo con los primeros pasos de la mañana.",true,"Dolor medial plantar."],
-["¿Qué ángulo >15° define hallux valgus?","Ángulo de hallux valgus (1.er MTF)",["Ángulo de Böhler","Ángulo de Cobb","Ángulo alfa"]],
-["La pérdida de dorsiflexión del tobillo y eversión sugiere lesión del nervio peroneo.",true,"Pie caído."],
-["¿Qué músculo realiza la inversión del pie?","Tibial posterior",["Peroneo corto","Extensor largo de los dedos","Tibial anterior exclusivamente"]],
-["El pie de Charcot ocurre en neuropatía diabética con colapso del mediopié.",true,"Calor, edema y poca sensibilidad."],
-["¿Qué cuadro inflama el tendón de Aquiles con prominencia posterosuperior calcánea?","Haglund",["Sever","Freiberg","Köhler"]],
-["La podagra es la artritis gotosa de la 1.ª MTF.",true,"Cristales de urato."],
-["¿Qué nervio produce hipoestesia lateral del pie y se lesiona en cirugías de Aquiles?","Sural",["Safeno","Tibial","Peroneo profundo"]],
-["La subluxación de los tendones peroneos ocurre por lesión del retináculo peroneo superior.",true,"Chasquido lateral."]]);
-TQ_ADD("t14",[
-["¿Qué ligamento se lesiona con mayor frecuencia en el esguince de tobillo?","Peroneoastragalino anterior",["Calcaneofibular","Deltoideo","Tibioperoneo anterior"]],
-["El esguince de tobillo alto compromete la sindesmosis tibioperonea.",true,"Prueba de compresión y rotación externa."],
-["¿Qué clasificación divide fracturas de tobillo según el peroné respecto a la sindesmosis?","Weber",["Garden","Gartland","Gustilo"]],
-["Una fractura Weber C implica lesión de la sindesmosis.",true,"Fractura suprasindesmal."],
-["¿Qué mecanismo es el más común en Lauge-Hansen?","Supinación-rotación externa",["Pronación-abducción","Supinación-aducción","Pronación-rotación externa"]],
-["La fractura de Maisonneuve incluye peroné proximal con lesión de sindesmosis y deltoides.",true,"Revisar toda la pierna."],
-["¿Qué nervio evalúa la sensibilidad del primer espacio interdigital en el compartimento anterior?","Peroneo profundo",["Sural","Tibial","Safeno"]],
-["El síndrome compartimental de pierna afecta más el compartimento anterior.",true,"Dolor con dorsiflexión pasiva de los dedos."],
-["¿Qué diferencia de presión (ΔP) indica fasciotomía?","≤30 mmHg",["≥60 mmHg","≥90 mmHg","≤120 mmHg"]],
-["La fractura de Gustilo IIIC incluye lesión vascular que requiere reparación.",true,"Alto riesgo de amputación."],
-["¿Qué parte del plato tibial se afecta más en Schatzker II?","Cuña lateral con depresión",["Medial","Bicondílea","Diafisaria"]],
-["El 'clear space' medial >4 mm sugiere lesión deltoidea con inestabilidad.",true,"Rx de mortaja."],
-["¿Qué signo evalúa rotura de Aquiles con rodilla flexionada?","Matles",["Lachman","Pivot shift","Anterior drawer"]]]);
-TQ_ADD("t12",[
-["¿Qué estructura es la principal fuente de dolor en la artrosis?","Hueso subcondral y sinovial",["Cartílago hialino","Menisco exclusivamente","Músculo"]],
-["Los nódulos de Heberden afectan las articulaciones interfalángicas distales.",true,"Bouchard: IFP."],
-["¿Qué clasificación radiológica se usa en artrosis?","Kellgren-Lawrence",["Gartland","Ficat","Garden"]],
-["La artrosis de rodilla medial se asocia con genu varo.",true,"Sobrecarga del compartimento medial."],
-["¿Qué cirugía se indica en gonartrosis medial en paciente joven con varo?","Osteotomía tibial alta",["Artroplastía total siempre","Artrodesis","Meniscectomía total"]],
-["La artrosis de cadera pierde primero la rotación interna.",true,"Dolor inguinal."],
-["¿Cuál es el recuento leucocitario típico del líquido en artrosis?","<2.000/mm³ (no inflamatorio)",["50.000/mm³","100.000/mm³ con PMN","Hemático"]],
-["La infiltración con corticoides alivia temporalmente, pero su uso repetido puede dañar el cartílago.",true,"Máximo 3-4 al año."],
-["¿Qué complicación es más importante tras artroplastía?","Infección periprotésica",["Parálisis","Hemorragia masiva siempre","Síndrome de Marfan"]],
-["El ejercicio y la baja de peso son pilares del tratamiento de la artrosis.",true,"Primera línea."],
-["¿Qué componente se reemplaza en la artroplastía unicompartimental?","Un compartimento (medial/lateral)",["Todos los compartimentos","Sólo rótula","Menisco"]]]);
-TQ_ADD("t11",[
-["¿Qué músculo estabiliza medialmente la rótula y se debilita en dolor patelofemoral?","Vasto medial oblicuo",["Recto femoral","Sartorio","Bíceps femoral"]],
-["El dolor patelofemoral empeora al bajar escaleras y estar sentado mucho tiempo.",true,"Signo del cine."],
-["¿Qué cuadro afecta la tuberosidad tibial en adolescentes deportistas?","Osgood-Schlatter",["Sinding-Larsen","Perthes","Köhler"]],
-["La tendinopatía del ligamento rotuliano es la 'rodilla del saltador'.",true,"Polo inferior de la rótula."],
-["¿Qué bursitis afecta la pata de ganso?","Sartorio, grácil y semitendinoso",["Bíceps femoral","Poplíteo","Recto femoral"]],
-["El síndrome de la banda iliotibial duele en el cóndilo femoral lateral en corredores.",true,"Fricción a 30° de flexión."],
-["¿Qué estructura forma un quiste de Baker?","Bolsa del semimembranoso y gastrocnemio medial",["Menisco lateral","Plica","LCA"]],
-["La osteocondritis disecante ocurre típicamente en la cara lateral del cóndilo femoral medial.",true,"Fragmento subcondral."],
-["¿Qué signo evalúa condromalacia patelar?","Clarke",["Lachman","Thessaly","Dial"]],
-["La bursitis prerrotuliana ('rodilla de sirvienta') aparece con arrodillamiento repetido.",true,"Aumento de volumen anterior."],
-["¿Qué nervio puede dar dolor medial de rodilla por irritación infrapatelar?","Safeno (rama infrapatelar)",["Peroneo","Sural","Tibial"]]]);
-TQ_ADD("t10",[
-["¿Qué prueba es más sensible para lesión de LCA?","Lachman",["Pivot shift","Cajón posterior","Valgo a 0°"]],
-["El pivot shift es la prueba más específica para inestabilidad rotatoria por LCA.",true,"Difícil con dolor."],
-["¿Qué tríada forman LCA, LCM y menisco medial?","Tríada infeliz de O'Donoghue",["Tríada de Beck","Tríada letal","Tríada de Charcot"]],
-["La lesión del LCP ocurre típicamente por golpe sobre la tibia anterior con rodilla flexionada.",true,"Cajón posterior positivo."],
-["¿Qué estructura se estudia con el dial test?","Esquina posterolateral",["LCM","Menisco medial","Rótula"]],
-["La luxación de rodilla puede lesionar la arteria poplítea y el nervio peroneo común.",true,"ITB <0,9 exige angio-TAC."],
-["¿Qué fractura sugiere lesión del LCA (Segond)?","Avulsión tibial lateral",["Epicóndilo medial","Cabeza del peroné","Polo inferior rotuliano"]],
-["La lesión del LCM se evalúa con estrés en valgo a 30°.",true,"Habitualmente tratamiento conservador."],
-["¿Qué menisco es más comúnmente lesionado en LCA crónica?","Menisco medial",["Menisco lateral","Ambos por igual","Ninguno"]],
-["El signo de bloqueo con imposibilidad de extender sugiere lesión en asa de balde.",true,"McMurray/Thessaly positivos."],
-["¿Qué zona meniscal tiene mejor potencial de cicatrización?","Zona roja-roja periférica",["Zona blanca-blanca","Zona central","Raíz exclusivamente"]],
-["La hemartrosis precoz tras torsión de rodilla sugiere lesión de LCA hasta demostrar lo contrario.",true,"Sobre todo en primeras horas."],
-["¿Qué ligamento se reconstruye con injerto hueso-tendón-hueso o isquiotibiales?","LCA",["LCM","LCP exclusivamente","Retináculo"]]]);
-TQ_ADD("t4",[
-["¿Qué clasificación se usa en fracturas expuestas?","Gustilo-Anderson",["Garden","Weber","Salter"]],
-["Las fracturas expuestas requieren antibióticos precoces, lavado y desbridamiento.",true,"Idealmente <1 hora."],
-["¿Cuál es el hallazgo más sensible del síndrome compartimental?","Dolor con estiramiento pasivo",["Pulso ausente","Palidez","Parestesias"]],
-["La ausencia de pulso es un signo tardío del síndrome compartimental.",true,"No esperarlo."],
-["¿Cuándo aparece el síndrome de embolia grasa?","24-72 h tras fractura de hueso largo",["Primeros minutos","1 mes","Sólo en pediatría"]],
-["La triada embolia grasa: hipoxemia, petequias y alteración de conciencia.",true,"Petequias axilares y torácicas."],
-["¿Qué lesión nerviosa tiene recuperación espontánea con pérdida de conducción transitoria?","Neuropraxia",["Axonotmesis","Neurotmesis","Avulsión"]],
-["La luxación de cadera es una urgencia por riesgo de necrosis avascular.",true,"Reducción <6 h."],
-["¿Qué síndrome produce anestesia en silla de montar y retención urinaria?","Cauda equina",["Brown-Séquard","Sd central medular","Conus únicamente leve"]],
-["La fascitis necrotizante cursa con dolor desproporcionado y toxicidad sistémica.",true,"Cirugía urgente."],
-["¿Qué compartimentos se liberan en fasciotomía de pierna?","Los 4 (anterior, lateral, posterior superficial y profundo)",["Sólo anterior","Anterior y lateral","Sólo posterior"]],
-["Una fractura con déficit neurovascular distal requiere reducción urgente.",true,"No esperar estudios."]]);
-TQ_ADD("t7",[
-["¿Qué raíz afecta una hernia L4-L5 posterolateral típica?","L5",["L4","S1","L3"]],
-["La hernia L5-S1 típicamente afecta S1 con pérdida del reflejo aquíleo.",true,"Debilidad de flexión plantar."],
-["¿Qué raíz compromete debilidad del cuádriceps y pérdida del reflejo rotuliano?","L4",["L5","S1","L2 exclusivamente"]],
-["El Lasègue positivo entre 30° y 70° sugiere radiculopatía ciática.",true,"El cruzado es más específico."],
-["¿Qué prueba evalúa raíces L2-L4?","Estiramiento femoral",["Lasègue","Thomas","Patrick"]],
-["La claudicación neurogénica mejora al flexionar el tronco o sentarse.",true,"Signo del carrito de compras."],
-["¿Qué indica anestesia en silla de montar con retención urinaria?","Cauda equina: RM urgente y cirugía",["AINE y reposo","Fisioterapia","Radiografía ambulatoria"]],
-["Una hernia lateral extrema afecta la raíz que sale (exiting) del nivel.",true,"L4-L5 lateral: L4."],
-["¿Qué es espondilolistesis ístmica?","Deslizamiento por defecto de la pars interarticularis",["Hernia discal","Escoliosis","Fractura vertebral por compresión"]],
-["El signo del 'perrito escocés' en Rx oblicua indica espondilólisis.",true,"Collar del perro."],
-["¿Qué dolor lumbar con mejoría con ejercicio y rigidez matinal sugiere?","Espondiloartritis anquilosante",["Hernia discal","Estenosis","Espondilolistesis"]],
-["En lumbago agudo sin banderas rojas no se solicita imagen de entrada.",true,"Mejora en 4-6 semanas."]]);
-TQ_ADD("t2",[
-["¿Cuántas proyecciones mínimo se requieren para evaluar una fractura?","Dos ortogonales",["Una","Tres siempre","Sólo oblicua"]],
-["Se deben incluir la articulación proximal y distal en la Rx de una fractura diafisaria.",true,"Evita pasar por alto luxaciones."],
-["¿Qué ángulo mide la inclinación radial normal del radio distal?","~22°",["~5°","~45°","~90°"]],
-["La basculación volar normal del radio distal es ~11°.",true,"Se pierde en Colles."],
-["¿Qué mide el ángulo de Böhler?","Calcáneo (normal 20-40°)",["Cadera","Escápula","Rodilla"]],
-["¿Qué línea se rompe en luxación de cadera en la Rx?","Línea de Shenton",["Línea de Klein","Línea de Hilgenreiner","Línea de Böhler"]],
-["El signo de la almohadilla grasa posterior del codo indica hemartrosis y fractura oculta.",true,"Fractura supracondílea o de cabeza radial."],
-["¿Qué línea debe pasar por el tercio medio del cóndilo en un codo pediátrico normal?","Línea humeral anterior",["Línea radiocapitelar exclusivamente","Línea de Klein","Línea de Shenton"]],
-["La resonancia es el estudio de elección para fractura oculta de escafoides.",true,"También gammagrafía o TAC."],
-["¿Qué proyecciones evalúan la pelvis para fracturas?","AP, inlet y outlet",["Skyline","Judet exclusivamente","Mortaja"]],
-["En un trauma cervical se debe visualizar C7-T1.",true,"Si no, TAC."],
-["¿Qué proyección evalúa el odontoides?","Transoral (boca abierta)",["Lateral estricta","Oblicua","Swimmer"]]]);
-
 /* Parejas difíciles de Traumatología (se reemplazan los pools t_* anteriores) */
 Object.keys(POOLS).filter(k=>k.indexOf("t_")===0).forEach(k=>{delete POOLS[k]});
 POOLS.t_nrv={name:"Nervio · déficit motor",p:[["Axilar","Abducción por deltoides; hipoestesia en 'charretera'"],["Musculocutáneo","Flexión de codo y supinación débiles"],["Radial","Extensión de muñeca y MCF (mano caída)"],["Mediano (túnel carpiano)","Pérdida de oposición del pulgar"],["Cubital","Garra y signo de Froment"],["Interóseo anterior","Pinza 'OK' alterada, sin déficit sensitivo"],["Peroneo común","Pie caído: sin dorsiflexión ni eversión"],["Glúteo superior","Trendelenburg por debilidad del glúteo medio"],["Femoral","Pérdida de extensión de rodilla"],["Torácico largo","Escápula alada por serrato anterior"],["Supraescapular","Falla abducción inicial y rotación externa"],["Tibial posterior","Falla flexión plantar y sensibilidad plantar"]]};
@@ -9862,6 +9611,8 @@ POOLS.t_clas={name:"Clasificación · lesión",p:[["Garden","Cuello femoral"],["
 POOLS.t_val={name:"Valores clave",p:[["Cobb ≥10°","Escoliosis"],["ΔP ≤30 mmHg","Síndrome compartimental"],["Ángulo alfa >55°","Pinzamiento tipo cam"],["Böhler 20-40°","Calcáneo"],["Inclinación radial ~22°","Radio distal"],["Tip-apex >25 mm","Riesgo de corte del tornillo cefálico"],["Hallux valgus >15°","Ángulo MTF"],["Kocher: 4 criterios","Artritis séptica de cadera pediátrica"],["Medial clear space >4 mm","Lesión deltoidea del tobillo"]]};
 POOLS.t_pos={name:"Postura · lesión",p:[["Miembro acortado y rotado externo","Fractura de cuello femoral"],["Flexión, aducción y rotación interna","Luxación posterior de cadera"],["Brazo abducido y rotado externo","Luxación anterior de hombro"],["Brazo aducido y rotado interno","Luxación posterior de hombro"],["Dorso de tenedor","Fractura de Colles"],["Garra en 4.º y 5.º dedos","Lesión del nervio cubital"],["Mano caída","Lesión del nervio radial"],["Pie caído","Peroneo común o raíz L5"],["Caída pélvica contralateral","Insuficiencia de glúteo medio"]]};
 POOLS.t_img={name:"Enfermedad · hallazgo",p:[["Osteosarcoma","Triángulo de Codman y rayos de sol"],["Ewing","Piel de cebolla; t(11;22)"],["Tumor de células gigantes","Epifisario lítico excéntrico"],["Osteoma osteoide","Nidus <1,5 cm; dolor nocturno que cede con AINE"],["Osteocondroma","Exóstosis con capuchón cartilaginoso"],["Quiste óseo aneurismático","Niveles líquido-líquido en RM"],["Epifisiolisis femoral","Línea de Klein alterada"],["Perthes","Colapso y aplanamiento de la cabeza femoral"],["Pie zambo","Equino, cavo, aducto y varo"]]};
+POOLS.t_dx3={name:"Caso clínico · diagnóstico",p:[["Dolor en la tabaquera anatómica tras caída sobre la mano","Fractura de escafoides"],["Hormigueo nocturno de 3½ dedos radiales, Phalen +","Túnel carpiano"],["Dolor del borde radial de la muñeca, Finkelstein +","Tenosinovitis de De Quervain"],["Signo de la tecla tras golpe en el hombro","Disyunción acromioclavicular"],["Hombro en charretera","Luxación anterior glenohumeral"],["Dolor en el talón con los primeros pasos","Fascitis plantar"],["Joven con «pop» y hemartrosis precoz tras torsión","Rotura del LCA"],["Obeso de 12 años con claudicación","Epifisiólisis femoral"],["Dolor lumbar con anestesia en silla de montar","Cauda equina"],["Dolor desproporcionado al estirar los dedos tras fractura","Síndrome compartimental"]]};
+POOLS.t_cd={name:"Hallazgo · conducta",p:[["Rx normal, dolor en tabaquera","Férula con pulgar y repetir Rx/RM"],["Fractura subcapital desplazada, 80 años","Artroplastía"],["Fractura subcapital no desplazada","Osteosíntesis con tornillos"],["Lumbociática sin déficit motor","AINE y kinesioterapia sin reposo"],["Artritis séptica de rodilla","Aseo quirúrgico y antibióticos EV"],["Fractura expuesta","Antibióticos precoces, tétanos y aseo"],["Rodilla traumática con derrame no evaluable","Inmovilizar y pedir RM"],["Genu valgo fisiológico a los 4 años","Educar y controlar"],["Desgarro muscular","Compresión y frío"],["Luxación de hombro con radiografía","Reducción"]]};
 
 /* ===== Traumatología: pruebas pasadas + banco estilo prueba ===== */
 C.forEach(r=>{if(/^t\d+$/.test(r[0])&&!r[3])r[0]="zhid"});
@@ -10128,6 +9879,248 @@ const CC=[["t1","Estabilidad absoluta vs relativa","Absoluta (placa/compresión)
  ["t2","Imágenes en trauma","Rx 2 proyecciones; tumor óseo: Rx simple primero; Rx normal con sospecha de fractura de cadera → RM/TAC; arcos de Gilula en el carpo."]];
 CC.forEach(c=>C.push(c));
 })();
+
+/* ===== Banco nuevo (estilo pruebas 2019-2026): casos clínicos, conducta, anatomía aplicada ===== */
+const CN=(ch,a)=>a.forEach(x=>C.push([ch,x[0],x[1]]));
+TQ_ADD("t1",[
+["Mujer de 71 años consulta por dolor de muñeca tras caer sobre la mano. La Rx muestra fractura de radio distal con trazo transversal. Antecedente: fractura de vértebra hace 2 años sin estudio. ¿Qué conducta agrega además del manejo de la fractura?","Estudiar y tratar osteoporosis (calcio, vitamina D y antirresortivo)",["Sólo analgesia y control de la fractura","Reposo prolongado en cama","Suspender toda actividad física"]],
+["Una fractura por fragilidad se produce con un trauma de baja energía, como una caída de altura propia.",true,"Cadera, columna y radio distal son las clásicas."],
+["Paciente de 45 años, tabaquista, con fractura de tibia operada hace 8 meses. La Rx muestra bordes escleróticos y un espacio persistente, con callo escaso. ¿Cuál es el diagnóstico?","Pseudoartrosis atrófica",["Consolidación retardada normal","Pseudoartrosis hipertrófica","Osteomielitis aguda"]],
+["En una pseudoartrosis hipertrófica falta estabilidad mecánica, no biología.",true,"Se corrige con una fijación más estable."],
+["¿Qué dato de la historia obliga a pensar en una fractura patológica y no en una traumática?","Dolor previo nocturno y fractura con un trauma mínimo",["Fractura con accidente de alta energía","Dolor que apareció tras el golpe","Edad menor de 20 años"]],
+["Un paciente con fractura cerrada de antebrazo en yeso consulta por dolor creciente y parestesias en los dedos. Antes de cualquier estudio, ¿qué hace primero?","Aflojar o abrir el yeso y reevaluar",["Indicar un opioide y esperar","Pedir una Rx de control mañana","Indicar elevación y hielo"]],
+["La inmovilización de una fractura debe incluir las articulaciones proximal y distal al foco.",false,"Eso rige para fracturas diafisiarias; en otras se inmoviliza según la zona."],
+["Paciente de 30 años con fractura de escafoides en yeso por 6 semanas; la Rx de control muestra línea de fractura visible sin callo. ¿Qué complicación vigila?","No unión y necrosis avascular del polo proximal",["Síndrome de Sudeck exclusivamente","Artritis séptica","Parálisis del nervio radial"]],
+["La osteopenia por desuso es un hallazgo esperable tras inmovilización prolongada.",true,"Ley de Wolff: sin carga el hueso se reabsorbe."],
+["Un niño con fractura de antebrazo consolida más rápido que un adulto porque…","El periostio es grueso y hay mayor potencial osteogénico",["No tiene cartílago de crecimiento","El hueso es más duro","Se remodela sólo con cirugía"]],
+["Una fractura de la diáfisis de la tibia tratada con clavo endomedular bloqueado consolida típicamente por consolidación secundaria.",true,"Estabilidad relativa: callo externo."],
+["Hombre de 63 años diabético con fractura de tobillo tratada quirúrgicamente tiene mayor riesgo de…","Retardo de consolidación e infección de la herida",["Consolidación más rápida","Necrosis avascular siempre","Parálisis del peroneo"]]]);
+CN("t1",[["¿Qué diferencia una fractura por fragilidad de una de alta energía?","Ocurre con trauma mínimo (caída de altura propia) sobre hueso osteoporótico."],["Pseudoartrosis atrófica vs hipertrófica","Atrófica: falla la biología (sin callo, bordes escleróticos); hipertrófica: abundante callo pero inestable, falla la mecánica."],["Complicación temprana grave de una fractura cerrada tratada con yeso","Síndrome compartimental: dolor desproporcionado, parestesias, dolor al estirar los dedos."],["Factores que retrasan la consolidación","Tabaquismo, diabetes, AINE, infección, desnutrición, inestabilidad y mala irrigación."],["Fractura de escafoides: complicaciones","No unión y necrosis avascular del polo proximal (irrigación retrógrada)."]]);
+TQ_ADD("t6",[
+["Mujer de 48 años con hormigueo nocturno en pulgar, índice y medio que mejora al sacudir la mano. Atrofia de la eminencia tenar. ¿Conducta más adecuada?","Derivar a traumatología/neurocirugía para estudio electrofisiológico y evaluar liberación del túnel",["Seguir sólo con ortesis nocturna","Infiltrar corticoides sin estudio","Indicar reposo absoluto"]],
+["Hombre de 32 años con caída sobre mano extendida, dolor en la tabaquera y Rx de muñeca normal. ¿Qué hace?","Inmovilizar con férula incluyendo el pulgar y repetir Rx/RM en 10-14 días",["Dar de alta con AINE","Yeso sólo de antebrazo sin pulgar","Pedir ecografía de partes blandas"]],
+["La fractura del tercio proximal del escafoides tiene mayor riesgo de necrosis avascular que la del tercio distal.",true,"Irrigación retrógrada desde el polo distal."],
+["Paciente tras caída con la mano extendida presenta dolor dorsal de muñeca y signo de «dorso de tenedor». ¿Cuál es la fractura más probable?","Fractura de Colles (radio distal con desplazamiento dorsal)",["Fractura de Smith","Fractura de Barton volar","Fractura de Galeazzi"]],
+["Tras una fractura de Colles aparece parestesias en los 3 dedos radiales y dolor intenso. ¿Qué complicación sospecha?","Síndrome de túnel carpiano agudo por compresión del mediano",["Lesión del nervio radial","Distrofia simpática refleja tardía","Rotura del extensor largo del pulgar"]],
+["La rotura espontánea del extensor largo del pulgar es una complicación tardía de la fractura de radio distal sin desplazamiento.",true,"Por isquemia del tendón sobre el tubérculo de Lister."],
+["Mujer de 29 años, recién madre, con dolor en el borde radial de la muñeca al cargar al bebé; Finkelstein positivo. ¿Estructuras comprometidas?","Abductor largo y extensor corto del pulgar",["Flexor radial del carpo","Extensor largo del pulgar únicamente","Abductor del meñique"]],
+["En un paciente con herida cortante volar en la muñeca, no puede flexionar la IFD del índice ni la IF del pulgar y tiene hipoestesia radial. ¿Qué lesión asume?","Sección del nervio mediano y tendones flexores",["Sección del nervio cubital","Sección del nervio radial","Rotura del extensor común"]],
+["Un paciente con herida por vidrio en el tercio distal del antebrazo medial mantiene la mano en garra con pérdida de la abducción de los dedos. ¿Qué nervio lesionó?","Cubital",["Mediano","Radial","Interóseo posterior"]],
+["El dedo en martillo corresponde a la rotura de la inserción del extensor en la falange distal.",true,"Se inmoviliza la IFD en extensión por 6-8 semanas."],
+["Mujer de 55 años con engrosamiento de la fascia palmar, nódulos y flexión fija del anular y meñique sin dolor. ¿Diagnóstico?","Enfermedad de Dupuytren",["Dedo en gatillo","Tenosinovitis de De Quervain","Artrosis interfalángica"]],
+["En el dedo en gatillo el sitio de atrapamiento es la polea A1 del flexor.",true,"A nivel de la cabeza del metacarpiano."]]);
+CN("t6",[["Signos del síndrome del túnel carpiano","Hormigueo nocturno de 3½ dedos radiales, Phalen y Durkan (+), debilidad de oposición del pulgar."],["Fractura de Colles vs Smith","Colles: desplazamiento dorsal («dorso de tenedor»). Smith: desplazamiento volar."],["Nervio mediano alto vs bajo","Bajo (muñeca): oposición del pulgar y sensibilidad palmar. Alto: además falla flexión de IFD del índice y pulgar (signo de la bendición)."],["Nervio cubital en la mano","Garra de anular y meñique, Froment (+), pérdida de abducción-aducción de los dedos."],["Lesión de tendón extensor en dedo","Martillo: inserción distal. Botonera: banda central en IFP."]]);
+TQ_ADD("t15",[
+["Futbolista de 24 años siente un «latigazo» en la cara posterior del muslo al esprintar. Equimosis a las 48 h y dolor a la flexión resistida de la rodilla. ¿Diagnóstico?","Desgarro de isquiotibiales",["Rotura del cuádriceps","Contractura del glúteo mayor","Bursitis isquiática"]],
+["En un desgarro muscular grado II hay rotura parcial de fibras con pérdida moderada de la función.",true,"Grado III es rotura completa."],
+["Corredor de 38 años con dolor súbito en la pantorrilla al arrancar, escucha un «chasquido». Gap palpable y Thompson positivo. ¿Diagnóstico?","Rotura del tendón de Aquiles",["Desgarro del gastrocnemio medial","Trombosis venosa profunda","Rotura del plantar delgado"]],
+["La maniobra de Thompson se evalúa con el paciente en decúbito prono comprimiendo el tríceps sural.",true,"Sin flexión plantar = rotura del Aquiles."],
+["¿Cuál es el manejo inicial de un desgarro muscular agudo sin signos de gravedad?","Reposo relativo, hielo, compresión y elevación; luego kinesioterapia progresiva",["Inmovilización con yeso por 4 semanas","Masaje profundo inmediato","Cirugía en las primeras 48 horas"]],
+["Paciente con hematoma voluminoso en el muslo tras un golpe, que a las 4 semanas presenta masa dura y dolorosa con calcificación en la Rx. ¿Diagnóstico?","Miositis osificante",["Osteosarcoma parostal","Absceso","Trombosis venosa"]],
+["Tras una contusión intensa de muslo está contraindicado el masaje y el calor en los primeros días.",true,"Favorecen la miositis osificante."],
+["Hombre de 60 años siente un «pop» en el brazo al levantar peso; hay equimosis y un bulto distal en el brazo, con flexión del codo conservada. ¿Qué se rompió?","La cabeza larga del bíceps proximal",["El tendón distal del bíceps completo","El braquial","El tríceps"]],
+["Luchador de 28 años con dolor y equimosis en la axila y el pecho tras un press de banca. Debilidad en la aducción y rotación interna. ¿Diagnóstico?","Rotura del pectoral mayor",["Luxación glenohumeral","Rotura del manguito rotador","Fractura de clavícula"]],
+["Un paciente con dolor muscular intenso, orina oscura y CK de 40.000 tras entrenamiento extremo tiene…","Rabdomiólisis",["DOMS","Desgarro grado III","Miositis osificante"]],
+["El DOMS cede espontáneamente en pocos días y no requiere imágenes.",true,"Dolor muscular de inicio tardío."],
+["Una lesión del recto femoral por patada de pelota en un adolescente puede avulsionar…","La espina ilíaca anteroinferior",["La tuberosidad isquiática","El trocánter menor","La cresta ilíaca"]]]);
+CN("t15",[["Grados de desgarro muscular","I: elongación; II: rotura parcial; III: rotura completa."],["Tríada del tendón de Aquiles roto","Chasquido, gap palpable y Thompson positivo."],["Miositis osificante","Complicación de un hematoma muscular tratado con masaje/calor; masa dura y calcificación a las 3-4 semanas."],["Mecanismo de los desgarros","Contracción excéntrica en músculos biarticulares, en la unión miotendínea."],["Manejo inicial de un desgarro","Reposo relativo, hielo, compresión, elevación y kinesioterapia progresiva."]]);
+TQ_ADD("t3",[
+["Motociclista de 28 años: PA 80/50, FC 130, FR 30, abdomen distendido. Tras asegurar la vía aérea, ¿qué prioridad sigue?","Control de la hemorragia con reposición balanceada de hemoderivados",["Rx de columna cervical","TAC de cerebro","Sutura de la herida del cuero cabelludo"]],
+["Un paciente con 800 mL de pérdida y taquicardia leve está en shock hemorrágico clase II.",true,"15-30% de la volemia."],
+["Paciente con hipotensión, bradicardia y piel caliente tras caída de altura con parálisis de piernas. ¿Mecanismo del shock?","Neurogénico por pérdida del tono simpático",["Hipovolémico por hemorragia","Cardiogénico","Obstructivo por neumotórax"]],
+["Tras un accidente, paciente con disnea, ausencia de murmullo vesicular derecho, yugulares ingurgitadas y desviación traqueal. ¿Conducta inmediata?","Descompresión pleural con aguja y luego tubo pleural",["Esperar una Rx de tórax","Intubación sin otra medida","Pericardiocentesis"]],
+["La hipotermia, la acidosis y la coagulopatía forman la tríada letal del trauma.",true,"Se previenen con calor y reposición balanceada."],
+["Politraumatizado con fractura inestable de pelvis e hipotensión. ¿Qué medida inicial reduce el sangrado?","Faja pélvica a nivel de los trocánteres mayores",["Rotación externa de ambas piernas con tracción","Fijación inmediata con yeso","Cateterismo vesical urgente"]],
+["Antes de instalar una sonda vesical en un traumatizado de pelvis se debe descartar lesión uretral si hay sangre en el meato.",true,"Se prefiere uretrografía."],
+["Un paciente con TEC grave debe evitar la hipotensión porque reduce la perfusión cerebral.",true,"Se mantiene PAS adecuada."],
+["Paciente con tórax inestable y respiración paradójica. ¿Cuál es el problema principal?","Contusión pulmonar y dolor que limitan la ventilación",["Fractura de columna","Neumotórax a tensión por definición","Taponamiento"]],
+["¿Cuál es el estudio rápido para buscar líquido libre en un politraumatizado inestable?","Ecografía FAST",["TAC con contraste","RM de abdomen","Rx de abdomen de pie"]],
+["Paciente con fractura abierta de tibia y shock. ¿Qué ocurre con el uso de torniquete?","Es una medida válida para control de hemorragia exanguinante de extremidades",["Está contraindicado siempre","Sólo se usa tras 24 horas","Es sustituto de la reposición"]],
+["Un paciente con trauma de columna y déficit neurológico incompleto requiere inmovilización y evaluación urgente por…","Equipo de columna/neurocirugía con imágenes (TAC/RM)",["Kinesiología diferida","Alta con collar","Sólo observación 24 h"]]]);
+CN("t3",[["Clases de shock hemorrágico","I <15%; II 15-30%; III 30-40% (hipotensión); IV >40%."],["Tríada letal del trauma","Hipotermia + acidosis + coagulopatía."],["Neumotórax a tensión","Disnea, hipotensión, yugulares ingurgitadas, desviación traqueal, sin murmullo: descomprimir sin esperar Rx."],["Shock neurogénico vs hemorrágico","Neurogénico: hipotensión + bradicardia + piel caliente. Hemorrágico: taquicardia + piel fría."],["Prioridades ATLS","A vía aérea con columna cervical; B ventilación; C circulación y control de hemorragia; D déficit neurológico; E exposición."]]);
+TQ_ADD("t16",[
+["Adolescente de 16 años con dolor y aumento de volumen en la rodilla de 3 meses, dolor nocturno. Rx: lesión mixta en metáfisis femoral distal con reacción perióstica en rayos de sol. ¿Siguiente paso?","Derivar a centro de sarcomas para RM y biopsia planificada",["Biopsia en el servicio de urgencia","Iniciar antibióticos","Inmovilizar con yeso y control en 3 meses"]],
+["La biopsia de un posible sarcoma debe ser planificada porque el trayecto contamina tejidos que luego se resecan.",true,"Debe hacerla el equipo que operará."],
+["Niño de 7 años con dolor en el muslo, fiebre y VHS elevada. Rx con reacción en «piel de cebolla» en la diáfisis femoral. ¿Diagnóstico más probable?","Sarcoma de Ewing",["Osteosarcoma","Osteoma osteoide","Condrosarcoma"]],
+["Paciente de 18 años con dolor nocturno que cede con AINE. Rx: pequeña lesión radiolúcida (<1,5 cm) rodeada de esclerosis en la cortical femoral. ¿Diagnóstico?","Osteoma osteoide",["Osteosarcoma","Quiste óseo aneurismático","Metástasis"]],
+["El osteoma osteoide típicamente cede con AINE y el tratamiento definitivo es ablación del nidus.",true,"Radiofrecuencia o resección."],
+["Mujer de 62 años con cáncer de mama operado consulta por dolor lumbar progresivo nocturno. Rx con lesión lítica vertebral. ¿Qué sospecha?","Metástasis ósea",["Hernia del núcleo pulposo","Osteoporosis simple","Espondilodiscitis"]],
+["Hombre de 70 años con fractura patológica del fémur proximal. ¿Qué descarta primero?","Metástasis y mieloma múltiple",["Osteosarcoma convencional","Osteocondroma","Fibroma no osificante"]],
+["La causa más frecuente de tumor óseo maligno en el adulto mayor es la metástasis.",true,"Mama, próstata, pulmón, riñón y tiroides."],
+["Mujer de 25 años con dolor y masa en la epífisis de la tibia proximal, lesión lítica excéntrica «burbujas de jabón». ¿Diagnóstico?","Tumor de células gigantes",["Condroblastoma","Sarcoma de Ewing","Osteosarcoma"]],
+["Un osteocondroma que crece tras el cierre de la fisis debe hacer sospechar transformación maligna.",true,"Capuchón cartilaginoso >2 cm."],
+["Paciente con metástasis ósea y riesgo de fractura inminente de fémur (Mirels alto). ¿Conducta?","Fijación profiláctica antes de la fractura",["Observación","Reposo con yeso","Sólo analgésicos"]],
+["Hipercalcemia con dolor óseo y lesiones líticas en cráneo en un hombre de 66 años sugiere…","Mieloma múltiple",["Osteosarcoma","Enfermedad de Paget","Hiperparatiroidismo primario"]]]);
+CN("t16",[["Tumores óseos por edad","Niños/adolescentes: osteosarcoma y Ewing. Adultos jóvenes: células gigantes. >50 años: metástasis y mieloma."],["Osteosarcoma","Metáfisis (rodilla), triángulo de Codman y rayos de sol, quimioterapia + resección."],["Sarcoma de Ewing","Diáfisis, piel de cebolla, fiebre y VHS elevada, t(11;22)."],["Osteoma osteoide","Dolor nocturno que cede con AINE, nidus <1,5 cm."],["Metástasis óseas más frecuentes","Mama, próstata, pulmón, riñón y tiroides."]]);
+TQ_ADD("t17",[
+["Lactante de 2 meses con asimetría de pliegues y limitación de la abducción de la cadera izquierda. ¿Estudio inicial?","Ecografía de cadera (Graf)",["Radiografía de pelvis","RM de caderas","TAC de caderas"]],
+["La maniobra de Ortolani reduce una cadera luxada hacia el acetábulo con un «clunk».",true,"Barlow luxa una cadera luxable."],
+["Lactante de 4 meses con luxación de cadera confirmada, sin éxito con Pavlik. ¿Siguiente paso?","Reducción cerrada bajo anestesia con inmovilización",["Seguir con el mismo arnés 6 meses más","Osteotomía pélvica inmediata","Observación"]],
+["Niño de 6 años con claudicación de 3 semanas, dolor en la ingle y rodilla, restricción de la abducción y rotación interna. Rx con aplanamiento de la epífisis. ¿Diagnóstico?","Enfermedad de Perthes",["Epifisiólisis femoral","Artritis séptica","Sinovitis transitoria"]],
+["Adolescente obeso de 13 años con dolor de rodilla y cadera en rotación externa al flexionar. ¿Qué evita?","Carga de peso y debe operarse con fijación in situ",["Se trata con AINE y control","Arnés de Pavlik","Yeso pelvipédico"]],
+["En la epifisiólisis la línea de Klein deja de cortar la epífisis.",true,"Desplazamiento posteromedial de la epífisis."],
+["Niño de 18 meses con pies que miran hacia dentro al caminar, simétrico, sin dolor. ¿Conducta?","Observación y educación: la mayoría se corrige sola",["Yeso seriado","Férulas nocturnas por años","Cirugía a los 2 años"]],
+["Recién nacido con pie en equino, varo, aducto y cavo rígido. ¿Tratamiento de primera línea?","Método de Ponseti con yesos seriados y tenotomía del Aquiles",["Cirugía inmediata","Zapatos correctores","Observación"]],
+["Niña de 11 años con asimetría de hombros y giba costal en el test de Adams; Cobb de 32°. ¿Conducta?","Derivar a traumatología para evaluar corsé",["Observación anual","Cirugía urgente","Kinesioterapia exclusiva"]],
+["Una escoliosis estructural no se corrige al flexionar el tronco y presenta rotación vertebral.",true,"La postural sí se corrige."],
+["Un niño de 3 años con genu valgo simétrico de 6 cm intermaleolar y marcha normal debe…","Observarse: es fisiológico y suele corregirse",["Operarse","Usar ortesis","Estudiarse con RM"]],
+["Un niño con marcha de puntillas bilateral desde que camina, sin déficit neurológico, requiere descartar causas como parálisis cerebral leve.",true,"Si persiste >2-3 años."]]);
+CN("t17",[["Displasia de cadera: estudio por edad","<4-6 meses: ecografía (Graf). >4-6 meses: radiografía de pelvis."],["Tratamiento de DDC por edad","0-6 m: Pavlik. 6-18 m: reducción cerrada y yeso. Mayores: reducción abierta/osteotomías."],["Perthes vs epifisiólisis","Perthes: 4-8 años, necrosis de la epífisis. Epifisiólisis: adolescente obeso, desplazamiento de la fisis."],["Pie zambo","Equino, cavo, aducto y varo. Ponseti con yesos seriados."],["Escoliosis: conducta por Cobb","<20°: observación; 20-40°: corsé; >45-50°: cirugía."]]);
+
+TQ_ADD("t18",[
+["Niño de 3 años con dolor de codo y brazo colgando en pronación tras ser tirado de la mano. Rx normal. ¿Conducta?","Reducción con supinación-flexión o hiperpronación",["Yeso braquiopalmar 3 semanas","Cirugía urgente","Resonancia"]],
+["Niño de 6 años cae del columpio; codo hinchado, pulso radial débil y dolor al extender los dedos. Rx: fractura supracondílea desplazada. ¿Conducta?","Urgencia: reducción y fijación con agujas, evaluar la perfusión",["Yeso y control en 1 semana","Reposo y hielo","Observación 48 horas"]],
+["En la fractura supracondílea tipo extensión el nervio más frecuentemente lesionado es el interóseo anterior.",true,"Se evalúa con la pinza «OK»."],
+["Niño de 8 años con fiebre de 39 °C, no apoya la pierna derecha y dolor a la rotación de la cadera. VHS 60. ¿Conducta?","Ecografía/artrocentesis y aseo quirúrgico urgente si hay pus",["Alta con AINE","Yeso pelvipédico","Esperar cultivos 72 horas"]],
+["Los criterios de Kocher incluyen fiebre >38,5 °C, no apoyo, VHS >40 y leucocitos >12.000.",true,"Con 4 criterios la probabilidad es ~99%."],
+["Niño de 10 años con fiebre y dolor metafisiario en tibia proximal, Rx normal a los 3 días. ¿Qué es lo más importante?","Hemocultivos y RM/gammagrafía; iniciar tratamiento de osteomielitis",["Descartar porque la Rx es normal","Alta con paracetamol","Esperar Rx a los 14 días sin tratar"]],
+["La Rx puede ser normal en los primeros 7-10 días de una osteomielitis.",true,"La RM es más sensible."],
+["Niña de 5 años cae sobre la mano; dolor en el antebrazo distal; la Rx muestra cortical angulada sin trazo completo. ¿Diagnóstico?","Fractura en tallo verde",["Fractura de Salter-Harris V","Luxación de Monteggia","Fractura en torus"]],
+["Escolar con fractura de la fisis distal del radio sin desplazamiento de la metáfisis ni epífisis: Salter-Harris I.",true,"Rx normal; dolor a la presión de la fisis."],
+["Lactante de 5 meses con fractura de fémur y de costillas posteriores, sin explicación coherente. ¿Qué descartar?","Maltrato infantil",["Osteogénesis imperfecta únicamente","Raquitismo","Leucemia"]],
+["Niño de 9 años con dolor de cadera de 4 días, afebril, buen estado, tras una virosis; VHS 12. ¿Conducta?","Sinovitis transitoria: reposo, AINE y control",["Artrotomía urgente","Antibióticos EV","Yeso"]],
+["Fractura de la fisis con compromiso de la superficie articular y la metáfisis, Salter-Harris IV, requiere reducción anatómica.",true,"Riesgo de cierre fisario parcial."]]);
+CN("t18",[["Salter-Harris","I: fisis; II: fisis + metáfisis (más frecuente); III: fisis + epífisis; IV: metáfisis + fisis + epífisis; V: compresión."],["Pronación dolorosa","Niño pequeño, tracción de la mano, brazo en pronación sin movimiento; reducción con supinación-flexión."],["Fractura supracondílea","Riesgo de arteria braquial y nervio interóseo anterior; Volkmann."],["Artritis séptica de cadera en niño","Kocher: fiebre, no apoyo, VHS >40, leucocitos >12.000; drenaje urgente."],["Signos de maltrato","Fractura en lactante que no camina, lesiones metafisiarias en esquina, costillas posteriores, relato incongruente."]]);
+TQ_ADD("t5",[
+["Hombre de 25 años con hombro «en charretera» y brazo en ligera abducción tras una caída; hipoestesia en el hombro lateral. Primer paso?","Rx de hombro (AP verdadera y axilar) antes de reducir",["Reducir de inmediato sin imágenes","Cirugía urgente","Infiltrar corticoides"]],
+["El nervio axilar inerva el deltoides y la sensibilidad de la cara lateral del hombro.",true,"Prueba: contraer el deltoides y sensibilidad en charretera."],
+["Mujer de 52 años diabética, dolor de hombro de 4 meses con pérdida progresiva de movilidad activa y pasiva, sobre todo rotación externa. ¿Diagnóstico?","Capsulitis adhesiva",["Rotura masiva del manguito","Artrosis acromioclavicular","Luxación posterior"]],
+["Hombre de 62 años no puede abducir el brazo tras una caída; test de caída del brazo positivo, dolor nocturno. ¿Diagnóstico probable?","Rotura del manguito rotador",["Capsulitis adhesiva","Esguince AC","Fractura de clavícula"]],
+["La rotación externa del hombro depende del infraespinoso y redondo menor.",true,"Supraescapular y axilar."],
+["Tenista de 35 años con dolor al elevar el brazo entre 60° y 120° de abducción. ¿Diagnóstico?","Síndrome subacromial",["Capsulitis adhesiva","Luxación recidivante","Fractura de escápula"]],
+["Tras una crisis convulsiva, un paciente mantiene el brazo en rotación interna y aducción fija y no puede rotarlo externamente. ¿Qué sospecha?","Luxación posterior de hombro",["Luxación anterior","Disyunción AC","Fractura de clavícula"]],
+["Joven con caída sobre el hombro, prominencia de la clavícula distal que cede a la presión (signo de la tecla). ¿Diagnóstico?","Disyunción acromioclavicular",["Luxación glenohumeral","Fractura del húmero proximal","Capsulitis"]],
+["Paciente de 70 años con caída sobre el codo, equimosis extensa del brazo, dolor y crepitación en el húmero proximal. ¿Qué lesión?","Fractura del húmero proximal",["Luxación AC","Esguince cervical","Rotura de bíceps"]],
+["Una luxación anterior recidivante en un joven deportista sugiere lesión de Bankart.",true,"Labrum anteroinferior."],
+["Tras una fractura diafisiaria de húmero aparece incapacidad para extender muñeca y dedos y hipoestesia del dorso de la mano. ¿Qué nervio?","Radial",["Axilar","Mediano","Musculocutáneo"]]]);
+CN("t5",[["Manguito rotador (SITS)","Supraespinoso (abducción inicial), infraespinoso y redondo menor (rotación externa), subescapular (rotación interna)."],["Luxación anterior vs posterior","Anterior: charretera, nervio axilar. Posterior: convulsiones/electrocución, rotación interna fija."],["Capsulitis adhesiva","Pérdida de movilidad activa y pasiva, sobre todo rotación externa; diabetes."],["Lesiones asociadas a luxación anterior","Bankart (labrum) e Hill-Sachs (cabeza humeral)."],["Signo de la tecla","Disyunción acromioclavicular."]]);
+TQ_ADD("t8",[
+["Mujer de 55 años con dolor lateral de cadera al acostarse sobre ese lado y dolor a la palpación del trocánter mayor. ¿Diagnóstico?","Síndrome doloroso trocantérico mayor (tendinopatía glútea)",["Artrosis de cadera","Hernia discal L5","Osteonecrosis"]],
+["El dolor de origen intraarticular en la cadera se localiza típicamente en la ingle.",true,"El lateral o glúteo orienta a causa extraarticular."],
+["Hombre de 40 años con uso crónico de corticoides y dolor inguinal que empeora con la carga. Rx normal. ¿Qué pide?","RM de cadera para descartar necrosis avascular",["Ecografía de partes blandas","Densitometría","Nuevo control en 6 meses"]],
+["Mujer de 34 años con hormigueo y ardor en la cara lateral del muslo, sin debilidad. ¿Diagnóstico?","Meralgia parestésica",["Radiculopatía L5","Neuropatía del ciático","Bursitis trocantérea"]],
+["La meralgia parestésica es una neuropatía puramente sensitiva del nervio femorocutáneo lateral.",true,"Pasa bajo el ligamento inguinal."],
+["Adulto joven deportista con dolor inguinal, resorte y FADIR positivo. ¿Sospecha?","Pinzamiento femoroacetabular",["Artritis séptica","Hernia discal","Fractura de pelvis"]],
+["En la marcha de Trendelenburg el glúteo medio débil deja caer la pelvis del lado contrario.",true,"Nervio glúteo superior."],
+["Paciente de 68 años con dolor inguinal y limitación de la rotación interna de cadera, Rx con pinzamiento y osteofitos. ¿Diagnóstico?","Coxartrosis",["Necrosis avascular","Osteoporosis","Tendinopatía glútea"]],
+["Joven con dolor súbito en la ingle y claudicación tras entrenamiento intenso, Rx normal. ¿Qué descartar?","Fractura por estrés del cuello femoral",["Hernia inguinal sola","Artrosis","Tumor"]],
+["En un paciente con dolor de cadera, la prueba FABER positiva orienta al compromiso de la articulación sacroilíaca o cadera.",true,"Hay que correlacionar con la localización del dolor."],
+["Mujer de 45 años con chasquido audible al pasar de flexión a extensión de cadera, sin dolor. ¿Origen?","Tendón del iliopsoas sobre la eminencia iliopectínea",["Rotura del labrum","Fractura del trocánter","Artritis séptica"]]]);
+CN("t8",[["Localización del dolor de cadera","Ingle: intraarticular. Lateral: trocantérico. Glúteo/posterior: columna lumbar o sacroilíaca."],["Necrosis avascular de cadera","Corticoides, alcohol; Rx normal al inicio; RM es el estudio."],["Marcha de Trendelenburg","Debilidad del glúteo medio (nervio glúteo superior): cae la pelvis contralateral."],["Meralgia parestésica","Atrapamiento del femorocutáneo lateral: hormigueo lateral del muslo, sin debilidad."],["Pinzamiento femoroacetabular","Cam (ángulo alfa >55°) o pincer; dolor inguinal y FADIR positivo."]]);
+TQ_ADD("t9",[
+["Mujer de 82 años cae en su casa; dolor inguinal, pierna derecha acortada en rotación externa. Rx confirma fractura subcapital desplazada. ¿Tratamiento más adecuado?","Artroplastía de cadera",["Tornillos canulados","Tratamiento ortopédico con tracción","Yeso pelvipédico"]],
+["Un paciente de 78 años con fractura intertrocantérica estable se opera con un tornillo-placa deslizante o clavo cefalomedular.",true,"Ambos son aceptables."],
+["Hombre de 40 años con fractura subcapital desplazada tras un accidente de moto. ¿Conducta?","Reducción y osteosíntesis urgente para preservar la cabeza",["Artroplastía total inmediata","Reposo y analgesia","Tracción por 6 semanas"]],
+["Paciente de 83 años con deterioro cognitivo, fractura de cadera estabilizada. ¿Cuándo operar?","Lo antes posible, idealmente en 24-48 horas",["A las 2 semanas tras optimizar","Sólo si mejora la cognición","Nunca; manejo conservador siempre"]],
+["La irrigación de la cabeza femoral depende en gran parte de la arteria circunfleja femoral medial.",true,"Por eso las fracturas subcapitales desplazadas tienen riesgo de necrosis."],
+["Paciente de 70 años con dolor inguinal tras caída, no logra levantar el talón y la Rx es normal. ¿Qué pide?","TAC o RM de cadera",["Alta con analgesia","Ecografía de cadera","Repetir Rx en 3 semanas sin carga"]],
+["Un paciente joven tras accidente de tránsito con cadera flexionada, aducida y en rotación interna. ¿Lesión?","Luxación posterior de cadera",["Fractura de cuello femoral","Luxación anterior","Fractura de pelvis"]],
+["En la luxación posterior de cadera se debe examinar la función del nervio ciático.",true,"Pie caído por compromiso de la rama peronea."],
+["Fractura intertrocantérica en paciente de 85 años. ¿Complicación posoperatoria que más se previene con movilización precoz?","Trombosis venosa, neumonía y úlceras por presión",["Pseudoartrosis","Necrosis avascular","Infección articular tardía"]],
+["Paciente con fractura de cadera en tratamiento anticoagulante crónico, ¿qué se hace?","Evaluar el riesgo, ajustar y no retrasar innecesariamente la cirugía",["Suspender la cirugía hasta normalizar todo en 1 semana","Operar sin ningún ajuste","Cancelar la cirugía"]],
+["Una fractura subtrocantérica en una paciente con 5 años de bifosfonatos puede ser una fractura atípica.",true,"Dolor prodrómico en el muslo."]]);
+CN("t9",[["Fractura de cuello femoral: tratamiento","Joven o no desplazada: osteosíntesis (tornillos). Mayor de 65 y desplazada: artroplastía."],["Fractura intertrocantérica","Extracapsular; clavo cefalomedular o tornillo-placa; no hay necrosis avascular."],["Luxación posterior de cadera","Cadera flexionada, aducida y rotada internamente; riesgo de ciático y necrosis; reducir antes de 6 horas."],["Cirugía en adultos mayores","Lo antes posible, estabilizado (<48 h); reduce mortalidad."],["Fractura oculta","Dolor inguinal y carga imposible con Rx normal: TAC o RM."]]);
+TQ_ADD("t13",[
+["Mujer de 60 años con dolor en el talón al dar los primeros pasos en la mañana. Dolor en el tubérculo medial del calcáneo. ¿Diagnóstico?","Fascitis plantar",["Fractura por estrés del calcáneo","Neuroma de Morton","Tendinopatía del Aquiles"]],
+["Mujer de 45 años con dolor entre el tercer y cuarto dedo y sensación de «piedra en el zapato». ¿Diagnóstico?","Neuroma de Morton",["Metatarsalgia por artritis","Fractura de estrés","Tendinopatía peronea"]],
+["El hallux valgus se asocia con desviación del 1.er metatarsiano en varo y del hallux en valgo.",true,"Ángulo de hallux valgus >15°."],
+["Paciente diabético con pie caliente, edematoso y sin dolor, con colapso del arco. ¿Diagnóstico?","Pie de Charcot",["Celulitis","Gota","Fascitis plantar"]],
+["Mujer de 50 años con pie plano progresivo unilateral, dolor medial del tobillo y no puede ponerse de puntillas con un solo pie. ¿Estructura?","Tendón del tibial posterior",["Tendón del peroneo corto","Fascia plantar","Ligamento deltoideo"]],
+["Hombre de 55 años con dolor súbito, eritema y calor del primer dedo del pie tras ingesta de alcohol. ¿Diagnóstico?","Gota aguda",["Artritis séptica","Hallux rigidus","Esguince"]],
+["Corredor con dolor posterior del talón, nódulo en el Aquiles y dolor a 4 cm de su inserción. ¿Diagnóstico?","Tendinopatía aquílea no insercional",["Rotura completa","Fascitis plantar","Bursitis retrocalcánea"]],
+["Un paciente con debilidad de la dorsiflexión y pie caído, con hipoestesia del dorso del pie, puede tener lesión del nervio peroneo común.",true,"Revisar el cuello del peroné y la raíz L5."],
+["Adolescente con dolor en el talón al correr, que aparece en la inserción del Aquiles; se agrava con el deporte. ¿Diagnóstico?","Apofisitis calcánea (Sever)",["Fractura del calcáneo","Gota","Tumor"]],
+["Un paciente con sensación de ardor en la planta del pie, que se agrava al estar de pie, y signo de Tinel retromaleolar medial. ¿Diagnóstico?","Síndrome del túnel tarsiano",["Neuroma de Morton","Fascitis plantar","Tendinopatía peronea"]]]);
+CN("t13",[["Fascitis plantar","Dolor en el tubérculo medial del calcáneo con los primeros pasos; tratamiento conservador."],["Neuroma de Morton","Dolor y parestesias en el 3.er espacio intermetatarsiano."],["Disfunción del tibial posterior","Pie plano adquirido del adulto, signo de «demasiados dedos»."],["Pie de Charcot","Diabético, pie caliente, edema, poco dolor, colapso del mediopié."],["Gota aguda","Podagra: dolor súbito, eritema; urato en el líquido sinovial."]]);
+TQ_ADD("t14",[
+["Mujer de 24 años torsión de tobillo en inversión; edema lateral, dolor en el ligamento peroneoastragalino anterior, camina sin ayuda y no hay dolor óseo. ¿Conducta?","Manejo funcional (frío, compresión, vendaje) sin imágenes",["Yeso cerrado 6 semanas","Cirugía de ligamentos","Resonancia urgente"]],
+["Los criterios de Ottawa para tobillo incluyen dolor óseo en el borde posterior o punta de los maléolos o incapacidad para dar 4 pasos.",true,"Se evalúan en la urgencia."],
+["Jugador de fútbol con dolor sobre la sindesmosis tras un golpe con la rodilla rotada; dolor a la compresión de tibia y peroné. ¿Diagnóstico?","Lesión de la sindesmosis (esguince alto)",["Esguince lateral simple","Fractura de calcáneo","Tendinopatía del Aquiles"]],
+["Mujer de 48 años con fractura de peroné distal sobre la sindesmosis tras un giro; mortaja con espacio medial ensanchado. ¿Conducta?","Evaluación quirúrgica por inestabilidad (fractura inestable)",["Bota ortopédica sin control","Alta","Yeso 2 semanas"]],
+["La fractura de Weber B es transindesmal y puede ser estable o inestable según la lesión deltoidea.",true,"El espacio medial >4 mm sugiere inestabilidad."],
+["Hombre de 33 años con fractura expuesta de tibia grado III tras accidente, ¿qué prioriza?","Antibióticos precoces, aseo quirúrgico y estabilización",["Cierre primario inmediato","Yeso sin aseo","Alta con antibióticos orales"]],
+["Paciente con fractura cerrada de tibia en yeso largo que consulta por dolor desproporcionado al estirar los dedos. ¿Qué descarta?","Síndrome compartimental",["Trombosis venosa profunda sola","Esguince","Mialgia"]],
+["La fasciotomía de la pierna debe liberar los 4 compartimentos.",true,"Anterior, lateral, posterior superficial y profundo."],
+["Un paciente con fractura de peroné proximal y dolor de tobillo, edema medial. ¿Qué lesión?","Maisonneuve (lesión de sindesmosis y deltoides)",["Fractura de Pott","Tillaux","Pilon tibial"]],
+["Una fractura en espiral de tibia con peroné a otro nivel suele reflejar un mecanismo rotacional.",true,"Se trata con clavo endomedular en adultos."],
+["Mujer de 40 años no puede ponerse de puntillas tras un movimiento brusco; signo de Thompson positivo. ¿Conducta típica en la prueba?","Tenorrafia quirúrgica (o tratamiento funcional según el caso)",["AINE y reposo","Yeso de caminata sólo 1 semana","Alta"]]]);
+CN("t14",[["Ottawa de tobillo","Dolor en la zona maleolar + dolor óseo posterior de maléolo (6 cm) o incapacidad de 4 pasos → Rx."],["Ligamentos del esguince","Lateral: peroneoastragalino anterior (el más frecuente) y calcaneofibular. Alto: sindesmosis."],["Weber","A infrasindesmal; B transindesmal; C suprasindesmal."],["Síndrome compartimental de pierna","Dolor con estiramiento pasivo; fasciotomía de 4 compartimentos."],["Gustilo","I <1 cm; II 1-10 cm; III >10 cm o alta energía; IIIC con lesión vascular."]]);
+
+TQ_ADD("t12",[
+["Mujer de 68 años obesa con gonalgia mecánica bilateral, crepitaciones y Rx con pinzamiento medial y osteofitos. ¿Tratamiento inicial?","Baja de peso, ejercicio y paracetamol",["Artroplastía inmediata","Corticoides orales","Reposo absoluto"]],
+["En la artrosis, el líquido sinovial es no inflamatorio, con menos de 2.000 leucocitos/mm³.",true,"La artritis inflamatoria suele superar 2.000."],
+["Paciente de 55 años con varo y artrosis medial aislada, joven y activo. ¿Opción quirúrgica?","Osteotomía tibial alta",["Artrodesis","Artroplastía total de entrada","Meniscectomía total"]],
+["Mujer de 75 años con coxartrosis severa, dolor nocturno y limitación funcional que no responde a tratamiento conservador. ¿Conducta?","Artroplastía total de cadera",["Infiltración mensual","Osteotomía tibial","Reposo absoluto"]],
+["Las infiltraciones repetidas de corticoides intraarticulares pueden dañar el cartílago.",true,"Su efecto es temporal."],
+["Paciente con artroplastía total de rodilla de 2 años, ahora con fiebre y dolor súbito. ¿Qué sospecha?","Infección periprotésica",["Aflojamiento aséptico seguro","Artrosis del otro lado","Tendinitis simple"]],
+["La esclerosis subcondral y los osteofitos son hallazgos radiográficos de la artrosis.",true,"Junto con el pinzamiento asimétrico."],
+["Paciente de 60 años con dolor de rodilla y sin respuesta a paracetamol. ¿Qué agrega con precaución?","AINE tópicos u orales con vigilancia renal y gástrica",["Opioides de rescate fuertes como primera línea","Colchicina","Metotrexato"]],
+["Mujer con nódulos de Heberden y rizartrosis. ¿Qué articulaciones afecta típicamente la artrosis de la mano?","Interfalángicas distales y trapecio-metacarpiana",["Metacarpofalángicas","Muñeca radiocarpiana","Interfalángicas proximales sólo"]],
+["La artrosis de rodilla afecta más al compartimiento medial.",true,"Genu varo y sobrecarga."]]);
+CN("t12",[["Artrosis: hallazgos radiográficos","Pinzamiento asimétrico, osteofitos, esclerosis subcondral y quistes."],["Primera línea en artrosis","Ejercicio, baja de peso, paracetamol o AINE tópico."],["Indicación de artroplastía","Dolor y limitación severos que no responden al tratamiento conservador."],["Osteotomía tibial alta","Joven con artrosis medial y varo."],["Artrosis vs AR","Artrosis: mecánica, DIP, líquido <2.000. AR: inflamatoria, MCF e IFP, rigidez matinal."]]);
+TQ_ADD("t11",[
+["Mujer de 22 años con dolor anterior de rodilla al subir escaleras y estar sentada mucho rato; crepitación patelar. ¿Diagnóstico?","Síndrome de dolor patelofemoral",["Rotura del LCA","Lesión meniscal","Bursitis anserina"]],
+["El dolor patelofemoral mejora con fortalecimiento del cuádriceps (vasto medial).",true,"Base del tratamiento."],
+["Adolescente deportista con dolor y prominencia en la tuberosidad tibial. ¿Diagnóstico?","Enfermedad de Osgood-Schlatter",["Sinding-Larsen","Tendinitis rotuliana crónica","Rotura del tendón"]],
+["Corredora con dolor en la cara lateral de la rodilla a los 2 km de carrera, a 30° de flexión. ¿Diagnóstico?","Síndrome de la banda iliotibial",["Menisco lateral","LCL","Bursitis anserina"]],
+["Mujer obesa con dolor medial de la rodilla, 5 cm bajo la interlínea, que aumenta al subir escaleras. ¿Diagnóstico?","Bursitis anserina (pata de ganso)",["Rotura del menisco medial","Artrosis lateral","Fractura de platillo"]],
+["Un quiste de Baker se ubica en la fosa poplítea y comunica con la articulación.",true,"Bursa del semimembranoso y gastrocnemio."],
+["Niño de 12 años con cojera y dolor de rodilla, sin trauma. ¿Qué sospecha primero?","Patología de cadera (dolor referido)",["Rotura del LCA","Artrosis","Bursitis"]],
+["Adolescente con dolor, bloqueo ocasional y un fragmento subcondral en el cóndilo femoral medial. ¿Diagnóstico?","Osteocondritis disecante",["Osgood","Condromalacia","Gota"]],
+["El signo de Clarke (compresión de la rótula) detecta patología del cartílago patelofemoral.",true,"Dolor al contraer el cuádriceps."],
+["Trabajador que se arrodilla con aumento de volumen anterior no doloroso. ¿Diagnóstico?","Bursitis prerrotuliana",["Artritis séptica","Rotura rotuliana","Osgood"]]]);
+CN("t11",[["Dolor patelofemoral","Anterior, escaleras y estar sentado; cepillo/Clarke (+); kinesioterapia."],["Banda iliotibial","Corredor, dolor lateral a 30° de flexión."],["Osgood-Schlatter","Adolescente deportista, tuberosidad tibial."],["Bursitis anserina","Dolor medial bajo la interlínea en obesas."],["Quiste de Baker","Masa poplítea; sospechar patología intraarticular."]]);
+TQ_ADD("t10",[
+["Futbolista de 19 años, torsión sin contacto, «pop» y hemartrosis en 2 horas. Lachman positivo. ¿Lesión?","Rotura del LCA",["Esguince del LCM aislado","Fractura de rótula","Lesión del menisco lateral aislada"]],
+["La prueba de Lachman es la más sensible para el LCA.",true,"Se hace a 20-30° de flexión."],
+["Paciente con golpe en la cara lateral de la rodilla en valgo, dolor medial y apertura en valgo a 30° sin Lachman positivo. ¿Diagnóstico?","Esguince del LCM",["Rotura del LCA","Rotura del LCP","Lesión de la esquina posterolateral"]],
+["Paciente con rodilla bloqueada en flexión de 20° tras una torsión. ¿Qué sospecha?","Rotura meniscal en asa de balde",["Rotura del LCA","Rotura del LCP","Luxación patelar"]],
+["Accidente en moto: rodilla dislocada y reducida espontáneamente. Pulsos presentes. ¿Qué descarta?","Lesión de la arteria poplítea (ITB, angio-TAC)",["Sólo una Rx","Necrosis avascular","Gota"]],
+["Una luxación de rodilla puede lesionar el nervio peroneo común.",true,"Pie caído."],
+["Caída con golpe en la tibia anterior con rodilla flexionada (dashboard). ¿Lesión?","Rotura del LCP",["Rotura del LCA","LCM","Menisco lateral"]],
+["Mujer de 22 años con luxación de rótula lateral. ¿Qué ligamento se lesiona?","Ligamento patelofemoral medial",["LCA","LCP","LCL"]],
+["Hombre de 60 años cae con dolor y rodilla muy aumentada de volumen con hemartrosis y grasa en la artrocentesis. ¿Qué sospecha?","Fractura intraarticular (platillos tibiales)",["Artritis séptica","Gota","Esguince LCM"]],
+["La tríada de O'Donoghue comprende LCA, LCM y menisco medial.",true,"Mecanismo valgo-rotación."],
+["Paciente tras caída con imposibilidad de extender la rodilla, rótula alta y dolor suprarrotuliano. ¿Lesión?","Rotura del tendón del cuádriceps",["Rotura del tendón rotuliano","Fractura de platillo","LCA"]]]);
+CN("t10",[["LCA","Mecanismo: valgo + flexión + rotación interna; Lachman (+); hemartrosis precoz."],["LCM","Dolor medial, bostezo en valgo a 30°; manejo conservador."],["Meniscos","Dolor en la interlínea, McMurray y Thessaly; asa de balde bloquea la extensión."],["Luxación de rodilla","Lesión de arteria poplítea y nervio peroneo común; ITB y angio-TAC."],["Aparato extensor","Rotura del cuádriceps, rótula o rotuliano: no extiende la rodilla; cirugía."]]);
+TQ_ADD("t4",[
+["Obrero de 45 años con fractura abierta de tibia (herida de 3 cm, contaminación mínima). ¿Prioridad?","Antibióticos precoces, profilaxis antitetánica y aseo quirúrgico",["Cierre en el box y alta","Yeso cerrado","Sólo analgesia"]],
+["Una fractura expuesta grado IIIB requiere cobertura con colgajo.",true,"Pérdida de partes blandas con exposición ósea."],
+["Hombre con fractura de fémur cerrada, a las 36 horas con disnea, petequias axilares y confusión. ¿Diagnóstico?","Síndrome de embolia grasa",["Tromboembolismo pulmonar masivo","Neumonía","Delirium simple"]],
+["Niño con dolor de pierna creciente tras un yeso, no tolera el estiramiento pasivo de los dedos. ¿Conducta?","Abrir el yeso y reevaluar; fasciotomía si persiste",["Más analgesia","Elevar y observar","Cambiar el yeso mañana"]],
+["La presión intracompartimental con ΔP ≤30 mmHg apoya el diagnóstico de síndrome compartimental.",true,"ΔP = diastólica − presión del compartimento."],
+["Mujer de 60 años con artritis séptica de rodilla confirmada por líquido turbio con 70.000 leucocitos. ¿Conducta?","Aseo quirúrgico y antibióticos endovenosos",["Alta con AINE","Colchicina","Antibióticos orales y control"]],
+["Un paciente diabético con eritema, crepitación y dolor desproporcionado en la pierna, con shock. ¿Diagnóstico?","Fascitis necrotizante",["Celulitis simple","Trombosis venosa","Erisipela"]],
+["Joven con luxación de cadera posterior tras accidente. ¿Cuánto tiempo máximo antes de reducir idealmente?","6 horas",["24 horas","3 días","1 semana"]],
+["La anestesia en silla de montar con retención urinaria es una urgencia neuroquirúrgica.",true,"Síndrome de cauda equina."],
+["Un paciente con pie frío, sin pulso y herida abierta de rodilla requiere…","Evaluación vascular urgente y reparación",["Observación","Yeso","AINE"]],
+["Un politraumatizado con fractura de pelvis inestable y shock: la hemorragia es principalmente venosa del plexo presacro.",true,"Se estabiliza con faja."]]);
+CN("t4",[["Síndrome compartimental","Dolor desproporcionado, al estirar pasivamente; ΔP ≤30; fasciotomía."],["Embolia grasa","24-72 h tras fractura de hueso largo: hipoxemia, petequias, confusión."],["Fracturas expuestas","Antibióticos precoces, tétanos, aseo y estabilización; Gustilo."],["Artritis séptica","Líquido >50.000 leucocitos, >90% PMN: aseo quirúrgico + antibióticos EV."],["Cauda equina","Silla de montar, retención, déficit bilateral: RM y cirugía urgente."]]);
+TQ_ADD("t7",[
+["Hombre de 44 años con dolor lumbar tras levantar peso, irradiado a la pantorrilla, Lasègue positivo a 40°, sin déficit motor. ¿Conducta?","AINE, kinesioterapia, mantener actividad y control",["Reposo absoluto en cama","Cirugía inmediata","Resonancia urgente"]],
+["Una hernia L4-L5 posterolateral suele comprimir la raíz L5.",true,"Debilidad de extensión del hallux, parestesia dorsal del pie."],
+["Mujer de 70 años con dolor lumbar tras un estornudo y dolor a la percusión de una vértebra. ¿Qué sospecha?","Fractura vertebral por compresión osteoporótica",["Hernia discal","Espondilolistesis","Mieloma sólo"]],
+["Hombre de 65 años con dolor lumbar progresivo, baja de peso y dolor nocturno. ¿Qué bandera roja es?","Sospecha de neoplasia: se pide imagen",["Lumbago mecánico","Contractura simple","Pseudoartrosis"]],
+["Paciente con lumbalgia, fiebre y antecedente de uso de drogas IV. ¿Qué descarta?","Espondilodiscitis / absceso epidural",["Hernia","Escoliosis","Osteoartritis"]],
+["La claudicación neurogénica mejora al sentarse o inclinarse hacia adelante.",true,"Estenosis del canal lumbar."],
+["Hombre de 24 años con dolor lumbar de 6 meses, rigidez matinal de más de 30 minutos que mejora con el ejercicio. ¿Diagnóstico?","Espondiloartritis axial",["Hernia","Lumbago mecánico","Estenosis"]],
+["Un deportista adolescente con dolor lumbar al extender y signo del «perrito escocés» tiene espondilólisis.",true,"Defecto de la pars interarticularis."],
+["Mujer de 36 años con dolor irradiado a la cara anterior del muslo y parestesias, reflejo rotuliano disminuido. ¿Raíz?","L4",["L5","S1","S2"]],
+["Paciente con lumbociática de 8 días con déficit motor progresivo (pie caído). ¿Conducta?","Derivación urgente al especialista y RM",["Reposo y control en 6 semanas","Alta con AINE","Infiltración inmediata"]],
+["El lumbago agudo mecánico se resuelve en la mayoría de los casos en 4-6 semanas.",true,"Sin banderas rojas no se piden imágenes."]]);
+CN("t7",[["Banderas rojas del lumbago","Edad <20 o >50, fiebre, cáncer, baja de peso, trauma, dolor nocturno, déficit neurológico."],["Raíces","L4: rotuliano; L5: extensión del hallux, dorso del pie; S1: aquíleo, plantiflexión, borde lateral."],["Estenosis lumbar","Claudicación neurogénica, mejora al flexionar el tronco."],["Cauda equina","Anestesia en silla de montar, retención urinaria, déficit bilateral."],["Lumbago inflamatorio","<40 años, rigidez matinal, mejora con el ejercicio."]]);
+TQ_ADD("t2",[
+["Un paciente con dolor de muñeca tras caída tiene Rx AP y lateral normales. Dolor en la tabaquera persiste. ¿Qué proyección ayuda?","Proyección de escafoides (oblicua con desviación cubital)",["Proyección de Judet","Rx de columna","Panorámica de caderas"]],
+["La línea de Shenton permite evaluar una luxación o fractura de cuello femoral.",true,"Debe ser continua."],
+["Niño con codo doloroso, Rx lateral con almohadilla grasa posterior elevada y sin fractura visible. ¿Qué sospecha?","Fractura oculta de la región supracondílea o cabeza radial",["Codo normal","Artritis","Luxación AC"]],
+["En una Rx de tobillo lateral, ¿qué se mide para evaluar fractura de calcáneo?","Ángulo de Böhler",["Línea de Klein","Cobb","Ángulo alfa"]],
+["La Rx de pelvis en un paciente con politrauma estable debe incluir proyecciones inlet y outlet si hay fractura.",true,"Para valorar desplazamiento."],
+["Paciente con sospecha de lesión ligamentaria de rodilla y Rx normal. ¿Mejor estudio?","RM de rodilla",["Ecografía de partes blandas","Gammagrafía","TAC"]],
+["En trauma cervical la radiografía lateral debe incluir C7-T1.",true,"Si no, se completa con TAC."],
+["Tumor óseo sospechoso en un adolescente. ¿Primer estudio?","Radiografía simple en dos proyecciones",["RM directamente","Cintigrafía","PET"]],
+["Una fractura de cuello femoral oculta con Rx normal se estudia con…","TAC o RM",["Ecografía","Reposo y alta","Rx 3 semanas después"]],
+["La proyección de mortaja evalúa la sindesmosis del tobillo.",true,"Con 15° de rotación interna."]]);
+CN("t2",[["Lectura de una Rx de trauma","2 proyecciones, articulaciones proximal y distal; describir localización, trazo, desplazamiento, angulación y compromiso articular."],["Línea de Shenton","Arco continuo del cuello femoral y la rama púbica."],["Ángulo de Böhler","Calcáneo: normal 20-40°."],["Fractura oculta","Rx normal con sospecha: RM o TAC."],["Almohadilla grasa posterior","Hemartrosis del codo: fractura oculta."]]);
 
 /* Bloque «Pruebas pasadas» al final del resumen de cada capítulo */
 (function(){
