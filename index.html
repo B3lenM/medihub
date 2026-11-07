@@ -11025,7 +11025,7 @@ const SECICO={int:SP.syringe,lab:SP.scope,hem:SP.drop,der:SP.skin,res:SP.lung,ga
 const SECNAME={int:"Medicina interna",lab:"Laboratorio clínico",hem:"Hematología",der:"Dermatología",res:"Respiratorio",gas:"Gastroenterología",tra:"Traumatología"};
 
 /* ===== gamificación retro ===== */
-const LEVELS=[[0,"Estudiante Iluso"],[100,"Interno Sobreviviente de Guardia"],[250,"Médico General en Entrenamiento"],[450,"Residente Estrella"],[700,"Residente Jefe Cafeinado"],[1000,"Becado de Alta Complejidad"],[1400,"Especialista en Formación"],[1900,"Subespecialista Legendario"],[2500,"Jefe de Servicio Imparable"],[3200,"Especialista Graduado con Honores"],[4200,"Doctora Suprema Belén Murillo"]];
+const LEVELS=[[0,"Estudiante Iluso"],[100,"Interno Sobreviviente de Guardia"],[250,"Médico General en Entrenamiento"],[450,"Residente Estrella"],[700,"Residente Jefe Cafeinado"],[1000,"Becado de Alta Complejidad"],[1400,"Especialista en Formación"],[1900,"Subespecialista Legendario"],[2500,"Jefe de Servicio Imparable"],[3200,"Especialista Graduado con Honores"],[4200,"Doctor Supremo Jaime Cerda"]];
 const levelOf=xp=>{let i=0;for(let k=0;k<LEVELS.length;k++)if(xp>=LEVELS[k][0])i=k;return i;};
 const BADGES=[
  {id:"cafe",name:"Taza de Café Infinita",desc:"5 respuestas correctas seguidas",sp:"cup"},
@@ -11168,7 +11168,7 @@ bd("esp","trot","Rotación Completa","Estudiaste las 5 especialidades","shield",
 bd("esp","lince","Ojo de Lince","20 respuestas correctas a preguntas con imagen","eye",s=>(s.imgOk||0)>=20);
 bd("esp","atlas","Atlas Viviente","100 respuestas correctas a preguntas con imagen","eye",s=>(s.imgOk||0)>=100);
 Object.keys(CHC).forEach((k,i)=>{if(CHC[k].length>=3)bd("cap","cap_"+k,"Dominado · "+(TN[k]||k),"Todas las tarjetas de «"+(TN[k]||k)+"» con intervalo de 7 días o más",i%2?"medal":"gem",s=>CHC[k].every(id=>{const e=s.srs[id];return e&&e.s===2&&e.iv>=7;}));});
-[[4,"Residente en Ruta","medal"],[7,"Subespecialista en Camino","gem"],[10,"Doctora Suprema Belén Murillo","crown"]].forEach(a=>bd("niv","lv"+a[0],a[1],"Llegar al nivel "+(a[0]+1)+" de "+LEVELS.length,a[2],s=>levelOf(s.xp)>=a[0]));
+[[4,"Residente en Ruta","medal"],[7,"Subespecialista en Camino","gem"],[10,"Doctor Supremo Jaime Cerda","crown"]].forEach(a=>bd("niv","lv"+a[0],a[1],"Llegar al nivel "+(a[0]+1)+" de "+LEVELS.length,a[2],s=>levelOf(s.xp)>=a[0]));
 [[500,"Primeros 500 XP","star"],[2000,"Dos Mil XP","star"],[5000,"Cinco Mil XP","trophy"],[10000,"Diez Mil XP","trophy"]].forEach(a=>bd("niv","xp"+a[0],a[1],"Acumular "+a[0]+" XP","star",s=>s.xp>=a[0]));
 bd("ext","night","Búho de Guardia","Estudiaste entre medianoche y las 5 AM","moon",s=>!!(s.fl&&s.fl.night));
 bd("ext","early","Madrugadora de Turno","Estudiaste entre las 5 y las 8 AM","sun",s=>!!(s.fl&&s.fl.early));
@@ -12368,7 +12368,7 @@ var LORE=[
  ["Tus apuntes circulan de mano en mano. Los internos te buscan en los pasillos para preguntar «una duda rápida».","Leyenda de los pasillos"],
  ["Diriges el servicio con calma. Cada decisión tuya tiene detrás cientos de repasos que nadie vio.","Calma de jefa de servicio"],
  ["La constancia se volvió identidad. Ya no estudias para aprobar: estudias porque sabes quién quieres ser.","La constancia como identidad"],
- ["Cima del campus. Cada tarjeta repasada, cada guardia y cada caso construyeron a la doctora que mira el horizonte.","Doctora Suprema"]];
+ ["Cima del campus. Cada tarjeta repasada, cada guardia y cada caso construyeron al doctor que mira el horizonte.","Doctor Supremo"]];
 var FRASES={
  hoy:["¡Hoy ya sumaste! Cada día cuenta, y hoy cuenta doble.","Racha a salvo por hoy. Mañana sigues tú.","Misión cumplida por hoy. Lo constante vence a lo intenso."],
  riesgo:["Tu racha te espera. Con un solo repaso hoy sigue viva.","Cinco minutos bastan para mantener la llama encendida.","No rompas la cadena: un repaso corto y listo."],
