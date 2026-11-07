@@ -31,6 +31,7 @@
 .algsvg .alb{fill:#fff;stroke:#cdbfe8}.algsvg .alt{font:700 9.5px 'Manrope',sans-serif;fill:#6b5a96}
 .algft{font-size:11.5px;color:var(--muted);margin:6px 2px 0}
 .kind.alg{background:#ffd9e8;color:#8a2f5c;border:1px solid #e58fb4}
+.rhero-t{gap:6px!important}.rhero-t small.rth{font-size:10.5px!important;letter-spacing:.06em!important;text-transform:none!important;font-weight:500!important;opacity:.85}@media(max-width:560px){.rhero-t small.rth{font-size:8.5px!important;letter-spacing:.02em!important;line-height:1.3}}
 </style>
 <meta name="claude:viewport-fit-sides" content="cover">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -5274,7 +5275,7 @@ POOLS.r_tx={name:"Respi · Tratamiento",p:[["Formoterol","LABA de inicio rápido
 
 L("r17","Preguntas ABCD · cómo funciona",[
 ["key","60 preguntas con distractores plausibles",ul([
- "Ve a la pestaña {{Cifras}} y toca la casilla {{Preguntas}}: 60 preguntas de alternativas A–D, de los 15 capítulos y de Radiografías.",
+ "Ve a la pestaña {{Alternativas}} y toca la casilla {{Preguntas}}: 60 preguntas de alternativas A–D, de los 15 capítulos y de Radiografías.",
  "Cada respuesta correcta da {{12 XP}} + bonus de racha (hasta +5). Las incorrectas vuelven a repasarse con repetición espaciada.",
  "Los distractores son errores reales de razonamiento: cortes parecidos, fármacos de la misma familia, conductas de otro grupo de riesgo.",
  "Hay {{11 preguntas con imagen}} (espirometría, Rx, TC, PPD, TNM, TACAR) para entrenar el ojo clínico.",
@@ -11189,7 +11190,7 @@ function badgeHTML(){
 }
 function srsPanel(){
   const sc=k=>secOfCh(k)===section,st=srsStats(),now=Date.now();
-  const kinds=[["cards","Tarjetas"],["vf","V o F"],["mc","Cifras"]];
+  const kinds=[["cards","Tarjetas"],["vf","V o F"],["mc","Alternativas"]];
   const rows=kinds.map(a=>{const c=bcount(bucket(itemsFor(a[0],sc)),a[0]);return '<tr><td>'+a[1]+'</td><td class="sn">'+c.n+'</td><td class="sl">'+c.l+'</td><td class="sr">'+c.r+"</td></tr>";}).join("");
   const d0=new Date();d0.setHours(0,0,0,0);const base=d0.getTime(),fc=new Array(14).fill(0);
   for(const k in save.srs){const e=save.srs[k];if(e.s===0)continue;let i=Math.floor((e.due-base)/DAY);if(i<0)i=0;if(i<14)fc[i]++;}
@@ -11267,7 +11268,7 @@ const exPick={};
 const topics=()=>section==="gas"?GTOPICS:section==="tra"?TTOPICS:section==="lab"?LTOPICS:section==="hem"?HTOPICS:section==="der"?DTOPICS:section==="res"?RTOPICS:TOPICS;
 const secOf=k=>k.indexOf("g_")===0?"gas":k.indexOf("t_")===0?"tra":k.indexOf("l_")===0?"lab":k.indexOf("h_")===0?"hem":k.indexOf("d_")===0?"der":k.indexOf("r_")===0?"res":"int";
 const poolKeys=()=>Object.keys(POOLS).filter(k=>secOf(k)===section&&(!POOLS[k].ch||sel.has(POOLS[k].ch)));
-const tabsFor=()=>section==="tra"?[["learn","Aprender"],["cards","Tarjetas"],["vf","V o F"],["mc","Cifras"],["mt","Parejas"],["tatl","🩻 Atlas"],["t3d","🦴 3D"]]:section==="der"||section==="res"||section==="gas"?[["learn","Aprender"],["cards","Tarjetas"],["vf","V o F"],["mc","Cifras"],["mt","Parejas"]]:section!=="int"?[["learn","Aprender"],["cards","Tarjetas"],["vf","V o F"],["mc","Cifras"],["mt","Parejas"],["ex","Prueba"]]:[["learn","Aprender"],["cards","Tarjetas"],["vf","V o F"],["mc","Cifras"],["mt","Parejas"],["t10","⏱ 10 s"]];
+const tabsFor=()=>section==="tra"?[["learn","Aprender"],["cards","Tarjetas"],["vf","V o F"],["mc","Alternativas"],["mt","Parejas"],["tatl","🩻 Atlas"],["t3d","🦴 3D"]]:section==="der"||section==="res"||section==="gas"?[["learn","Aprender"],["cards","Tarjetas"],["vf","V o F"],["mc","Alternativas"],["mt","Parejas"]]:section!=="int"?[["learn","Aprender"],["cards","Tarjetas"],["vf","V o F"],["mc","Alternativas"],["mt","Parejas"],["ex","Prueba"]]:[["learn","Aprender"],["cards","Tarjetas"],["vf","V o F"],["mc","Alternativas"],["mt","Parejas"],["t10","⏱ 10 s"]];
 const KIND={sum:"Resumen exprés",doc:"Resumen",pp:"Pruebas pasadas",alg:"Algoritmo",key:"Claves",dx:"Criterios dg",dd:"Dg diferencial",cl:"Clasificación",tx:"Tratamiento",ex:"Exámenes"};
 
 function gain(n){save.xp+=n;if(ses)ses.xp=(ses.xp||0)+n;persist();renderHeader();renderHall();checkLevel();}
@@ -14539,7 +14540,7 @@ var SEMS=[{id:"s",name:"Semestre actual",desc:"Clínicas II e Integrado IV",subj
 var SPD={int:"Casos clínicos y pasantía",lab:"Ciclo, interpretación y seguridad",hem:"Aplasia, leucemias, linfomas",der:"Acné a melanoma",res:"Fisiología, asma, EPOC",gas:"Esófago a páncreas, con algoritmos clínicos",tra:"Lesiones en el modelo 3D, atlas y temas"};
 var PAL=[["#d9b3ef","#a56bc7"],["#f9b4d6","#d4769f"],["#c3b8f3","#8878cf"],["#fbcfb0","#d99a6c"],["#b5ead7","#6cb89b"],["#f7b6c4","#d17b8f"],["#ffd8a8","#e09a55"]];
 var SPI={int:0,lab:1,hem:4,der:3,res:2,gas:6,tra:5};
-var MODES={learn:["Aprender","book"],cards:["Tarjetas","cards"],vf:["V o F","check"],mc:["Cifras","num"],mt:["Parejas","link"],t10:["10 segundos","bolt"],ex:["Prueba","trophy"]};
+var MODES={learn:["Aprender","book"],cards:["Tarjetas","cards"],vf:["V o F","check"],mc:["Alternativas","num"],mt:["Parejas","link"],t10:["10 segundos","bolt"],ex:["Prueba","trophy"]};
 var IC={
  book:'<svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 6.2C10.3 4.8 8 4 5 4v14c3 0 5.3.8 7 2.2 1.7-1.4 4-2.2 7-2.2V4c-3 0-5.300.8-7 2.200z"/><path d="M12 6.500v13" stroke="#fff" stroke-width="1.600" opacity=".55" fill="none"/></svg>',
  cards:'<svg viewBox="0 0 24 24" fill="currentColor"><rect x="3" y="6" width="14" height="14" rx="3" opacity=".55"/><rect x="7" y="3" width="14" height="14" rx="3"/></svg>',
@@ -14606,7 +14607,7 @@ function unitsOf(spec){
 /* ---------- armazón ---------- */
 var app=$(".app");
 var duo=document.createElement("div");duo.id="duo";
-duo.innerHTML='<aside class="dside" id="dside"></aside><div class="dmain"><div id="rhero" class="rhero"><div class="rhero-t"><b>MEDI-HUB</b><small>by Belén Murillo</small></div></div><div class="dcol"><div id="dtopbar" class="dtopbar"></div><div id="duopath"></div><div id="dlbar"><button class="x" aria-label="Cerrar lección" data-d="close">✕</button><div class="tt"><b id="dlt"></b><small id="dls"></small></div><button class="dsum" id="dsum" data-d="chsum" hidden>Resumen del capítulo</button></div><div id="nbview"></div><div id="mhview"></div><div id="ecoeview"></div><div id="duoc"></div></div></div><aside class="drail" id="drail"></aside>';
+duo.innerHTML='<aside class="dside" id="dside"></aside><div class="dmain"><div id="rhero" class="rhero"><div class="rhero-t"><b>MEDI-HUB</b><small>by Belén Murillo</small><small class="rth">Agradecimientos a: Mateo Calquín y Antonia Narea</small></div></div><div class="dcol"><div id="dtopbar" class="dtopbar"></div><div id="duopath"></div><div id="dlbar"><button class="x" aria-label="Cerrar lección" data-d="close">✕</button><div class="tt"><b id="dlt"></b><small id="dls"></small></div><button class="dsum" id="dsum" data-d="chsum" hidden>Resumen del capítulo</button></div><div id="nbview"></div><div id="mhview"></div><div id="ecoeview"></div><div id="duoc"></div></div></div><aside class="drail" id="drail"></aside>';
 document.body.insertBefore(duo,document.body.firstChild);
 var rh=document.createElement("header");rh.id="rhead";
 rh.innerHTML='<button class="rlogo" data-d="nav" data-v="path" aria-label="MEDI-HUB inicio"><span class="rl-ic"></span><span class="rl-t"><b>MEDI-HUB</b><small>by Belén Murillo</small></span></button><div class="rsearch" role="search"><input id="rq" type="search" autocomplete="off" spellcheck="false" placeholder="Buscar curso, capítulo o lesión…" aria-label="Buscar"><kbd>Ctrl K</kbd><div id="rres" class="rres" hidden></div></div><div class="dpills rhp"></div><button class="rtheme" data-d="theme" aria-label="Cambiar tema">'+IC.moon+'</button>';
