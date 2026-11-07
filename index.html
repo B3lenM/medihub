@@ -27,7 +27,7 @@
 </script></head><body><title>MEDI-HUB · Belén Murillo</title>
 <style id="gas-css">.alg{margin:6px 0}.algleg{display:flex;flex-wrap:wrap;gap:6px 12px;margin-bottom:8px;font:600 11.5px var(--f-body);color:var(--muted)}.algleg span{display:inline-flex;align-items:center;gap:5px}.algleg i{width:14px;height:14px;border-radius:4px;border:2px solid}
 .algsc{overflow-x:auto;border:1px solid var(--line);border-radius:12px;background:#fffaf5;padding:6px;-webkit-overflow-scrolling:touch}
-.algsvg{display:block;margin:0 auto;max-width:none}.algsvg .an{font:700 11.5px 'Manrope',sans-serif;fill:#3b2f5c}.algsvg .ae{fill:none;stroke:#9a8fb8;stroke-width:1.8}.algsvg .aa{fill:none;stroke:#9a8fb8;stroke-width:1.8}
+.alg,.algsc{min-width:0;max-width:100%}.algsvg{display:block;margin:0 auto}.algsvg .an{font:700 11.5px 'Manrope',sans-serif;fill:#3b2f5c}.algsvg .ae{fill:none;stroke:#9a8fb8;stroke-width:1.8}.algsvg .aa{fill:none;stroke:#9a8fb8;stroke-width:1.8}
 .algsvg .alb{fill:#fff;stroke:#cdbfe8}.algsvg .alt{font:700 9.5px 'Manrope',sans-serif;fill:#6b5a96}
 .algft{font-size:11.5px;color:var(--muted);margin:6px 2px 0}
 .kind.alg{background:#ffd9e8;color:#8a2f5c;border:1px solid #e58fb4}
@@ -7096,7 +7096,7 @@ function algSVG(spec){
  const maxN=Math.max.apply(null,rows.filter(Boolean).map(r=>r.length));
  const W=Math.max(300,maxN*(NW+GAP)+GAP);
  let y=22;
- rows.forEach(r=>{if(!r)return;const hh=Math.max.apply(null,r.map(n=>n.h));r.forEach(n=>{n.y=y;n.rh=hh});y+=hh+54});
+ rows.forEach(r=>{if(!r)return;const hh=Math.max.apply(null,r.map(n=>n.h));r.forEach(n=>{n.y=y;n.rh=hh});y+=hh+(r.some(n=>n.ou.length>2)?86:54)});
  const H=y-30;
  rows.forEach(r=>{if(!r)return;r.forEach((n,i)=>{n.x=W/2+(i-(r.length-1)/2)*(NW+GAP)})});
  for(let p=0;p<6;p++){
@@ -7115,11 +7115,11 @@ function algSVG(spec){
   const x1=n.x+(n.ou.length>1?(k-(n.ou.length-1)/2)*Math.min(40,NW/n.ou.length):0),y1=n.y+n.h,x2=m.x,y2=m.y,dy=Math.max(18,(y2-y1)/2);
   e+='<path d="M'+x1+" "+y1+"C"+x1+" "+(y1+dy)+" "+x2+" "+(y2-dy)+" "+x2+" "+(y2-3)+'" class="ae"/>';
   e+='<path d="M'+(x2-4)+" "+(y2-8)+"L"+x2+" "+(y2-2)+"L"+(x2+4)+" "+(y2-8)+'" class="aa"/>';
-  if(o.lb){const lx=(x1+x2)/2,ly=y1+(y2-y1)*0.38,lw=Math.min(120,o.lb.length*5.6+12);e+='<rect x="'+(lx-lw/2)+'" y="'+(ly-9)+'" width="'+lw+'" height="16" rx="8" class="alb"/><text x="'+lx+'" y="'+(ly+3)+'" class="alt" text-anchor="middle">'+esc(o.lb.length>22?o.lb.slice(0,21)+"…":o.lb)+"</text>"}}));
+  if(o.lb){const LL=algWrap(o.lb,18).slice(0,3),lh=LL.length*10.5+6,lw=Math.min(112,Math.max.apply(null,LL.map(t=>t.length))*5.3+14),lx=(x1+x2)/2,ly=y1+(y2-y1)*(n.ou.length>2?(k%2?0.58:0.3):0.4);e+='<rect x="'+(lx-lw/2)+'" y="'+(ly-lh/2)+'" width="'+lw+'" height="'+lh+'" rx="8" class="alb"/>'+LL.map((t,i)=>'<text x="'+lx+'" y="'+(ly-lh/2+11+i*10.5)+'" class="alt" text-anchor="middle">'+esc(t)+"</text>").join("")}}));
  order.forEach(n=>{const c=ALGC[n.ty]||ALGC.q;
   nd+='<g><rect x="'+(n.x-n.w/2+3)+'" y="'+(n.y+3)+'" width="'+n.w+'" height="'+n.h+'" rx="'+(n.ty==="q"||n.ty==="c"?14:7)+'" fill="'+c[1]+'" opacity=".55"/><rect x="'+(n.x-n.w/2)+'" y="'+n.y+'" width="'+n.w+'" height="'+n.h+'" rx="'+(n.ty==="q"||n.ty==="c"?14:7)+'" fill="'+c[0]+'" stroke="'+c[1]+'" stroke-width="2"/>'+
    n.L.map((l,i)=>'<text x="'+n.x+'" y="'+(n.y+n.h/2-(n.L.length-1)*7.5+i*15+4)+'" text-anchor="middle" class="an">'+esc(l)+"</text>").join("")+"</g>"});
- return '<svg class="algsvg" viewBox="0 0 '+W+" "+H+'" width="'+W+'" height="'+H+'" role="img" aria-label="'+esc(spec.t)+'">'+e+nd+"</svg>";
+ return '<svg class="algsvg" viewBox="0 0 '+W+" "+H+'" style="width:100%;max-width:'+W+'px;min-width:min('+W+'px,520px);height:auto" role="img" aria-label="'+esc(spec.t)+'">'+e+nd+"</svg>";
 }
 function alg(spec){
  const used={};spec.n.forEach(r=>used[r[1]]=1);
